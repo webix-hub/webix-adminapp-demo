@@ -1,0 +1,264 @@
+.webix_icon_button{
+	position:relative;
+}
+.webix_layout_toolbar.webix_toolbar .webix_el_icon  .webix_icon{
+	height:100%;
+	width:100%;
+	line-height: inherit;
+}
+.webix_icon_count {
+	background-color: #eb6e1a;
+	border-radius: 50%;
+	font-size: 12px;
+	height: 22px;
+	min-width: 22px;
+	line-height: 17px;
+	box-sizing: border-box;
+	-moz-box-sizing: boder-box;
+	padding: 0 4px;
+	text-align: center;
+	line-height: 22px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.header_person{
+	background: transparent !important;
+}
+.header_person .webix_template{
+	padding: 0;
+	line-height: 46px;
+}
+.header_person .photo{
+	width: 38px;
+	height: 38px;
+	float: left;
+	margin-top: 5px;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+}
+.header_person span{
+	color: #fff;
+	float: left;
+	padding-left: 7px;
+}
+.header_person .webix_icon{
+	line-height: inherit;
+}
+
+.webix_tree_item {
+	height: 40px;
+	line-height: 40px;
+}
+.webix_tree .webix_scroll_cont > .webix_tree_leaves {
+	padding: 9px 0;
+}
+.menu .webix_tree_item.webix_selected , .menu .webix_tree_item.webix_selected span{
+	background-color: #27ae60;
+	padding-right:0;
+}
+.menu .webix_tree_branch_1 .webix_tree_item{
+	padding-left:10px;
+	padding-right:10px;
+}
+.menu .webix_tree_item.webix_selected span, .menu .webix_tree_item span{
+	margin:0;
+	padding:1px;
+}
+
+.menu .webix_tree_item.webix_selected .webix_icon{
+	color: #fff;
+}
+.menu .webix_icon{
+	width: 25px;
+	padding-left: 12px !important;
+	text-align: center;
+}
+.menu .dashboard .webix_icon{
+	font-size: 18px;
+}
+
+.menu .webix_tree_leaves .webix_tree_leaves {
+	margin-left: 0px;
+}
+/*.menu .dashboard .webix_icon{
+	color: #27ae60 ;
+}
+.menu .orders .webix_icon{
+	color: #eb6e1a;
+}
+.menu .products .webix_icon{
+	color: #9b59b6;
+}*/
+.list_popup .text{
+	display: inline-block;
+	max-width:180px;
+	float:left;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.list_popup .name{
+	float:left;
+	font-size: 14px;
+	display: inline-block;
+
+	padding-left: 10px;
+	font-style: italic;
+}
+
+.extended_search{
+	color: #3498db;
+	padding: 5px 10px;
+	line-height: 30px;
+
+}
+.extended_search span{
+	cursor: pointer;
+}
+
+
+.show_all{
+	background-color: #fbfbfb;
+}
+.show_all .webix_template{
+	line-height: 30px;
+	padding: 5px 10px;
+
+}
+.show_all .webix_template .webix_icon{
+	line-height: 30px;
+	float:right;
+}
+
+
+.webix_layout_space, .webix_layout_wide, .webix_view.webix_layout_accordion{
+	background-color: #f4f4f4;
+}
+
+.title{
+	background-color: #fbfbfb;
+}
+.title .webix_template{
+	padding: 10px 12px;
+	line-height: 29px;
+}
+.title .header{
+	float: left;
+	font-size: 18px;
+}
+.title .details{
+	float: left;
+	font-size: 13px;
+	font-style: italic;
+
+	padding-left: 10px;
+}
+
+.sub_title  .webix_template{
+	padding-left: 12px;
+	padding-top: 12px;
+}
+
+.tasks_list .webix_list_item:last-child{
+	border-bottom: none;
+}
+
+.tasks_list .marker.internal{
+	color: #b07be5;
+}
+.tasks_list .marker.projects{
+	color: #eb6e1a;
+}
+.tasks_list .marker.company{
+	color: #27ae60;
+}
+.tasks_list .fa-square-o{
+	color: #888;
+}
+.show_all.webix_layout_form{
+	background:#fbfbfb;
+}
+
+.chat_list .webix_list_item:last-child{
+	border-bottom: none;
+}
+.chat_list .name{
+	color: #3498db;
+	font-size: 13px;
+	display: block;
+	line-height: 16px;
+	font-weight: 700;
+}
+
+.chat_list .photo{
+	width: 38px;
+	height: 38px;
+	padding-top: 5px;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+
+}
+.chat_list .text{
+
+	display:block;
+	margin-top: -45px;
+	padding-left:45px;
+}
+.chat_list .time{
+	float:right;
+	font-weight: 400;
+	color: #666666;
+	text-align: right;
+	padding:0 10px;
+	width: 70px;
+	font-style: italic;;
+}
+
+.tiles .webix_template{
+	padding:0;
+}
+.flex_tmp{
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+.flex_tmp .item{
+	border-radius: 4px;
+	position: relative;
+	min-width: 200px;
+	height: 100px;
+	padding: 10px;
+	margin: 10px 10px 0 10px;
+	color: #fff;
+	font-size: 20px;
+	flex: 1 auto;
+
+}
+.flex_tmp .item.orders{
+	background-color: #a693eb;
+
+}
+.flex_tmp .item.users{
+	background-color: #63b4ea;
+
+}
+.flex_tmp .item.profit{
+	background-color: #a4b4bf;
+
+
+}
+.flex_tmp .item.feedbacks{
+	background-color: #f19b60;
+	/*background-color: #eb8d4d;
+	color: #8c7396;*/
+}
+#
