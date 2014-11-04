@@ -11,6 +11,8 @@ ui.init = function(){
 		data: [
 			{id: 1, icon: "user", value: "My Profile"},
 			{id: 2, icon: "cog", value: "My Account"},
+			{id: 3, icon: "calendar", value: "My Calendar"},
+			{id: 5, icon: "tasks", value: "My Tasks"},
 			{ $template:"Separator" },
 			{id: 4, icon: "sign-out", value: "Logout"}
 		],
@@ -53,12 +55,13 @@ ui.init = function(){
 					view: "list",
 					autoheight: true,
 					data: [
-						{id: 1, name: "Sofia Lee", text: "Lorem ipsum dolor sit amet."},
-						{id: 2, name: "Jeremy O'Neal", text: "Morbi eget facilisis risus."},
-						{id: 3, name: "Paul Jackson", text: "Cras lacinia bibendum arcu."}
+						{id: 1, name: "Sofia Lee", text: "Lorem ipsum dolor sit amet.", personId:2},
+						{id: 2, name: "Jeremy O'Neal", text: "Morbi eget facilisis risus.", personId:1},
+						{id: 3, name: "Paul Jackson", text: "Cras lacinia bibendum arcu.", personId:1}
 					],
 					type:{
-						template: "<span class='text'>#text#</span><span class='name'>#name#</span>"
+						height: 45,
+						template: "<img class='photo' src='photos/#personId#.png' /><span class='text'>#text#</span><span class='name'>#name#</span>"
 
 					}
 				},
@@ -82,14 +85,15 @@ ui.init = function(){
 					view: "list",
 					autoheight: true,
 					data: [
-						{id: 1, name: "Mario Douglas", text: "Lorem ipsum dolor sit amet"},
-						{id: 2, name: "Sofia Lee", text: "Praesent luctus nulla enim, pellentesque condimentum "},
-						{id: 3, name: "Kim Alley", text: "Lorem ipsum dolor sit amet"},
-						{id: 4, name: "Jeremy O'Neal", text: "Morbi eget facilisis risus"},
-						{id: 5, name: "Paul Jackson", text: "Cras lacinia bibendum arcu"}
+						{id: 1, name: "Mario Douglas", text: "Lorem ipsum dolor sit amet", personId:1},
+						{id: 2, name: "Sofia Lee", text: "Praesent luctus nulla enim, pellentesque condimentum ", personId:2},
+						{id: 3, name: "Kim Alley", text: "Lorem ipsum dolor sit amet", personId:2},
+						{id: 4, name: "Jeremy O'Neal", text: "Morbi eget facilisis risus", personId:1},
+						{id: 5, name: "Paul Jackson", text: "Cras lacinia bibendum arcu", personId:1}
 					],
 					type:{
-						template: "<span class='text'>#text#</span><span class='name'>#name#</span>"
+						height: 45,
+						template: "	<img class='photo' src='photos/#personId#.png' /><span class='text'>#text#</span><span class='name'>#name#</span>"
 
 					}
 				},
@@ -124,7 +128,7 @@ ui.init = function(){
 	// Menu
 
 	var menu = {
-		width: 250,
+		width: 200,
 
 		rows:[
 			{
