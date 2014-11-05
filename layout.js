@@ -104,11 +104,32 @@ ui.init = function(){
 
 		}
 	});
+	webix.ui({
+		view: "submenu",
+		id: "exportPopup",
+		width: 200,
+		padding:0,
+		data: [
+			{id: 1, icon: "file-excel-o", value: "Export To Excel"},
+			{id: 2, icon: "file-pdf-o", value: "Export To PDF"}
+		],
+		on:{
+			onItemClick:function(id){
+				if(id==1){
+					$$("orderData").exportToExcel();
+				}
+				else if(id==2)
+					$$("orderData").exportToPdf();
+			}
+		}
+
+
+	});
 	var mainToolbar = {
 		view: "toolbar",
 
 		elements:[
-			{view: "label", label: "Webix APP", width: 250},
+			{view: "label", label: "Webix APP", width: 200},
 
 			{ height:46, id: "person_template", css: "header_person", borderless:true, width: 180, data: {id:3,name: "Oliver Parr"},
 				template: function(obj){
@@ -134,9 +155,9 @@ ui.init = function(){
 			{
 				view: "tree",
 				id: "menuTree",
-				type: "menuTree",
+				type: "menuTree2",
 				css: "menu",
-				//activeTitle: true,
+				activeTitle: true,
 				select: true,
 				tooltip: {
 					template: function(obj){
@@ -156,6 +177,17 @@ ui.init = function(){
 						{ id: "windows", value: "Windows", icon: "list-alt", details: "window examples"}
 
 					]}
+					/*
+					{id: "dashboard", value: "Dashboard", icon: "home", $css: "dashboard", details:"reports and statistics"},
+					{id: "orders", value: "Orders", icon: "check", $css: "orders", details:"order reports and editing"},
+					{id: "products", value: "Products", icon: "leaf", $css: "products", details:"product reports and editing"},
+					{id: "components", open: true, value:"Components", data:[
+						{ id: "data", value: "Datatables", icon: "table", details: "datatable examples" },
+						{ id: "charts", value: "Charts", icon: "bar-chart-o", details: "charts examples"},
+						{ id: "form", value: "Forms", icon: "file-text-o", details: "form examples"},
+						{ id: "windows", value: "Windows", icon: "list-alt", details: "window examples"}
+
+					]}*/
 				]
 			}
 		]

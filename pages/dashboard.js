@@ -25,7 +25,6 @@
 				items:[
 					{id:1, text: "New Orders", value: 250, icon: "check-square-o", css: "orders"},
 					{id:2, text: "New Users", value: 300, icon: "user", css: "users"},
-
 					{id:4, text: "New Feedbacks", value: 40, icon: "quote-right", css: "feedbacks"},
 					{id:3, text: "Profit", value: "+25%", icon: "line-chart", css:"profit" }
 				]
@@ -44,7 +43,7 @@
 						"type": "clean",
 						"rows":[
 							{
-								"template": "Visitor statistics", "css": "sub_title", "height": 30
+								"template": "<span class='webix_icon fa-sign-in'></span>Visitor statistics", "css": "sub_title", "height": 30
 							},
 							{
 								"view": "chart", "type": "stackedArea",
@@ -91,7 +90,7 @@
 						"type": "clean",
 						"rows":[
 							{
-								"template": "Orders", "css": "sub_title", "height": 30
+								"template": "<span class='webix_icon fa-bar-chart'></span>Orders", "css": "sub_title", "height": 30
 							},
 							{
 								"view": "chart", "type": "bar",
@@ -116,7 +115,7 @@
 
 										"item":{
 											"borderColor": "#fff",
-											"color": "#b07be5",
+											"color": "#49cd81",
 											"radius": 3
 										},
 										"line":{
@@ -144,49 +143,53 @@
 					type: "wide",
 						"cols": [
 							{
-								gravity: 3,
 
-								//"type": "clean",
+
+								"type": "clean",
 								"rows":[
 									{
 										"template": "<span class='webix_icon fa-comments-o'></span>Messages", "css": "sub_title", "height": 50
 									},
 									{
-										"view": "list",
-										css: "chat_list",
-										maxHeight: 300,
-										minHeight: 250,
-										"type": {
-											"height": "auto",
-											"template": function(obj){
-												var text = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae. ";
-												var html = 	"<img class='photo' src='photos/"+obj.personId+".png' />";
-												html += "<div class='text'><div class='name'>"+obj.name+"<div class='time'>"+obj.time+"</div></div>";
-												html += text+"</div>";
-												return html;
-											}
-										},
-										"data": [
-											{ id: 1,  personId: 1, time:"Just now", name: "Peter Johnson"},
-											{ id: 2,  personId: 2, time:"Just now", name: "Vera Liu"},
-											{ id: 3, personId: 1, time:"11:40", name: "Peter Johnson"},
-											{ id: 4, personId: 2, time:"11:30", name: "Vera Liu"},
-											{ id: 5, personId: 1, time:"10:10", name: "Peter Johnson"},
-											{ id: 6, personId: 2, time:"9:50", name: "Vera Liu"}
-										]
-									},
-									{
-										view: "form",
-										css: "show_all",
-										paddingX: 10,
-										paddingY: 2,
-
-										cols:[
+										rows:[
 											{
-												view: "text", placeholder: "Type a message here",height:36
+												"view": "list",
+												css: "chat_list",
+												maxHeight: 300,
+												minHeight: 250,
+												"type": {
+													"height": "auto",
+													"template": function(obj){
+														var text = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae. ";
+														var html = 	"<img class='photo' src='photos/"+obj.personId+".png' />";
+														html += "<div class='text'><div class='name'>"+obj.name+"<div class='time'>"+obj.time+"</div></div>";
+														html += text+"</div>";
+														return html;
+													}
+												},
+												"data": [
+													{ id: 1,  personId: 1, time:"Just now", name: "Peter Johnson"},
+													{ id: 2,  personId: 2, time:"Just now", name: "Vera Liu"},
+													{ id: 3, personId: 1, time:"11:40", name: "Peter Johnson"},
+													{ id: 4, personId: 2, time:"11:30", name: "Vera Liu"},
+													{ id: 5, personId: 1, time:"10:10", name: "Peter Johnson"},
+													{ id: 6, personId: 2, time:"9:50", name: "Vera Liu"}
+												]
 											},
 											{
-												view: "icon", icon: "search",height:36
+												view: "form",
+												css: "show_all",
+												paddingX: 10,
+												paddingY: 2,
+
+												cols:[
+													{
+														view: "text", placeholder: "Type a message here",height:36
+													},
+													{
+														view: "icon", icon: "search",height:36
+													}
+												]
 											}
 										]
 									}
@@ -194,22 +197,144 @@
 								]
 							},
 							{
-								gravity: 2,
-							//"type": "clean",
-							"rows":[
-								/*{
-									"template": "Project Map", type:"header", "css": "sub_title", "height": 50
-								},*/
-								{
-									view:"google-map",
-									id:"map",
-									zoom:2,
-									center:[ 48.724, 8.215 ]
+
+								"type": "clean",
+
+								"rows":[
+									{
+										"template": "<span class='webix_icon fa-line-chart'></span>Revenue", "css": "sub_title", "height": 50
+
+									},
+									{
+										"view": "chart",
+
+										"type": "line",
+
+										"xAxis":{
+
+											"template": "#month#"
+										},
+
+										tooltip: {
+											template: "#number#M $"
+										},
+										"yAxis":{
+
+											"start":0,
+											"end": 450,
+											"step": 150
+										},
+										offset: false,
+										"series":[
+											{
+												"value": "#number#",
 
 
-								}
-							]
-						}
+												"item":{
+													"borderColor": "#fff",
+													"color": "#61b5ee",
+													"radius": 4
+												},
+												"line":{
+													"color":"#61b5ee",
+													"width":1
+												}
+											}
+										],
+										"padding":{
+											"top": 25
+										},
+										"data":[
+											{"id": 1, "month": "Jun", "number": 90},
+											{"id": 2, "month": "Jul", "number": 220},
+											{"id": 3, "month": "Aug", "number": 180},
+											{"id": 4, "month": "Sep", "number": 405},
+											{"id": 5, "month": "Oct", "number": 275}
+										]
+									},{
+										height: 90,
+										type: "clean",
+										cols:[
+											{
+												view: "chart",
+												css:"donut_result",
+												type: "donut",
+												shadow: false,
+												color: "#color#",
+												pieInnerText: function(obj){
+													return obj.result?"<div class='donut_result'>"+obj.value+"</div>":"";
+												},
+												padding:{
+													left:10,
+													right:10,
+													top:10,
+													bottom:10
+												},
+												data:[
+													{value: 30, color: "#61b5ee",result:1},
+													{value: 70, color: "#eee"}
+												]
+											},
+											{
+												view: "chart",
+												type: "donut",
+												shadow: false,
+												css:"donut_result",
+												color: "#color#",
+												padding:{
+													left:10,
+													right:10,
+													top:10,
+													bottom:10
+												},
+												pieInnerText: function(obj){
+													return obj.result?"<div class='donut_result'>"+obj.value+"</div>":"";
+												},
+												data:[
+													{value: 25, color: "#61b5ee",result:1},
+													{value: 75, color: "#eee"}
+												]
+											},
+											{
+												view: "chart",
+												type: "donut",
+												css:"donut_result",
+												shadow: false,
+												color: "#color#",
+												pieInnerText: function(obj){
+													return obj.result?"<div class='donut_result'>"+obj.value+"</div>":"";
+												},
+												padding:{
+													left:10,
+													right:10,
+													top:10,
+													bottom:10
+												},
+												data:[
+													{value: 45, color: "#61b5ee",result:1},
+													{value: 55, color: "#eee"}
+												]
+											}
+										]
+									},
+									{
+										height: 40,
+										type: "clean",
+										css: "donut_titles",
+										cols:[
+											{
+												template: "Europe"
+											},
+											{
+												template: "Asia"
+											},
+											{
+												template: "Northern America"
+											}
+										]
+									}
+								]
+							}
 
 					]
 				},
@@ -217,27 +342,29 @@
 					type: "wide",
 					"cols": [
 						{
-							gravity: 3,
-							view:"dhx-scheduler",
-							date:new Date(2010,0,5),
-							mode:"week",
-							init:function(){
-								scheduler.config.xml_date="%Y-%m-%d %H:%i";
-								scheduler.config.first_hour = 6;
-								scheduler.config.multi_day = false;
-							},
-							ready:function(){
-								scheduler.parse("<data><event id='1261150506' start_date='2010-01-01 18:00' end_date='2010-01-03 18:00' text='Sister Act' details='Palladium' /><event id='1261150507' start_date='2010-01-02 07:00' end_date='2010-01-02 09:00' text='Cat On a Hot Tin Roof' details='Novello Theatre' /><event id='1261150508' start_date='2010-01-02 07:00' end_date='2010-01-02 09:00' text='Grease' details='Piccadilly Theatre' /><event id='1261150509' start_date='2010-01-03 17:00' end_date='2010-01-03 19:00' text='Ladbrokes.com World Darts Championships' details='Alexandra Palace' /><event id='1261150510' start_date='2010-01-05 14:00' end_date='2010-01-05 16:00' text='Calendar Girls' details='Noel Coward Theatre' /><event id='1261150511' start_date='2010-01-06 08:00' end_date='2010-01-08 08:00' text='Dirty Dancing' details='Aldwych Theatre' /><event id='1261150512' start_date='2010-01-07 15:00' end_date='2010-01-07 17:00' text='Cirque du Soleil Varekai' details='Royal Albert Hall' /><event id='1261150513' start_date='2010-01-08 15:00' end_date='2010-01-08 17:00' text='Grease' details='Piccadilly Theatre' /><event id='1261150514' start_date='2010-01-09 09:00' end_date='2010-01-09 11:00' text='The Lion King' details='Lyceum Theatre' /><event id='1261150515' start_date='2010-01-09 07:00' end_date='2010-01-09 09:00' text='Cirque du Soleil Varekai' details='Royal Albert Hall' /><event id='1261150516' start_date='2010-01-10 10:00' end_date='2010-01-12 10:00' text='Cirque du Soleil Varekai' details='Royal Albert Hall' /><event id='1261150517' start_date='2010-01-12 09:00' end_date='2010-01-12 11:00' text='Masters Snooker 2010      Afternoon session' details='Wembley Arena' /></data>");
+							/*rows:[
+								{ "template": "<span class='webix_icon fa-calendar'></span>Calendar", type:"header", "css": "sub_title", "height": 50 },
+								{ view:"dhx-scheduler",
+									date:new Date(),
+									height: 550,
+									mode:"month",
+									tabs:["day", "month"],
+									init:function(){
+										scheduler.config.month_day_min_height = 50;
+										scheduler.config.xml_date="%Y-%m-%d %H:%i";
+										scheduler.config.first_hour = 8;
+										scheduler.config.week_ = 8;
+										scheduler.config.last_hour = 18;
+										scheduler.config.multi_day = false;
+									},
+									ready:function(){
+										scheduler.parse("<data><event id='1261150506' start_date='2010-01-01 18:00' end_date='2010-01-03 18:00' text='Sister Act' details='Palladium' /><event id='1261150507' start_date='2010-01-02 07:00' end_date='2010-01-02 09:00' text='Cat On a Hot Tin Roof' details='Novello Theatre' /><event id='1261150508' start_date='2010-01-02 07:00' end_date='2010-01-02 09:00' text='Grease' details='Piccadilly Theatre' /><event id='1261150509' start_date='2010-01-03 17:00' end_date='2010-01-03 19:00' text='Ladbrokes.com World Darts Championships' details='Alexandra Palace' /><event id='1261150510' start_date='2010-01-05 14:00' end_date='2010-01-05 16:00' text='Calendar Girls' details='Noel Coward Theatre' /><event id='1261150511' start_date='2010-01-06 08:00' end_date='2010-01-08 08:00' text='Dirty Dancing' details='Aldwych Theatre' /><event id='1261150512' start_date='2010-01-07 15:00' end_date='2010-01-07 17:00' text='Cirque du Soleil Varekai' details='Royal Albert Hall' /><event id='1261150513' start_date='2010-01-08 15:00' end_date='2010-01-08 17:00' text='Grease' details='Piccadilly Theatre' /><event id='1261150514' start_date='2010-01-09 09:00' end_date='2010-01-09 11:00' text='The Lion King' details='Lyceum Theatre' /><event id='1261150515' start_date='2010-01-09 07:00' end_date='2010-01-09 09:00' text='Cirque du Soleil Varekai' details='Royal Albert Hall' /><event id='1261150516' start_date='2010-01-10 10:00' end_date='2010-01-12 10:00' text='Cirque du Soleil Varekai' details='Royal Albert Hall' /><event id='1261150517' start_date='2010-01-12 09:00' end_date='2010-01-12 11:00' text='Masters Snooker 2010      Afternoon session' details='Wembley Arena' /></data>");
 
-							}
-
-						},
-						{
-							gravity: 2,
-							//"type": "clean",
+									}}
+							]*/
 							"rows":[
 								{
-									"template": "Pending Tasks", type:"header", "css": "sub_title", "height": 50
+									"template": "<span class='webix_icon fa-tasks'></span>Pending Tasks", type:"header", "css": "sub_title", "height": 50
 								},
 								{
 									"view": "list",
@@ -279,6 +406,22 @@
 									css: "show_all bg", template: "Show all tasks <span class='webix_icon fa-angle-double-right'></span>", height: 40
 								}
 							]
+
+
+						},
+						{
+							"rows":[
+								{
+									template:"<span class='webix_icon fa-map-marker'></span>Events Map" , type:"header", "css": "sub_title", "height": 50
+								},
+								{
+									view:"google-map",
+									id:"map",
+									zoom:3,
+									center:[ 48.724, 8.215 ]
+								}
+							]
+
 						}
 
 
@@ -303,6 +446,7 @@
 					],
 					url:"data/orders_short.json"
 				}*/
+
 			]
 
 		}

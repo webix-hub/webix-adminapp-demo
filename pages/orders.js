@@ -6,7 +6,7 @@
 		"rows":[
 			{
 				cols:[
-					{ view: "button", value: "Add order", width: 150, click: function(){
+					{ view: "button", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
 
 						if(!app.logic.orderWin)
 							app.logic.orderWin = webix.ui({
@@ -26,6 +26,7 @@
 								}
 							}).show();
 					}},
+					{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: "exportPopup"},
 					{},
 					{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
 						{id:"all", value:"All"},
@@ -63,6 +64,7 @@
 					{id:"date", header:"Date", sort:"string", width:100},
 					{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 				],
+				export: true,
 				url: "data/orders.json",
 				onClick:{
 					"webix_icon":function(e,id,node){
