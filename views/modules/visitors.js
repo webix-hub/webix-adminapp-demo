@@ -1,4 +1,4 @@
-define(function(){
+define(["models/visitors"],function(visitors){
 
 	return {
 		$ui:{
@@ -28,22 +28,13 @@ define(function(){
 						"step": 500
 					},
 					"series":[
-
-
-
 						{ "value": "#rec#", "color": "#a4b4bf"},
 						{ "value": "#new#", "color": "#61b5ee"}
 					],
 					"padding":{
 						"top": 25
 					},
-					"data":[
-						{"id": 1, "month": "Jun", "new": 300, "rec": 600},
-						{"id": 2, "month": "Jul", "new": 100, "rec":  400},
-						{"id": 3, "month": "Aug", "new": 400, "rec": 700},
-						{"id": 4, "month": "Sep", "new": 600, "rec": 900},
-						{"id": 5, "month": "Oct", "new": 400, "rec": 400}
-					]
+					"data": visitors.getAll
 				}
 			]
 		}

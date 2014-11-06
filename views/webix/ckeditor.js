@@ -15,12 +15,14 @@ webix.protoUI({
 		this.$view.innerHTML = "<textarea id='"+tid+"'>"+this.config.value+"</textarea>";
 
 		window.CKEDITOR_BASEPATH = webix.codebase+"ckeditor/";
+		var t = {
+			toolbar: this.config.toolbar,
+			width:this.$width -2,
+			height:this.$height - 44
+		};
+		webix.extend(t,this.config.editor||{});
 		webix.require("ckeditor/ckeditor.js", function(){
-			this._3rd_editor = CKEDITOR.replace( this.config.textAreaID, {
-				toolbar: this.config.toolbar,
-				width:this.$width -2,
-				height:this.$height - 44
-			});
+			this._3rd_editor = CKEDITOR.replace( this.config.textAreaID, t);
 		}, this);
 	},
 	_set_inner_size:function(x, y){

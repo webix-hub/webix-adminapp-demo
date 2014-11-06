@@ -306,14 +306,11 @@
 	padding-top: 10px;
 	margin: 11px 5.5px 0px 5.5px;
 	color: #fff;
-
-	-moz-box-flex: 1 auto;               /* Firefox 19- */
-
+	-ms-box-flex: 1;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;               /* Firefox 19- */
 	-ms-flex: 1 auto;                    /* TWEENER - IE 10 */
 	-webkit-flex: 1 auto;                /* NEW - Chrome */
-	flex: 1 auto;
-	-webkit-box-flex: 1 auto;
-
 	flex: 1 auto;
 }
 .flex_tmp .item .icon{
@@ -391,4 +388,29 @@
 }
 .webix_view .defaultSimpleSkin table.mceLayout{
 	border: none;
+}
+
+/*ckeditor*/
+.webix_view .cke_reset{
+	border-color: #ccc;
+}
+.webix_view .cke_top {
+	background: #fafafa;
+	background-image: none;
+	border-color: #ddd;
+}
+.webix_view .cke_toolgroup {
+	background: #fafafa;
+	background-image: none;
+	border-color: #ccc;
+}
+.webix_view .cke_button:hover {
+	background: #f4f4f4;
+	background-image: none;
+}
+.webix_view .cke_button_on{
+	background: #ddd;
+}
+.webix_view .cke_button_on.cke_button:hover{
+	background: #ddd;
 }

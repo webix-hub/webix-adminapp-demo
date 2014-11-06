@@ -12,7 +12,7 @@ define(["views/webix/ckeditor"], function(){
 			{view: "checkbox", label: "In Store",value: 1},
 			{view: "label", label: "Description", height:30},
 
-			{ id:'editor', view:"ckeditor", value:"", minHeight: 300},
+			{ id:'editor', view:"ckeditor", value:"", editor:{language: 'en'}, minHeight: 250},
 			{
 				view: "button", value: "Add new product", type: "form",inputWidth: 150
 			},{
@@ -22,6 +22,7 @@ define(["views/webix/ckeditor"], function(){
 	};
 
 	var layout = {
+		maxWidth: 500,
 		rows:[
 			{
 				"template": "<span class='webix_icon fa-list-alt'></span>Product form", "css": "sub_title", "height": 50

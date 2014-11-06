@@ -1,14 +1,15 @@
 define([
 	"views/forms/order",
+	"views/menus/export",
 	"models/orders"
-], function(orderform, orders){
+], function(orderform, exports, orders){
 
 	var controls = {
 		cols:[
 			{ view: "button", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
 				this.$scope.ui(orderform.$ui).show();
 			}},
-			{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: "exportPopup"},
+			{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
 			{},
 			{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
 				{id:"all", value:"All"},
@@ -41,7 +42,7 @@ define([
 			{id:"fee", header:"Fee", width:90, sort:"string", format:webix.i18n.priceFormat},
 			{id:"taxes", header:"Taxes", width:90, sort:"string", format:webix.i18n.priceFormat},
 			{id:"total", header:"Total", width:90, sort:"string", format:webix.i18n.priceFormat},
-			{id:"shipping_company", header:"Shipping Company", sort:"string", },
+			{id:"shipping_company", header:"Shipping Company", sort:"string" },
 			{id:"payment_method", header:"Payment method", width:130, sort:"string"},
 			{id:"date", header:"Date", sort:"string", width:100},
 			{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
@@ -71,6 +72,8 @@ define([
 		]
 	};
 
-	return { $ui: layout };
+	return {
+		$ui: layout
+	};
 
 });
