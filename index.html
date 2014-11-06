@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="../webix/codebase/webix.css" type="text/css" media="screen" charset="utf-8">
-		<script src="../webix/codebase/webix.js" type="text/javascript" charset="utf-8"></script>
-		<script src="layout.js" type="text/javascript" charset="utf-8"></script>
-		<script src="ui.js" type="text/javascript" charset="utf-8"></script>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- Webix Library -->
+	<script type="text/javascript" src="../webix/codebase/webix.js"></script>
+	<!-- Dynamic themes -->
+	<script type="text/javascript">
+		var user   = webix.remote.$user;
+		var config = (user && user.settings) ? JSON.parse(user.settings): {};
+		var theme = (config.theme || webix.storage.local.get("--:app:theme") || "siberia:webix").split(":");
+		
+		document.write('<link type="text/css" rel="stylesheet" href="../webix/codebase/'+theme[1]+'.css">');
+		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.'+theme[0]+'.less">');
+	</script>
 
-		<script src="core.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" href="app.css" type="text/css" media="screen" charset="utf-8">
-		<script src="http://cdn.webix.io/components/scheduler/scheduler.js"></script>
-		<script src="http://cdn.webix.io/components/scheduler/scheduler/dhtmlxscheduler.js"></script>
-		<link rel="stylesheet" type="text/css" href="http://cdn.webix.io/components/scheduler/scheduler/dhtmlxscheduler.css">
+	<!-- The app's logic -->
+	<script type="text/javascript" data-main="app" src="libs/require.js"></script>
+	<script type="text/javascript">
+		require.config({
+			paths: { text:"libs/text" }
+		});
+	</script>
 
-		<script type="text/javascript">
-			webix.require.disabled = true;
-			webix.codebase = "http://cdn.webix.io/components/tinymce/";
-		</script>
-		<script src="http://cdn.webix.io/components/tinymce/tinymce.js"></script>
-		<script src="http://cdn.webix.io/components/tinymce/tinymce/tiny_mce.js"></script>
-
-		<script src="http://cdn.webix.io/components/googlemap/googlemap.js"></script>
-		<title>Webix APP</title>
-	</head>
-	<body>
-
-		<script>
-			webix.ready(function(){
-				app.init();
-			});
-		</script>
-	</body>
+	 <!-- Development only -->
+	 <script type="text/javascript" src="libs/less.min.js"></script>
+</head>
+<body></body>
 </html>
