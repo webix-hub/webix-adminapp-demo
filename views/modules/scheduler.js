@@ -43,8 +43,9 @@ return {
 		minWidth: 500,
 		gravity: 2,
 		rows:[
-			{ "template": "<span class='webix_icon fa-calendar'></span>Calendar", type:"header", "css": "sub_title", "height": 50 },
+
 			{
+				type: "wide",
 				cols:[
 				{
 					view: "form",
