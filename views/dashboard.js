@@ -5,9 +5,8 @@ define([
 	"views/modules/messages",
 	"views/modules/revenue",
 	"views/modules/tasks",
-	"views/modules/map",
-	"views/modules/scheduler"
-],function(dashline, visitors, orders, messages, revenue, tasks, map, scheduler){
+	"views/modules/map"
+],function(dashline, visitors, orders, messages, revenue, tasks, map){
 	
 	var layout = {
 		type: "clean",
@@ -38,8 +37,7 @@ define([
 							tasks,
 							map
 						]
-					},
-					scheduler
+					}
 				]
 
 			}

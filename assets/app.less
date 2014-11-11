@@ -414,3 +414,120 @@
 .webix_view .cke_button_on.cke_button:hover{
 	background: #ddd;
 }
+.rating_bar_element{
+	background-image: url(stars.gif);
+	width:80px;
+	height:16px;
+	margin-top:7px;
+	position:relative;
+}
+.rating_bar_element.star1 { background-position: 0 -16px; }
+.rating_bar_element.star2 { background-position: 0 -32px; }
+.rating_bar_element.star3 { background-position: 0 -48px; }
+.rating_bar_element.star4 { background-position: 0 -64px; }
+.rating_bar_element.star5 { background-position: 0 -80px; }
+
+.rating_star:hover {
+	z-index:2; position: absolute;
+	width:80px;
+	height:16px;
+	overflow:hidden;
+	left:0px !important;
+	background-image: url(stars.gif);
+}
+.rating_star.star1:hover {background-position:0 -96px;}
+.rating_star.star2:hover {background-position:0 -112px;}
+.rating_star.star3:hover {background-position:0 -128px}
+.rating_star.star4:hover {background-position:0 -144px}
+.rating_star.star5:hover {background-position:0 -160px}
+
+.rating_star{
+	z-index:3; position: absolute;
+	width:16px;
+	height:16px;
+	top:0px;
+	float:left;
+	cursor:pointer;
+}
+
+.webix_view.webix_pager{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.highlight_row{
+	background-color:#edf4f9;
+	font-weight:bold;
+}
+.progress_bar_element{
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	width:100%;
+	height:6px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	margin-top:16px;
+	float:left;
+	overflow: hidden;
+	cursor:pointer;
+}
+.progress_result{
+	height:100%;
+
+	float:left;
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+	background: #eb6e1a;
+}
+.progress_result.inner{
+	 background: #a693eb;
+}
+.progress_result.company{
+	background: #49cd81;
+}
+
+
+.webix_view .dhx_scale_holder_now {
+	background-image: url(imgs_dhx_terrace/databg.png);
+
+}
+.webix_view .dhx_now .dhx_month_head {
+	background-color: #fff8c4;
+}
+.webix_view .dhx_now .dhx_month_body {
+	background-color: #fff8c4;
+}
+.webix_view .dhx_cal_tab.active {
+	background-color: #f0f5f9;
+	box-shadow: inset 0 2px #eee;
+	-webkit-box-shadow: inset 0 2px #eee;
+}
+.webix_view .dhx_cal_event_line {
+
+	background-color: #63b4ea;
+
+}
+.webix_view .dhx_cal_event_line.other {
+	background-color: #27ae60;
+}
+.dhx_cal_event .dhx_header, .dhx_cal_event .dhx_footer, .dhx_cal_event .dhx_body, .dhx_cal_event .dhx_title {
+	background-color: #63b4ea !important;
+}
+.dhx_cal_event_clear.other {
+	color: #1c6d3e;
+}
+.other.dhx_cal_event .dhx_header, .other.dhx_cal_event .dhx_footer, .other.dhx_cal_event .dhx_body, .other.dhx_cal_event .dhx_title {
+	background-color: #27ae60 !important;
+}
+.calendar_icon{
+	display: block;
+	height: 16px;
+	width:16px;
+	border-radius: 4px;
+	float:left;
+	margin-top: 6px;
+	margin-right:5px;
+	background: #63b4ea;
+}
+.calendar_icon.other{
+	background: #27ae60;
+}

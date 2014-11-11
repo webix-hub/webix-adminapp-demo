@@ -32,7 +32,7 @@ define([
 
 	var grid = {
 		id:"orderData",
-		view:"treetable", select:true,
+		view:"datatable", select:true,
 		columns:[
 			{id:"id", header:"#", width:50},
 			{id:"employee", header:["Employee", {content:"selectFilter"} ], sort:"string", minWidth:150, fillspace:1},
@@ -48,11 +48,16 @@ define([
 			{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 		],
 		export: true,
+		on: {
+			onAfterLoad: function(){
+				this.select(4);
+			}
+		},
 		data: orders.getAll,
 		onClick:{
 			webix_icon:function(e,id,node){
 				webix.confirm({
-					text:"Are you sure", ok:"Yes", cancel:"Cancel",
+					text:"Are you sure sdfds", ok:"Yes", cancel:"Cancel",
 					callback:function(res){
 						if(res){
 							webix.$$("orderData").remove(id);
@@ -60,8 +65,7 @@ define([
 					}
 				});
 			}
-		},
-		onContext:{}
+		}
 	};
 
 	var layout = {

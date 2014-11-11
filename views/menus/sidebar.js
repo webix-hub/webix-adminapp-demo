@@ -19,11 +19,11 @@ define(function(){
 					},
 					on:{
 						onBeforeSelect:function(id){
+							console.log(this.getSelectedId())
 							return !this.getItem(id).$count;
 						},
 						onAfterSelect:function(id){
 							this.$scope.show("./"+id);
-
 							var item = this.getItem(id);
 							webix.$$("title").parse({title: item.value, details: item.details});
 						}
@@ -35,10 +35,12 @@ define(function(){
 							{id: "products", value: "Products", icon: "leaf", $css: "products", details:"product reports and editing"}
 						]},
 						{id: "components", open: true, value:"Components", data:[
-							{ id: "data", value: "Datatables", icon: "table", details: "datatable examples" },
-							{ id: "charts", value: "Charts", icon: "bar-chart-o", details: "charts examples"},
-							{ id: "form", value: "Forms", icon: "file-text-o", details: "form examples"},
-							{ id: "windows", value: "Windows", icon: "list-alt", details: "window examples"}
+							{ id: "datatables", value: "Datatables", icon: "table", details: "datatable examples" },
+							{ id: "charts", value: "Charts", icon: "bar-chart-o", details: "charts examples"}
+
+						]},
+						{id: "uis", value:"UI Examples", data:[
+							{ id: "calendar", value: "My Calendar", icon: "calendar", details: "calendar example" }
 
 						]}
 					]
