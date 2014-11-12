@@ -39,7 +39,7 @@ define(function(){
 							{ id: "charts", value: "Charts", icon: "bar-chart-o", details: "charts examples"}
 
 						]},
-						{id: "uis", value:"UI Examples", data:[
+						{id: "uis", value:"UI Examples", open:1, data:[
 							{ id: "calendar", value: "My Calendar", icon: "calendar", details: "calendar example" }
 
 						]}

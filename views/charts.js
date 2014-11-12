@@ -77,6 +77,7 @@ define([
 						type: "wide",
 						cols: [
 							{
+
 								type: "clean",
 								rows:[
 									{
@@ -94,9 +95,9 @@ define([
 									{
 										view:"chart",
 										type:"barH",
-										minHeight: 230,
-										value:"#progress#",
 
+										value:"#progress#",
+										minHeight: 230,
 										color:"#color#",
 										barWidth:30,
 										radius:2,

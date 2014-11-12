@@ -2,6 +2,7 @@ define(["views/webix/ckeditor"], function(){
 
 	var form = {
 		view: "form",
+
 		elementsConfig:{
 			labelWidth: 120
 		},
@@ -23,9 +24,16 @@ define(["views/webix/ckeditor"], function(){
 
 	var layout = {
 		maxWidth: 500,
+
 		rows:[
 			{
-				"template": "<span class='webix_icon fa-list-alt'></span>Product form", "css": "sub_title", "height": 50
+				view: "toolbar",
+				paddingX:5,
+				paddingY:5,
+				height:40,	css: "highlighted_header header2", elements:[
+					{"template": "<span class='webix_icon fa-list-alt'></span>Product form", borderless: true,"css": "sub_title2"}
+				]
+
 			},
 			form
 		]

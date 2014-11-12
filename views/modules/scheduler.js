@@ -1,62 +1,43 @@
-define(["views/webix/scheduler"], function(){
+define(["views/webix/scheduler","models/events"], function(sch,events){
 var addEvents = function(){
-	var weekStart = webix.Date.weekStart(new Date());
-	var monthStart = webix.Date.monthStart(new Date());
-	var today = webix.Date.dayStart(new Date());
-
-	scheduler.addEvent({
-		start_date: webix.Date.copy(weekStart),
-		end_date:   webix.Date.add(webix.Date.copy(weekStart),3,"day",true),
-		text:   "Conference"
-	});
-	scheduler.addEvent({
-		start_date: webix.Date.copy(monthStart),
-		end_date:   webix.Date.add(webix.Date.copy(monthStart),2,"day",true),
-		text:   "Partners meeting",
-		calendar: "other"
-	});
-	scheduler.addEvent({
-		start_date: webix.Date.add(webix.Date.copy(monthStart),15,"day",true),
-		end_date:   webix.Date.add(webix.Date.copy(monthStart),17,"day",true),
-		text:   "Webix project",
-		calendar: "other"
-	});
-	scheduler.addEvent({
-		start_date: webix.Date.add(webix.Date.copy(monthStart),14,"day",true),
-		end_date:   webix.Date.add(webix.Date.copy(monthStart),18,"day",true),
-		text:   "Webix project"
-	});
-	scheduler.addEvent({
-		start_date:  webix.Date.add(today,9,"hour",true),
-		end_date:   webix.Date.add(today,11,"hour",true),
-		text:   "Meeting",
-		calendar: "other"
-	});
-	scheduler.addEvent({
-		start_date:  webix.Date.add(weekStart,19,"hour",true),
-		end_date:   webix.Date.add(weekStart,23,"hour",true),
-		text:   "Birthday party"
-	});
+	scheduler.parse(events.data,"json");
 };
 return {
 	$ui:{
 		minWidth: 500,
 		gravity: 2,
 		rows:[
-
 			{
 				type: "wide",
 				cols:[
 				{
 
 					width: 240,
+
 					rows:[
-						{view: "calendar"},
+						{view: "calendar", on:{
+							onDateSelect: function(date){
+								scheduler.updateView(date,"week");
+							}
+						}},
+
 						{
 							view: "form",
 							rows:[
-								{ view:"label",label: "<div><span class='calendar_icon'></span>My Calendar</div>",height: 35},
-								{view:"label",label: "<div><span class='calendar_icon other'></span>Webix Project</div>",height: 35},
+								{view: "list", id:"calendarList", borderless: true, css: "calendar_list", autoheight:true, template: "<div><span class='calendar_icon #id#'></span>#name#</div>", data:[
+										{id: "my", name: "My Calendar", active: true},
+										{id: "company", name: "Webix Project", active: true}
+									],
+									on:{
+										onItemClick: function(calendarId){
+											var item = this.getItem(calendarId);
+											item.active = !item.active;
+											item.$css =  (item.active?"":"disabled");
+											this.refresh(calendarId);
+											scheduler.updateView();
+										}
+									}
+								},
 								{ view: "button", label:"Add new calendar",align:"left"},
 								{}
 							]
@@ -80,14 +61,25 @@ return {
 						var d = scheduler.date.date_to_str;
 						var week1 = d("%d");
 						var week2 = d("%d %M %y");
+						scheduler.filter_day = scheduler.filter_week = scheduler.filter_month = function(id, event){
+							console.log(event.calendar)
+							var calendar = event.calendar;
+							if(!calendar)
+								return $$("calendarList").getItem("my").active;
+							else
+								return $$("calendarList").getItem(calendar).active;
+						};
 						scheduler.templates.week_scale_date = d("%D, %W/%j");
 						scheduler.templates.week_date = function(d1,d2){
 							return week1(d1)+" &ndash; "+ week2(scheduler.date.add(d2,-1,"day"));
 						}
 					},
 					ready:function(){
-						addEvents();
-						addEvents = null;
+						if(addEvents){
+							addEvents();
+							addEvents = null;
+						}
+
 					}
 				}
 			]}

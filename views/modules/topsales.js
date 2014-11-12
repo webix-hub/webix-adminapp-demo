@@ -62,7 +62,13 @@ define(["models/topsales"],function(topsales){
 	var layout = {
 		rows:[
 			{
-				"template": "<span class='webix_icon fa-bar-chart'></span>Top selling products", "css": "sub_title",  height:50
+				view: "toolbar",
+				paddingX:5,
+				paddingY:5,
+				height:40,	css: "highlighted_header header3", elements:[
+					{"template": "<span class='webix_icon fa-bar-chart'></span>Top selling products", borderless: true,"css": "sub_title2"}
+				]
+
 			},
 			form,
 			chart		

@@ -5,7 +5,8 @@ define([
 ], function(rating,data_arrays, orders){
 
 var titleProgress = {
-	view: "form",
+	view: "toolbar",
+	css: "highlighted_header header4",
 	paddingX:5,
 	paddingY:5,
 	height:40,
@@ -20,7 +21,7 @@ var gridProgress = {
 	columns:[
 		{ id:"id",	header:"",  	width:35,sort:"int"},
 		{ id:"name",	header:"Task",	 fillspace:4,sort:"string"},
-		{ id:"progress",	header:"Progress",  sort:"int",fillspace:3,	template:function(obj){
+		{ id:"progress",	header:"Progress",  sort:"int",fillspace:2.5,	template:function(obj){
 			var html = "<div class='progress_bar_element'>";
 			var className = "progress_result "+(obj.type||"")
 			html += "<div title='"+(parseInt(obj.progress*100,10)+"%")+"' class='"+className+"' style='width:"+(obj.progress*100+"%")+"'></div>";
@@ -39,7 +40,8 @@ var gridProgress = {
 	data:data_arrays.progress
 };
 var titleGroup = {
-	view: "form",
+	view: "toolbar",
+	css: "highlighted_header header2",
 	paddingX:5,
 	paddingY:5,
 	height:40,
@@ -63,7 +65,8 @@ var gridGroup = {
 	data:data_arrays.colspans
 };
 var titlePager = {
-	view: "form",
+	view: "toolbar",
+	css: "highlighted_header header5",
 	paddingX:5,
 	paddingY:5,
 	height:40,
@@ -134,6 +137,7 @@ var layout = {
 				{
 
 					type:"wide",
+					gravity: 0.8,
 					rows:[
 						{
 							type: "clean",

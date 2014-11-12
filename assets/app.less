@@ -193,6 +193,9 @@
 .sub_title .webix_icon{
 	padding-right: 7px;
 }
+.sub_title2 .webix_icon{
+	padding-right: 5px;
+}
 .tasks_list .webix_list_item:last-child{
 	border-bottom: none;
 }
@@ -520,18 +523,59 @@
 }
 .calendar_icon{
 	display: block;
-	height: 16px;
-	width:16px;
+	height: 14px;
+	width:14px;
 	border-radius: 4px;
 	float:left;
 	margin-top: 6px;
 	margin-right:5px;
 	background: #63b4ea;
+	border:1px solid #63b4ea;
 }
-.calendar_icon.other{
+.calendar_icon.company{
 	background: #27ae60;
+	border-color:#27ae60;
 }
 .webix_view .dhx_cal_navline .dhx_cal_date{
-
 	font-size: 15px;
 }
+
+.calendar_list .webix_list_item{
+	border-bottom-color: #fff;
+	padding-left:2px;
+	padding-right:2px;
+}
+.calendar_list .disabled .calendar_icon{
+	background: #fff;
+	border-color: #ddd;
+}
+.calendar_list .disabled.webix_list_item{
+	color: #aaa;
+}
+
+.sub_title2{
+	background: transparent !important;
+}
+.webix_toolbar.header1{
+	background-color: #a693eb !important;
+}
+.webix_toolbar.highlighted_header .webix_template{
+	color:#fff !important;
+}
+.webix_toolbar.highlighted_header .webix_template .webix_icon{
+	color:#fff !important;
+}
+
+.webix_toolbar.header2{
+	background-color: #f19b60 !important;
+}
+.webix_toolbar.header3{
+	background-color: #63b4ea !important;
+}
+.webix_toolbar.header4{
+	 background-color: #49cd81 !important;
+}
+.webix_toolbar.header5{
+	background-color: #a4b4bf !important;
+}
+

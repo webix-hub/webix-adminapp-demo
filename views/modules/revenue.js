@@ -13,6 +13,7 @@ define(function(){
 		tooltip: {
 			template: "#number#M $"
 		},
+		minHeight:140,
 		yAxis:{
 			"start":0,
 			"end": 450,

@@ -5,7 +5,8 @@ define([
 ], function(editor, topsales, products){
 
 var form = {
-	view: "form",
+	view: "toolbar",
+	css: "highlighted_header header1",
 	paddingX:5,
 	paddingY:5,
 	height:40,
