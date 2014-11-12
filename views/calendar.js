@@ -5,7 +5,6 @@ define([
 	var layout = {
 		type: "space",
 		cols:[
-
 			calendar
 		]
 	};

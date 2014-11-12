@@ -48,13 +48,20 @@ return {
 				type: "wide",
 				cols:[
 				{
-					view: "form",
-					width: 180,
+
+					width: 240,
 					rows:[
-						{ view:"label",label: "<div><span class='calendar_icon'></span>My Calendar</div>",height: 35},
-						{view:"label",label: "<div><span class='calendar_icon other'></span>Webix Project</div>",height: 35},
-						{ view: "button", label:"Add new calendar",align:"left"},
-						{}
+						{view: "calendar"},
+						{
+							view: "form",
+							rows:[
+								{ view:"label",label: "<div><span class='calendar_icon'></span>My Calendar</div>",height: 35},
+								{view:"label",label: "<div><span class='calendar_icon other'></span>Webix Project</div>",height: 35},
+								{ view: "button", label:"Add new calendar",align:"left"},
+								{}
+							]
+						}
+
 					]
 				},
 				{
@@ -70,6 +77,13 @@ return {
 						scheduler.config.last_hour = 24;
 						scheduler.config.multi_day = true;
 						scheduler.templates.event_class=function(s,e,ev){ return ev.calendar?"other":""; };
+						var d = scheduler.date.date_to_str;
+						var week1 = d("%d");
+						var week2 = d("%d %M %y");
+						scheduler.templates.week_scale_date = d("%D, %W/%j");
+						scheduler.templates.week_date = function(d1,d2){
+							return week1(d1)+" &ndash; "+ week2(scheduler.date.add(d2,-1,"day"));
+						}
 					},
 					ready:function(){
 						addEvents();
