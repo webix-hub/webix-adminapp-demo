@@ -4,31 +4,29 @@ define([
 	"models/orders"
 ], function(orderform, exports, orders){
 
-	var controls = {
-		cols:[
-			{ view: "button", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
-				this.$scope.ui(orderform.$ui).show();
-			}},
-			{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
-			{},
-			{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
-				{id:"all", value:"All"},
-				{id:"new", value:"Need Invoicing"},
-				{id:"ready", value:"Ready to Ship"},
-				{id:"completed", value:"Completed"},
-				{id:"cancelled", value:"Cancelled"}
-			],  label:"Filter orders", on:{
-					onChange:function(){
-						var val = this.getValue();
-						if(val=="all")
-							$$("orderData").filter("#status#","");
-						else
-							$$("orderData").filter("#status#",val);
-					}
-				}
+	var controls = [
+		{ view: "button", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
+			this.$scope.ui(orderform.$ui).show();
+		}},
+		{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
+		{},
+		{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
+			{id:"all", value:"All"},
+			{id:"new", value:"Need Invoicing"},
+			{id:"ready", value:"Ready to Ship"},
+			{id:"completed", value:"Completed"},
+			{id:"cancelled", value:"Cancelled"}
+		],  label:"Filter orders", on:{
+			onChange:function(){
+				var val = this.getValue();
+				if(val=="all")
+					$$("orderData").filter("#status#","");
+				else
+					$$("orderData").filter("#status#",val);
 			}
-		]
-	};
+		}
+		}
+	];
 
 	var grid = {
 		margin:10,
@@ -61,7 +59,7 @@ define([
 				onClick:{
 					webix_icon:function(e,id,node){
 						webix.confirm({
-							text:"Are you sure sdfds", ok:"Yes", cancel:"Cancel",
+							text:"The order will be deleted.<br/> Are you sure?", ok:"Yes", cancel:"Cancel",
 							callback:function(res){
 								if(res){
 									webix.$$("orderData").remove(id);
@@ -70,13 +68,6 @@ define([
 						});
 					}
 				}
-			},
-			{
-				view:"pager", id:"pagerA",
-				size:20,
-				height: 35,
-				group:5
-
 			}
 		]
 
@@ -85,9 +76,39 @@ define([
 	var layout = {
 		type: "space",
 		rows:[
-			controls,
-			grid
+			{
+				rows:[
+					{
+						view: "toolbar",
+						css: "highlighted_header header3",
+						paddingX:5,
+						paddingY:5,
+						height:40,
+
+						cols:controls
+					},
+					grid,
+					{
+						view: "toolbar",
+						css: "highlighted_header header6",
+						paddingX:5,
+						paddingY:5,
+						height:40,
+						cols:[{
+							view:"pager", id:"pagerA",
+							template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
+							autosize:true,
+							height: 35,
+							group:5
+						}
+
+						]
+					}
+
+				]
+			}
 		]
+
 	};
 
 	return {

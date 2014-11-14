@@ -30,9 +30,10 @@ define(function(){
 					},
 					data:[
 						{id: "main", value: "Main", open: true, data:[
-							{id: "dashboard", value: "Dashboard", icon: "home", $css: "dashboard", details:"reports and statistics"},
-							{id: "orders", value: "Orders", icon: "check", $css: "orders", details:"order reports and editing"},
-							{id: "products", value: "Products", icon: "leaf", $css: "products", details:"product reports and editing"}
+							{ id: "dashboard", value: "Dashboard", icon: "home", $css: "dashboard", details:"reports and statistics"},
+							{ id: "orders", value: "Orders", icon: "check", $css: "orders", details:"order reports and editing"},
+							{ id: "products", value: "Products", icon: "leaf", $css: "products", details:"all products"},
+							{ id: "product_edit", value: "Product Edit", icon: "pencil-square-o", details: "changing product data"}
 						]},
 						{id: "components", open: true, value:"Components", data:[
 							{ id: "datatables", value: "Datatables", icon: "table", details: "datatable examples" },
