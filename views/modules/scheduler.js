@@ -62,7 +62,6 @@ return {
 						var week1 = d("%d");
 						var week2 = d("%d %M %y");
 						scheduler.filter_day = scheduler.filter_week = scheduler.filter_month = function(id, event){
-							console.log(event.calendar)
 							var calendar = event.calendar;
 							if(!calendar)
 								return $$("calendarList").getItem("my").active;
