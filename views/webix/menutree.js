@@ -22,6 +22,7 @@ webix.type(webix.ui.tree, {
 webix.type(webix.ui.tree, {
 	name:"menuTree2",
 	height: 40,
+
 	icon:function(obj, common){
 		var html = "";
 		var open = "";

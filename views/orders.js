@@ -77,16 +77,16 @@ define([
 		type: "space",
 		rows:[
 			{
-				rows:[
-					{
-						view: "toolbar",
-						css: "highlighted_header header3",
-						paddingX:5,
-						paddingY:5,
-						height:40,
+				/*view: "toolbar",
+				css: "highlighted_header header3",
+				paddingX:5,
+				paddingY:5,*/
+				height:40,
 
-						cols:controls
-					},
+				cols:controls
+			},
+			{
+				rows:[
 					grid,
 					{
 						view: "toolbar",
@@ -104,9 +104,11 @@ define([
 
 						]
 					}
-
 				]
 			}
+
+
+
 		]
 
 	};

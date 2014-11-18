@@ -15,6 +15,7 @@
 	line-height: 17px;
 	box-sizing: border-box;
 	-moz-box-sizing: boder-box;
+	-webkit-box-sizing: boder-box;
 	padding: 0 4px;
 	text-align: center;
 	line-height: 22px;
@@ -48,15 +49,15 @@
 	line-height: inherit;
 }
 
-.webix_tree_item {
+.menu .webix_tree_item {
 	height: 40px;
 	line-height: 40px;
 }
 .webix_tree .webix_scroll_cont > .webix_tree_leaves {
 	padding: 0;
 }
-.menu{
-	background: #f1f1f1;
+.menu.webix_view{
+	background: #f1f1f1 !important;
 }
 .menu .webix_tree_item.webix_selected , .menu .webix_tree_item.webix_selected span{
 	background-color: #27ae60;
@@ -624,3 +625,69 @@
 	line-height: 80px;
 	text-align: center;
 }
+// file manager
+.webix_tree.file .folder_title{
+	float:left;
+	padding:0 6px 0 3px;
+	width:auto;
+}
+.webix_tree.file .webix_selected .folder_title{
+	background-color: #27ae60;
+}
+.webix_tree.file .webix_selected .folder_title .icon{
+	color: #fff;
+}
+.webix_tree.file .folder_title .icon{
+	margin-left: 0;
+	color: #63b4ea;
+	padding-left:4px;
+	padding-right:4px;
+}
+.webix_tree.file .icon{
+	padding-right:0;
+}
+.webix_tree.file .webix_tree_branch_1{
+	padding: 7px;
+}
+.webix_tree.file .webix_tree_item{
+	padding: 1px 0;
+}
+
+.webix_dataview_item.files{
+	text-align: center;
+	font-size: 14px;
+	line-height: 20px;
+	border-color: #fff;
+	border-right-color: #fff;
+	margin: 5px;
+}
+.webix_dataview_item.files .webix_icon{
+	padding-top: 10px;
+	width:30px;
+	padding-bottom: 5px;
+	font-size: 30px;
+}
+.webix_dataview_item.files.webix_selected .webix_icon{
+	color: #fff !important;
+}
+.webix_dataview_item.files .folder .webix_icon{
+	color: #63b4ea;
+}
+.webix_dataview_item.files .pp .webix_icon{
+	color: #eb6e1a;
+}
+.webix_dataview_item.files .ex .webix_icon{
+	color: #27ae60;
+}
+.webix_dataview_item.files .doc .webix_icon{
+	color: #63b4ea;
+}
+.webix_dataview_item.files .img .webix_icon{
+	color: #eb6e1a;
+}
+.webix_dataview_item.files .video .webix_icon{
+	color: #a693eb;
+}
+
+
+

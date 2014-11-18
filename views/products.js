@@ -45,62 +45,58 @@ var grid = {
 
 	var layout = {
 		type: "space",
+
 		rows:[
 			{
-				type: "clean",
+				/*view: "toolbar",
+				css: "highlighted_header header3",
+				paddingY:5,*/
+				height:40,
+
+				cols:[
+					{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", type: "iconButton", icon:"refresh",width:100, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
+					{},
+					{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
+						{id:"all", value:"All"},
+						{id:"1", value:"Published"},
+						{id:"2", value:"Not published"},
+						{id:"0", value:"Deleted"}
+					],  label:"Filter products", on:{
+						onChange:function(){
+							var val = this.getValue();
+							if(val=="all")
+								$$("productsData").filter("#status#","");
+							else
+								$$("productsData").filter("#status#",val);
+						}
+					}
+					}
+				]
+			},
+			{
 				rows:[
+					grid,
 					{
 						view: "toolbar",
-						css: "highlighted_header header3",
+						css: "highlighted_header header6",
 						paddingX:5,
 						paddingY:5,
 						height:40,
+						cols:[{
+							view:"pager", id:"pagerA",
+							template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
+							autosize:true,
+							height: 35,
+							group:5
+						}
 
-						cols:[
-							{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
-							{view: "button", type: "iconButton", icon:"refresh",width:100, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
-							{},
-							{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
-								{id:"all", value:"All"},
-								{id:"1", value:"Published"},
-								{id:"2", value:"Not published"},
-								{id:"0", value:"Deleted"}
-							],  label:"Filter products", on:{
-								onChange:function(){
-									var val = this.getValue();
-									if(val=="all")
-										$$("productsData").filter("#status#","");
-									else
-										$$("productsData").filter("#status#",val);
-								}
-							}
-							}
-						]
-					},
-					{
-						rows:[
-							grid,
-							{
-								view: "toolbar",
-								css: "highlighted_header header6",
-								paddingX:5,
-								paddingY:5,
-								height:40,
-								cols:[{
-									view:"pager", id:"pagerA",
-									template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
-									autosize:true,
-									height: 35,
-									group:5
-								}
-
-								]
-							}
 						]
 					}
-
 				]
 			}
+
+
 		]
 
 	};

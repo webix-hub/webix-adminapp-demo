@@ -19,7 +19,6 @@ define(function(){
 					},
 					on:{
 						onBeforeSelect:function(id){
-							console.log(this.getSelectedId())
 							return !this.getItem(id).$count;
 						},
 						onAfterSelect:function(id){
@@ -31,8 +30,8 @@ define(function(){
 					data:[
 						{id: "main", value: "Main", open: true, data:[
 							{ id: "dashboard", value: "Dashboard", icon: "home", $css: "dashboard", details:"reports and statistics"},
-							{ id: "orders", value: "Orders", icon: "check", $css: "orders", details:"order reports and editing"},
-							{ id: "products", value: "Products", icon: "leaf", $css: "products", details:"all products"},
+							{ id: "orders", value: "Orders", icon: "check-square-o", $css: "orders", details:"order reports and editing"},
+							{ id: "products", value: "Products", icon: "cube", $css: "products", details:"all products"},
 							{ id: "product_edit", value: "Product Edit", icon: "pencil-square-o", details: "changing product data"}
 						]},
 						{id: "components", open: true, value:"Components", data:[
@@ -41,7 +40,8 @@ define(function(){
 
 						]},
 						{id: "uis", value:"UI Examples", open:1, data:[
-							{ id: "calendar", value: "My Calendar", icon: "calendar", details: "calendar example" }
+							{ id: "calendar", value: "My Calendar", icon: "calendar", details: "calendar example" },
+							{ id: "files", value: "File Manager", icon: "file-text-o", details: "file manager example" }
 
 						]}
 					]
