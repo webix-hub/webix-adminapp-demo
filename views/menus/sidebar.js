@@ -36,12 +36,13 @@ define(function(){
 						]},
 						{id: "components", open: true, value:"Components", data:[
 							{ id: "datatables", value: "Datatables", icon: "table", details: "datatable examples" },
-							{ id: "charts", value: "Charts", icon: "bar-chart-o", details: "charts examples"}
+							{ id: "charts", value: "Charts", icon: "bar-chart-o", details: "charts examples"},
+							{ id: "forms", value: "Forms", icon: "list-alt", details: "forms examples"}
 
 						]},
 						{id: "uis", value:"UI Examples", open:1, data:[
 							{ id: "calendar", value: "My Calendar", icon: "calendar", details: "calendar example" },
-							{ id: "files", value: "File Manager", icon: "file-text-o", details: "file manager example" }
+							{ id: "files", value: "File Manager", icon: "folder-open-o", details: "file manager example" }
 
 						]}
 					]
