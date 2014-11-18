@@ -5,13 +5,16 @@ define([],function(){
 		rows:[
 			{
 				view: "toolbar",
-				css: "highlighted_header header3",
+				css: "highlighted_header header1",
 				paddingX:5,
 				paddingY:5,
 				height:40,
 				cols:[
 					{
 						"template": "<span class='webix_icon fa-male'></span>User", "css": "sub_title2", borderless:true
+					},
+					{
+						view: "button", label: "Close", width: 80
 					}
 				]
 			},
@@ -19,12 +22,14 @@ define([],function(){
 				view: "form",
 				id: "userForm",
 				elementsConfig:{
-					labelWidth: 100
+					labelWidth: 120
 				},
 				elements:[
 					{view: "text", label: "First Name",name: "name1"},
 					{view: "text", label: "Last Name", name: "name2"},
 					{view: "datepicker", label: "Date of Birth", name: "date"},
+				
+					{view: "text", label: "Phone Number"},
 					{
 						margin: 10,
 						paddingX: 2,

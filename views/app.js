@@ -34,7 +34,7 @@ define([
 		rows:[
 			{ height: 49, id: "title", css: "title", template: "<div class='header'>#title#</div><div class='details'>( #details# )</div>", data: {text: "",title: ""}},
 			{
-				view: "scrollview",
+				view: "scrollview", scroll:"native-y",
 				body:{ cols:[{ $subview:true}] }
 			}
 		]

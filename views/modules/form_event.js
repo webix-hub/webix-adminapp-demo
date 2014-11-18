@@ -12,6 +12,9 @@ define([],function(){
 				cols:[
 					{
 						"template": "<span class='webix_icon fa-star-o'></span>Event", "css": "sub_title2", borderless:true
+					},
+					{
+						view: "button", label: "Close", width: 80
 					}
 				]
 			},

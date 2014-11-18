@@ -6,27 +6,22 @@ define([
 ],function(user, project, event, style){
 
 	var layout = {
-		type: "clean",
-		rows:[
-			{
-				type: "space",
-				rows:[
-					{type: "wide",
-						cols: [
-							user,
-							project
-						]
-					},
-					{type: "wide",
-						cols: [
-							event,
-							style
-						]
-					}
+		type: "space",
+		cols:[
+			{type: "wide",
+				rows: [
+					user,
+					event
 				]
-
+			},
+			{type: "wide",
+				rows: [
+					style,
+					project
+				]
 			}
 		]
+
 	};
 
 	return { $ui:layout };
