@@ -8,7 +8,7 @@ define([
 	"helpers/locale",
 	"helpers/theme",
 	"libs/rollbar"
-], function(core, menu, login, locale, theme, tracker, formats){
+], function(core, menu, locale, theme, tracker){
 
 
 	//webix.codebase = "libs/webix/";
