@@ -9,6 +9,7 @@ return {
 		css:"list_popup",
 		body:{
 			type: "clean",
+			borderless:true,
 			rows:[
 				{
 					view: "list",
@@ -20,7 +21,7 @@ return {
 					],
 					type:{
 						height: 45,
-						template: "<img class='photo' src='assets/photos/#personId#.png' /><span class='text'>#text#</span><span class='name'>#name#</span>"
+						template: "<img class='photo' src='assets/imgs/photos/#personId#.png' /><span class='text'>#text#</span><span class='name'>#name#</span>"
 
 					}
 				},

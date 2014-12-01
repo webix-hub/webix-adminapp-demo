@@ -34,7 +34,7 @@ define(function(){
 							webix.ui({
 								id:"uploadAPI",
 								view:"uploader",
-								upload:	"helpers/upload.php",
+								upload:	"server/upload.php",
 								on:{
 									onFileUploadError: function(item){
 										webix.alert("Error during file upload");

@@ -29,12 +29,10 @@ define(function(){
 					{ id: "7", text: "Discussing new theme for website", type: "company"}
 				],
 				on: {
-					onAfterRender: function(){
-						this.on_click.webix_icon_btn = function(e,id,node){
-							var item = this.getItem(id);
-							item.$check = !item.$check;
-							this.refresh(id);
-						};
+					onItemClick:function(id){
+						var item = this.getItem(id);
+						item.$check = !item.$check;
+						this.refresh(id);
 					}
 				}
 			},

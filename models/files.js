@@ -27,6 +27,8 @@ define([],function(){
 		{ id: "thumbnails", value: "Thumbnails",pId: "images"},
 		{ id: "base", value: "Base images",pId: "images"},
 		{ id: "video", value: "Video",pId: "files"},
+		{id: "video1", value: "New Year 2013.avi", icon: "file-video-o", type:"video",   date: "2014-01-01 16:01", size: "25.83 MB", pId: "video" },
+		{id: "video2", value: "Presentation.avi", icon: "file-video-o",type:"video",  date: "2014-10-04 12:05", size: "110.72 MB" , pId: "video"},
 		{id: "pres1", value: "October 2014.ppt", icon: "file-powerpoint-o", type:"pp", date: "2014-03-10 16:01", size: "12.83 KB",pId: "presentations"},
 		{id: "pres2", value: "June 2014.ppt", icon: "file-powerpoint-o",  type:"pp", date: "2014-03-10 16:03", size: "20.10 KB",pId: "presentations"},
 		{id: "pres3", value: "April 2014.ppt", icon: "file-powerpoint-o",  type:"pp", date: "2014-03-10 16:04", size: "15.75 KB",pId: "presentations"},
@@ -59,6 +61,10 @@ define([],function(){
 		{id: "video2", value: "Presentation.avi", icon: "file-video-o",type:"video",  date: "2014-10-04 12:05", size: "110.72 MB" , pId: "video"},
 		{id: "video3", value: "Conference.avi", icon: "file-video-o", type:"video", date: "2014-11-03 18:05", size: "312.56 MB", pId: "video" }
 	];
+
+	for (var i = 1; i < 100; i++)
+		files.push({ pId: "files", value:"backup."+((i<10)?"00":"0")+i+".zip", icon:"file-zip-o", type:"zip", size:"500 MB" })
+	
 	return {
 		folders:folders,
 		files:files

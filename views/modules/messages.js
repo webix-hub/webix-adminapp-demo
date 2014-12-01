@@ -13,7 +13,7 @@ define(function(){
 			"height": "auto",
 			"template": function(obj){
 				var text = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae. ";
-				var html = 	"<img class='photo' src='assets/photos/"+obj.personId+".png' />";
+				var html = 	"<img class='photo' src='assets/imgs/photos/"+obj.personId+".png' />";
 				html += "<div class='text'><div class='name'>"+obj.name+"<div class='time'>"+obj.time+"</div></div>";
 				html += text+"</div>";
 				return html;

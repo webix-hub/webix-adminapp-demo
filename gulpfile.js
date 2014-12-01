@@ -66,6 +66,7 @@ gulp.task('build', ["js", "css"], function(){
 		.pipe(replace(/\.css\"/g, '.css?'+build+'"'))
 		.pipe(replace(/\.js\"/g, '.js?'+build+'"'))
 		.pipe(replace("require.config", "webix.production = true; require.config"))
+		.pipe(replace(/\.\.\/webix\/codebase\//g, '//cdn.webix.io/site/'))
 
 		.pipe(gulp.dest("./deploy/")),
 		//server
