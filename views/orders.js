@@ -77,12 +77,7 @@ define([
 		type: "space",
 		rows:[
 			{
-				/*view: "toolbar",
-				css: "highlighted_header header3",
-				paddingX:5,
-				paddingY:5,*/
 				height:40,
-
 				cols:controls
 			},
 			{

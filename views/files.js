@@ -26,7 +26,7 @@ define(["models/files",	"views/modules/edittree","views/webix/fileview"], functi
 			{
 				type: "wide",
 				cols:[
-					{gravity: 0.6,rows:[
+					{width: 330, rows:[
 						tree,
 						{
 							view: "form",
@@ -36,7 +36,7 @@ define(["models/files",	"views/modules/edittree","views/webix/fileview"], functi
 							height:40,
 
 							elements:[
-								{view: "text", label: "Path:", labelAlign: "right", labelWidth: 60,id: "path"}
+								{view: "text", label: "Path:", labelAlign: "right", labelWidth: 60, id: "path"}
 							]
 
 						}
@@ -65,7 +65,7 @@ define(["models/files",	"views/modules/edittree","views/webix/fileview"], functi
 			webix.ui({
 				id:"fileUploadAPI",
 				view:"uploader",
-				upload:	"helpers/upload.php",
+				upload:	"server/upload.php",
 				on:{
 					onFileUploadError: function(item){
 						webix.alert("Error during file upload");

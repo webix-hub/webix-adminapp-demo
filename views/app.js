@@ -18,7 +18,7 @@ define([
 			{ height:46, id: "person_template", css: "header_person", borderless:true, width: 180, data: {id:3,name: "Oliver Parr"},
 				template: function(obj){
 					var html = 	"<div style='height:100%;width:100%;' onclick='webix.$$(\"profilePopup\").show(this)'>";
-					html += "<img class='photo' src='assets/photos/"+obj.id+".png' /><span class='name'>"+obj.name+"</span>";
+					html += "<img class='photo' src='assets/imgs/photos/"+obj.id+".png' /><span class='name'>"+obj.name+"</span>";
 					html += "<span class='webix_icon fa-angle-down'></span></div>";
 					return html;
 				}

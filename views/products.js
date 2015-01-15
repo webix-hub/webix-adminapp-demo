@@ -48,9 +48,6 @@ var grid = {
 
 		rows:[
 			{
-				/*view: "toolbar",
-				css: "highlighted_header header3",
-				paddingY:5,*/
 				height:40,
 
 				cols:[
