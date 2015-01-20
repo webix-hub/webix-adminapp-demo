@@ -10,7 +10,7 @@ define(function(){
 		barWidth:30,
 		radius:2,
 		tooltip:{
-			template:"#sales#"
+			template:"#progress# %"
 		},
 		yAxis:{
 			template:"#name#"
