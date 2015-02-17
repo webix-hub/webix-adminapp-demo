@@ -8,11 +8,11 @@
 	<!-- Dynamic themes -->
 	<script type="text/javascript">
 		var user   = webix.remote.$user;
-		var config = (user && user.settings) ? JSON.parse(user.settings): {};
-		var theme = (config.theme || webix.storage.local.get("--:app:theme") || "siberia:webix").split(":");
+		//var config = (user && user.settings) ? JSON.parse(user.settings): {};
+		//var theme = (config.theme || webix.storage.local.get("--:app:theme") || "siberia:webix").split(":");
 		
-		document.write('<link type="text/css" rel="stylesheet" href="../webix/codebase/'+theme[1]+'.css">');
-		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.'+theme[0]+'.less">');
+		document.write('<link type="text/css" rel="stylesheet" href="../webix/codebase/webix.css">');
+		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.siberia.less">');
 	</script>
 
 	<!-- The app's logic -->
