@@ -5,10 +5,10 @@ define([
 ], function(orderform, exports, orders){
 
 	var controls = [
-		{ view: "button", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
+		{ view: "button", css: "webix_button_primary raised", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
 			this.$scope.ui(orderform.$ui).show();
 		}},
-		{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
+		{ view: "button", css: "webix_button_primary raised", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
 		{},
 		{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
 			{id:"all", value:"All"},
@@ -75,23 +75,23 @@ define([
 
 	var layout = {
 		type: "space",
-		rows:[
+		rows: [
 			{
-				height:40,
-				cols:controls
+				height: 40,
+        css: "no_shadow",
+				cols: controls
 			},
 			{
 				rows:[
 					grid,
 					{
 						view: "toolbar",
-						css: "highlighted_header header6",
 						paddingX:5,
 						paddingY:5,
 						height:40,
 						cols:[{
 							view:"pager", id:"pagerA",
-							template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
+							template:"{common.pages()}",
 							autosize:true,
 							height: 35,
 							group:5

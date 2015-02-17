@@ -14,6 +14,7 @@ var layout = {
 			cols:[
 				{
 					type:"wide",
+          borderless: true,
 					rows:[
 						rating,
 						treetable
@@ -21,6 +22,7 @@ var layout = {
 				},
 				{
 					type:"wide",
+          borderless: true,
 					gravity: 0.8,
 					rows:[
 						progress,

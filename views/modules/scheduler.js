@@ -6,16 +6,21 @@ return {
 	$ui:{
 		minWidth: 500,
 		gravity: 2,
+    borderless: true,
+    css: "no_shadow",
 		rows:[
 			{
 				type: "wide",
+        borderless: true,
 				cols:[
 				{
 
 					width: 240,
 
 					rows:[
-						{view: "calendar", on:{
+						{
+              view: "calendar", 
+              on:{
 							onDateSelect: function(date){
 								scheduler.updateView(date,"week");
 							}
@@ -38,7 +43,7 @@ return {
 										}
 									}
 								},
-								{ view: "button", label:"Add new calendar",align:"left"},
+								{ view: "button", css: "webix_button_primary raised", label:"Add new calendar",align:"left"},
 								{}
 							]
 						}
@@ -46,9 +51,9 @@ return {
 					]
 				},
 				{
-					view:"dhx-scheduler",
-					date:new Date(),
-
+					view: "dhx-scheduler",
+					date: new Date(),
+          css: "shadow",
 					mode:"month",
 					tabs:["day","week", "month"],
 					init:function(){

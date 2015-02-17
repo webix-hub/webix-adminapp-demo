@@ -1,6 +1,7 @@
 define([],function(){
 	var layout = {
 		type: "clean",
+    borderless: true,
 		rows:[
 			{
 				view: "toolbar",
@@ -25,17 +26,18 @@ define([],function(){
 					{ view: "combo", label: "Font Family", value: "Arial", options:["Arial", "Tahoma", "Verdana"]},
 					{ view:"radio", name:"fontWeigth", label:"Font Weigth", value:"400",  options:["400", "500", "700"] },
 					{ view: "colorpicker", label: "Background", value: "#a693eb"},
-					{ view: "colorpicker", label: "Font Color", value: "#a4b4bf"},
+					{ view: "colorpicker",  label: "Font Color", value: "#a4b4bf"},
 
-					{ view: "text", label: "Font Size (px)", value: "14"},
+					{ view: "text", placeholder: "Type here...", label: "Font Size (px)", value: "14"},
 					{
 						margin: 10,
 						paddingX: 2,
 						borderless: true,
 						cols:[
 							{},
-							{view: "button", type: "iconButton", icon:"angle-left", label: "Back",  align: "right", width: 90},
-							{view: "button", type:"form", label: "Done",  align: "right", width: 90}
+              {view: "button", type: "iconButton", icon:"angle-left", label: "Back",  align: "right", width: 90},
+							{view: "button", css: "webix_button_info", type: "info", label: "Info",  align: "right", width: 90},
+							{view: "button", css: "webix_button_primary raised", type:"form", label: "Done",  align: "right", width: 90}
 						]
 					}
 

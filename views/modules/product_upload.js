@@ -6,10 +6,11 @@ define(function(){
 			margin: 10,
 			rows:[
 				{
+          css: "no_shadow",
 					cols:[
 						{},
 						{
-							view:"button", type:"iconButton", icon: "plus-circle", label: "Add image record", width: 170
+							view:"button", css: "webix_button_primary raised", type:"iconButton", icon: "plus-circle", label: "Add image record", width: 190
 						}
 					]
 				},

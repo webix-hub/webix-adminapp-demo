@@ -2,6 +2,7 @@ define([],function(){
 	var layout = {
 
 		type: "clean",
+    borderless: true,
 		rows:[
 			{
 				view: "toolbar",
@@ -14,7 +15,7 @@ define([],function(){
 						"template": "<span class='webix_icon fa-male'></span>User", "css": "sub_title2", borderless:true
 					},
 					{
-						view: "button", label: "Close", width: 80
+						view: "button", css: "transparent", label: "Close", width: 80
 					}
 				]
 			},
@@ -25,19 +26,20 @@ define([],function(){
 					labelWidth: 120
 				},
 				elements:[
-					{view: "text", label: "First Name",name: "name1"},
-					{view: "text", label: "Last Name", name: "name2"},
-					{view: "datepicker", label: "Date of Birth", name: "date"},
+					{view: "text", placeholder: "Type here...", label: "First Name",name: "name1"},
+					{view: "text", placeholder: "Type here...", label: "Last Name", name: "name2"},
+					{view: "datepicker", placeholder: "Select here...", label: "Date of Birth", name: "date"},
 				
-					{view: "text", label: "Phone Number"},
+					{view: "text", placeholder: "Type here...", label: "Phone Number"},
 					{
 						margin: 10,
 						paddingX: 2,
 						borderless: true,
 						cols:[
+              {view: "button", css: "webix_button_danger", label: "Delete", type: "form", align: "left"},
 							{},
-							{view: "button", label: "Reset",  align: "right"},
-							{view: "button", label: "Save", type: "form", align: "right"}
+							{view: "button", css: "", label: "Reset",  align: "right"},
+              {view: "button", css: "webix_button_primary raised", label: "Save", type: "form", align: "right"}
 						]
 					}
 

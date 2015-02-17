@@ -3,6 +3,7 @@ define(function(){
 	var tasks = {
 		gravity: 3,
 		"type": "clean",
+    borderless: true,
 		"rows":[
 			{
 				"template": "<span class='webix_icon fa-pie-chart'></span>Pie chart", "css": "sub_title", "height": 30

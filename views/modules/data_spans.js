@@ -3,6 +3,7 @@ define(["models/data_arrays"],function(data_arrays){
 	var titleGroup = {
 		view: "toolbar",
 		css: "highlighted_header header2",
+    borderless: true,
 		paddingX:5,
 		paddingY:5,
 		height:40,
@@ -10,7 +11,7 @@ define(["models/data_arrays"],function(data_arrays){
 			{
 				"template": "<span class='webix_icon fa-arrows-v'></span>Spans", "css": "sub_title2", borderless: true
 			},
-			{ view: "icon", icon: "refresh",width: 40}
+			{ view: "button", css: "transparent", type: "iconButton", icon: "refresh", width: 40}
 
 		]
 	};

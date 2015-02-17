@@ -13,13 +13,13 @@ var layout = {
 	type: "space",
 	rows:[
 		{
-				type: "wide",
+        type: "wide",
 				cols:[
 					search,
 					{
 						gravity: 2.2,
 						rows:[
-							{view: "tabbar", multiview: true,optionWidth: 130,
+							{view: "tabbar", type: "clean", multiview: true, optionWidth: 100,
 								options:[
 									{id: "mainView", value: "Main"},
 									{id: "imagesView", value: "Images"},
@@ -42,11 +42,11 @@ var layout = {
 								height:40,
 
 								cols:[
-									{ view: "button", type: "form", icon: "plus", label: "Save", width: 90},
+									{ view: "button", css: "webix_button_primary raised", type: "form", icon: "plus", label: "Save", width: 90},
 									{ view: "button", css: "button2", icon: "angle-left", label: "Reset", width: 90},
 
 									{},
-									{ view: "button", css: "button0", icon: "times", label: "Delete", width: 90}
+									{ view: "button", css: "webix_button_danger button0", icon: "times", label: "Delete", width: 90}
 								]
 
 							}
