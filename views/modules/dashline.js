@@ -3,6 +3,7 @@ define(function(){
 	return {
 		$ui:{
 			autoheight: true,
+      borderless: true,
 			css: "tiles",
 			template: function(data){
 				var t = null;

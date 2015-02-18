@@ -3,6 +3,7 @@ define(["models/orders"],function(orders){
 	var titlePager = {
 		view: "toolbar",
 		css: "highlighted_header header5",
+    borderless: true,
 		paddingX:5,
 		paddingY:5,
 		height:40,
@@ -10,8 +11,8 @@ define(["models/orders"],function(orders){
 			{
 				"template": "<span class='webix_icon fa-file-text-o'></span>Pager", "css": "sub_title2", borderless: true
 			},
-			{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 100},
-			{ view: "button", type: "iconButton", icon: "pencil-square-o", label: "Edit", width: 80}
+			{ view: "button", css: "transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120},
+			{ view: "button", css: "transparent", type: "iconButton", icon: "pencil-square-o", label: "Edit", width: 100}
 		]
 	};
 	var gridPager =  {
@@ -20,6 +21,7 @@ define(["models/orders"],function(orders){
 			{
 				id:"orderData",
 				view:"datatable", select:true,
+        borderless: true,
 				columns:[
 					{id:"id", header:"#", width:50},
 					{id:"employee", header:["Employee", {content:"selectFilter"} ], sort:"string", minWidth:150, fillspace:1},
@@ -32,7 +34,7 @@ define(["models/orders"],function(orders){
 					{id:"shipping_company", header:"Shipping Company", sort:"string" },
 					{id:"payment_method", header:"Payment method", width:130, sort:"string"},
 					{id:"date", header:"Date", sort:"string", width:100},
-					{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
+					{id:"trash", header:"&nbsp;", width:50, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 				],
 				export: true,
 				on: {

@@ -9,15 +9,15 @@ define(["views/webix/ckeditor"], function(){
 		},
 		scroll: true,
 		elements:[
-			{view: "text", name: "code", label: "Code"},
-			{view: "text", name: "name", label: "Name"},
-			{view: "text", name: "price", label: "Price"},
-			{view: "richselect", name: "category", label:"Category", vertical: true, options:[
+			{view: "text", placeholder: "Type here...", name: "code", label: "Code"},
+			{view: "text", placeholder: "Type here...", name: "name", label: "Name"},
+			{view: "text", placeholder: "Type here...", name: "price", label: "Price"},
+			{view: "richselect", placeholder: "Select here...", name: "category", label:"Category", vertical: true, options:[
 				{id:2, value: "Home furniture"},
 				{id:3, value: "Office furniture"},
 				{id:1, value: "Wood furniture"}
 			]},
-			{view:"richselect", name:"status", value: "all",label: "Status", options:[
+			{view:"richselect", placeholder: "Select here...", name:"status", value: "all",label: "Status", options:[
 				{id:"1", value:"Published"},
 				{id:"2", value:"Not published"},
 				{id:"0", value:"Deleted"}

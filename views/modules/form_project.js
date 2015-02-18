@@ -2,6 +2,7 @@ define([],function(){
 	var layout = {
 
 		"type": "clean",
+    borderless: true,
 		"rows":[
 			{
 				view: "toolbar",
@@ -36,7 +37,8 @@ define([],function(){
 						borderless: true,
 						cols:[
 							{},
-							{view: "button", label: "Next", type: "form", align: "right",width: 80}
+							{view: "button", css: "webix_button_primary raised", label: "Next", type: "form", align: "right",width: 80},
+              {view: "button", css: "webix_button_success raised", label: "Finish", type: "form", align: "right",width: 100}
 						]
 					}
 				]

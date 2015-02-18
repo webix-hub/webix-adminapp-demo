@@ -2,6 +2,7 @@ define(["models/data_arrays"],function(data_arrays){
 	var titleTree = {
 		view: "toolbar",
 		css: "highlighted_header header3",
+    borderless: true,
 		paddingX:5,
 		paddingY:5,
 		height:40,
@@ -9,7 +10,7 @@ define(["models/data_arrays"],function(data_arrays){
 			{
 				"template": "<span class='webix_icon fa-folder-o'></span>Treetable", "css": "sub_title2", borderless: true
 			},
-			{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 100}
+			{ view: "button", css: "transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120}
 		]
 	};
 	var gridTree = {
