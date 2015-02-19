@@ -2,7 +2,7 @@ define(function(){
 
 	return {
 		$ui:{
-			autoheight: true,
+			height: 136,
       borderless: true,
 			css: "tiles",
 			template: function(data){
