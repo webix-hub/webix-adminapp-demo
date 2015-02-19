@@ -23,6 +23,8 @@ define([
 		tracker.init({
 			accessToken: '650b007d5d794bb68d056584451a57a8',
 			captureUncaught: true,
+			source_map_enabled: true,
+			code_version:"0.8.0",
 			payload: {
 				environment: 'production'
 			}

@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var less = require('gulp-less');
 var clean = require('gulp-clean');
+var zip = require("gulp-zip");
 
 var replace = require("gulp-replace");
 var jshint = require("gulp-jshint");
@@ -76,6 +77,12 @@ gulp.task('build', ["js", "css"], function(){
 	
 });
 
+gulp.task("sources", function(){
+	gulp.src(["assets/**/*", "helpers/**/*", "libs/**/*", "models/**/*", "server/**/*", "views/**/*","index.html", "app.js", "package.json"], 
+		{base: './'})
+	.pipe( zip("webix-admin-app.sources.zip") )
+	.pipe( gulp.dest('./') );
+});
 
 gulp.task('lint', function() {
   return gulp.src('./views/**/*.js', './helpers/**/*.js', './models/**/*.js', './configs/**/*.js', './*.js')
