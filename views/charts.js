@@ -13,6 +13,7 @@ define([
 		rows:[
 			{
 				type: "space",
+        borderless: true,
 				rows:[
 
 					{

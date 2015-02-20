@@ -11,8 +11,8 @@ define(["models/orders"],function(orders){
 			{
 				"template": "<span class='webix_icon fa-file-text-o'></span>Pager", "css": "sub_title2", borderless: true
 			},
-			{ view: "button", css: "transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120},
-			{ view: "button", css: "transparent", type: "iconButton", icon: "pencil-square-o", label: "Edit", width: 100}
+			{ view: "button", css: "webix_button_transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120},
+			{ view: "button", css: "webix_button_transparent", type: "iconButton", icon: "pencil-square-o", label: "Edit", width: 100}
 		]
 	};
 	var gridPager =  {

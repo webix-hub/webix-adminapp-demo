@@ -42,14 +42,16 @@ define(["models/files",	"views/modules/edittree","views/webix/fileview"], functi
 						}
 					]},
 					{view: "resizer"},
-					{ view: "dataview", edit: true, select: true, id: "filesView", type: "fileView", drag: true,
-						onDblClick: {
-							webix_dataview_item: function(e,id){
-								if($$("fileTree").exists(id))
-									$$("fileTree").select(id);
-							}
-						}
-					}
+          { rows: [
+            { view: "dataview", edit: true, select: true, id: "filesView", type: "fileView", drag: true,
+              onDblClick: {
+                webix_dataview_item: function(e,id){
+                  if($$("fileTree").exists(id))
+                    $$("fileTree").select(id);
+                }
+              }
+            }
+          ]}
 				]
 			}
 		]

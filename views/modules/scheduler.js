@@ -8,6 +8,7 @@ return {
 		gravity: 2,
     borderless: true,
     css: "no_shadow",
+    type: "wide",
 		rows:[
 			{
 				type: "wide",
