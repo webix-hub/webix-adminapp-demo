@@ -15,7 +15,7 @@ define([],function(){
 						"template": "<span class='webix_icon fa-star-o'></span>Event", "css": "sub_title2", borderless:true
 					},
 					{
-						view: "button", css: "transparent", label: "Close", width: 80
+						view: "button", css: "webix_button_transparent", label: "Close", width: 80
 					}
 				]
 			},
