@@ -213,6 +213,47 @@ define([
                 ]
               }
             ]
+          },
+
+          {
+            type: "line",
+            height: 200,
+            width: "100%",
+            rows: [
+              {type: "line",
+                rows: [
+                  {
+                    view: "template",
+                    template: "Icon Styles",
+                    type: "header"
+                  },
+                  {
+                    view: "form",
+                    elementsConfig:{
+                      labelWidth: 100,
+                      margin: 10,
+                      paddingX: 2,
+                      borderless: true
+                    },
+                    elements:[
+                      {               
+                        cols:[
+                          {css: "webix_add_icon", header:"<span class='webix_icon fa-plus-circle'></span>", template:"<span class='webix_icon fa-plus-circle' style='cursor:pointer;'></span>Add Icon"},
+                          {css: "webix_remove_icon", header:"<span class='webix_icon fa-times'></span>", template:"<span class='webix_icon fa-times' style='cursor:pointer;'></span>Remove Icon"}
+                        ]
+                      },
+                      {
+                        cols:[
+                          {template: 'css: "webix_add_icon"'},
+                          {template: 'css: "webix_remove_icon"'}
+                        ]
+                      }
+
+                    ]
+                  }
+                ]
+              }
+            ]
           }
           
         ]
