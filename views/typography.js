@@ -189,22 +189,22 @@ define([
                     elements:[
                       {               
                         cols:[
-                          {view: "button", label: "Ordinary Raised", css: "raised", type: "form", align: "left"},
-                          {view: "button", label: "Primary Raised", css: "webix_button_primary raised", type: "form", align: "left"},
-                          {view: "button", label: "Info Raised", css: "webix_button_info raised", type: "form", align: "left"},
-                          {view: "button", label: "Success Raised", css: "webix_button_success raised", type: "form", align: "right"},
-                          {view: "button", label: "Warning Raised", css: "webix_button_warning raised", type: "form", align: "right"},
-                          {view: "button", label: "Danger Raised", css: "webix_button_danger raised", type: "form", align: "right"}
+                          {view: "button", label: "Ordinary Raised", css: "webix_button_raised", type: "form", align: "left"},
+                          {view: "button", label: "Primary Raised", css: "webix_button_primary webix_button_raised", type: "form", align: "left"},
+                          {view: "button", label: "Info Raised", css: "webix_button_info webix_button_raised", type: "form", align: "left"},
+                          {view: "button", label: "Success Raised", css: "webix_button_success webix_button_raised", type: "form", align: "right"},
+                          {view: "button", label: "Warning Raised", css: "webix_button_warning webix_button_raised", type: "form", align: "right"},
+                          {view: "button", label: "Danger Raised", css: "webix_button_danger webix_button_raised", type: "form", align: "right"}
                         ]
                       },
                       {
                         cols:[
-                          {template: 'css: "raised"'},
-                          {template: 'css: "webix_button_primary raised"'},
-                          {template: 'css: "webix_button_info raised"'},
-                          {template: 'css: "webix_button_success raised"'},
-                          {template: 'css: "webix_button_warning raised"'},
-                          {template: 'css: "webix_button_danger raised"'}
+                          {template: 'css: "webix_button_raised"'},
+                          {template: 'css: "webix_button_primary webix_button_raised"'},
+                          {template: 'css: "webix_button_info webix_button_raised"'},
+                          {template: 'css: "webix_button_success webix_button_raised"'},
+                          {template: 'css: "webix_button_warning webix_button_raised"'},
+                          {template: 'css: "webix_button_danger webix_button_raised"'}
                         ]
                       }
 

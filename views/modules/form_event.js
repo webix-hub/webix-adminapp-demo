@@ -40,10 +40,10 @@ define([],function(){
 						paddingX: 2,
 						borderless: true,
 						cols:[
-              {view: "button", css: "webix_button_warning raised", label: "Warning", type: "form", align: "left"},
+              {view: "button", css: "webix_button_warning webix_button_raised", label: "Warning", type: "form", align: "left"},
 							{},
 							{view: "button", label: "Reset",  align: "right"},
-							{view: "button", css: "webix_button_primary raised", label: "Save", type: "form", align: "right"}
+							{view: "button", css: "webix_button_primary webix_button_raised", label: "Save", type: "form", align: "right"}
 						]
 					}
 

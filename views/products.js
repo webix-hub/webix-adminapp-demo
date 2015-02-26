@@ -51,8 +51,8 @@ var grid = {
 				height: 40,
         css: "no_shadow",
 				cols: [
-					{view: "button", css: "webix_button_primary raised", type: "iconButton", icon:"file-excel-o",width:180, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
-					{view: "button", css: "webix_button_primary raised", type: "iconButton", icon:"refresh",width:120, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon:"file-excel-o",width:180, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon:"refresh",width:120, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
 					{},
 					{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
 						{id:"all", value:"All"},

@@ -42,7 +42,7 @@ var layout = {
 								height:40,
 
 								cols:[
-									{ view: "button", css: "webix_button_primary raised", type: "form", icon: "plus", label: "Save", width: 90},
+									{ view: "button", css: "webix_button_primary webix_button_raised", type: "form", icon: "plus", label: "Save", width: 90},
 									{ view: "button", css: "button2", icon: "angle-left", label: "Reset", width: 90},
 
 									{},

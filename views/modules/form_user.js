@@ -39,7 +39,7 @@ define([],function(){
               {view: "button", css: "webix_button_danger", label: "Delete", type: "form", align: "left"},
 							{},
 							{view: "button", css: "", label: "Reset",  align: "right"},
-              {view: "button", css: "webix_button_primary raised", label: "Save", type: "form", align: "right"}
+              {view: "button", css: "webix_button_primary webix_button_raised", label: "Save", type: "form", align: "right"}
 						]
 					}
 
