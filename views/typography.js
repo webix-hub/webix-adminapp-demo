@@ -239,12 +239,14 @@ define([
                       {               
                         cols:[
                           {css: "webix_add_icon", header:"<span class='webix_icon fa-plus-circle'></span>", template:"<span class='webix_icon fa-plus-circle' style='cursor:pointer;'></span>Add Icon"},
+                          {css: "webix_edit_icon", header:"<span class='webix_icon fa-edit'></span>", template:"<span class='webix_icon fa-edit' style='cursor:pointer;'></span>Edit Icon"},
                           {css: "webix_remove_icon", header:"<span class='webix_icon fa-times'></span>", template:"<span class='webix_icon fa-times' style='cursor:pointer;'></span>Remove Icon"}
                         ]
                       },
                       {
                         cols:[
                           {template: 'css: "webix_add_icon"'},
+                          {template: 'css: "webix_edit_icon"'},
                           {template: 'css: "webix_remove_icon"'}
                         ]
                       }
