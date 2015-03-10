@@ -4,6 +4,7 @@ define(function(){
 		$ui:{
 			height: 136,
       borderless: true,
+      css: "webix_layout_shadowed",
 			css: "tiles",
 			template: function(data){
 				var t = null;

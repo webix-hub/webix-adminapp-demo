@@ -82,6 +82,8 @@ define([
 				cols: controls
 			},
 			{
+        borderless: true,
+        css: "webix_layout_shadowed",
 				rows:[
 					grid,
 					{

@@ -3,6 +3,7 @@ define([],function(){
 
 		type: "clean",
     borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			{
 				view: "toolbar",

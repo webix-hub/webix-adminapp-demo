@@ -71,6 +71,8 @@ define(["models/orders"],function(orders){
 
 	var layout = {
 		type: "clean",
+    borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			titlePager,
 			gridPager

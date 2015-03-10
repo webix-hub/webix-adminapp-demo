@@ -9,6 +9,8 @@ define([
         rows:[          
           {
             type: "line",
+            borderless: true,
+            css: "webix_layout_shadowed",
             rows: [
               {type: "line",
                 rows: [
@@ -43,6 +45,8 @@ define([
           {
             type: "line",
             height: 150,
+            borderless: true,
+            css: "webix_layout_shadowed",
             rows: [
               {type: "line",
                 rows: [
@@ -81,6 +85,8 @@ define([
           {
             type: "line",
             height: 150,
+            borderless: true,
+            css: "webix_layout_shadowed",
             rows: [
               {type: "line",
                 rows: [
@@ -118,6 +124,8 @@ define([
           {
             type: "line",
             height: 200,
+            borderless: true,
+            css: "webix_layout_shadowed",
             rows: [
               {type: "line",
                 rows: [
@@ -170,6 +178,8 @@ define([
           {
             type: "line",
             height: 200,
+            borderless: true,
+            css: "webix_layout_shadowed",
             rows: [
               {type: "line",
                 rows: [
@@ -194,7 +204,9 @@ define([
                           {view: "button", label: "Info Raised", css: "webix_button_info webix_button_raised", type: "form", align: "left"},
                           {view: "button", label: "Success Raised", css: "webix_button_success webix_button_raised", type: "form", align: "right"},
                           {view: "button", label: "Warning Raised", css: "webix_button_warning webix_button_raised", type: "form", align: "right"},
-                          {view: "button", label: "Danger Raised", css: "webix_button_danger webix_button_raised", type: "form", align: "right"}
+                          {view: "button", label: "Danger Raised", css: "webix_button_danger webix_button_raised", type: "form", align: "right"},
+                          {view: "button", label: "Badged", css: "webix_button_raised", type: "form", align: "left", 
+                            template: "<button type='button'>#label#<span class='webix_badge'>4</span></button>"}
                         ]
                       },
                       {
@@ -204,7 +216,8 @@ define([
                           {template: 'css: "webix_button_info webix_button_raised"'},
                           {template: 'css: "webix_button_success webix_button_raised"'},
                           {template: 'css: "webix_button_warning webix_button_raised"'},
-                          {template: 'css: "webix_button_danger webix_button_raised"'}
+                          {template: 'css: "webix_button_danger webix_button_raised"'},
+                          {template: 'Button with badge (add class "webix_badge" to badge container)'}
                         ]
                       }
 
@@ -218,6 +231,8 @@ define([
           {
             type: "line",
             height: 200,
+            borderless: true,
+            css: "webix_layout_shadowed",
             width: "100%",
             rows: [
               {type: "line",

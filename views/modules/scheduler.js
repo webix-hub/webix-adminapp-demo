@@ -7,17 +7,15 @@ return {
 		minWidth: 500,
 		gravity: 2,
     borderless: true,
-    css: "no_shadow",
     type: "wide",
 		rows:[
 			{
 				type: "wide",
-        borderless: true,
 				cols:[
 				{
-
+          borderless: true,
+          css: "webix_layout_shadowed",
 					width: 240,
-
 					rows:[
 						{
               view: "calendar", 
@@ -54,7 +52,8 @@ return {
 				{
 					view: "dhx-scheduler",
 					date: new Date(),
-          css: "shadow",
+          borderless: true,
+          css: "webix_layout_shadowed",
 					mode:"month",
 					tabs:["day","week", "month"],
 					init:function(){

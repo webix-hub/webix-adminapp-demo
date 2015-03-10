@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+Options +Indexes
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^skins/(.+)\.css$ ../_dev/make/proxy.php?script=webix.css&skin=$1 [QSA]
+RewriteRule ^skins/fonts/(.+)\.*$ ./fonts/$1 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+\.(js|css|less)?(skin=(.*))?)$ ../_dev/make/proxy.php?script=$1&skin=$3 [QSA]

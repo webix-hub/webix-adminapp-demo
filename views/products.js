@@ -72,6 +72,8 @@ var grid = {
 				]
 			},
 			{
+        borderless: true,
+        css: "webix_layout_shadowed",
 				rows:[
 					grid,
 					{

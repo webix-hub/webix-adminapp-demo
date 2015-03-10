@@ -1,6 +1,6 @@
 /*
 @license
-webix UI v.2.1.14
+webix UI v.2.2.4
 This software is covered by Webix Commercial License.
 Usage without proper license is prohibited.
 (c) XB Software Ltd.
@@ -358,15 +358,22 @@ div.webix_modal_cover{background-color:#000;cursor:default;filter:alpha(opacity=
 .webix_cal_month_name{cursor:pointer}
 .webix_cal_block{float:left;text-align:center;cursor:pointer}
 .webix_selected{background:#27ae60;color:#fff}
-.webix_cal_time{text-align:center;font-size:12px;color:#444;padding:4px 20px;cursor:pointer}
-.webix_cal_time div{padding-top:6px;border-top:#CECECE 1px solid}
-.webix_time_header{padding:17px 17px 5px}
-.webix_time_header .webix_cal_hours,.webix_time_header .webix_cal_minutes{display:inline-block;font-size:14px;text-align:center;height:22px;line-height:22px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;box-shadow:0 1px 1px #FFF inset;border-bottom:1px solid #ddd}
-.webix_time_header .webix_cal_minutes{border-left:1px solid #fff}
+.webix_cal_footer{text-align:center;font-size:12px;color:#444;margin:4px 22px;padding-top:2px;cursor:pointer}
+.webix_cal_icons{float:right;padding:4px}
+.webix_cal_time{padding:2px 4px}
+.webix_cal_time_icons{float:left}
+.webix_cal_icons .webix_cal_icon{text-align:center;padding:2px 4px}
+.webix_cal_icon:hover,.webix_cal_month_name:hover,.webix_cal_time:hover{text-decoration:underline;color:#3498db}
+.webix_time_header{padding:17px 17px 1px}
+.webix_time_header .webix_cal_hours,.webix_time_header .webix_cal_minutes{display:inline-block;font-size:14px;text-align:center;height:26px;line-height:22px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;box-shadow:0 1px 1px #FFF inset;border-bottom:1px solid #ddd}
+.webix_time_header .webix_cal_minutes{padding-left:1px;border-left:none}
 .webix_time_header .webix_cal_hours{border-right:none!important}
-.webix_cal_body .webix_hours{float:left;border-right:1px solid #cecece}
-.webix_time_footer{text-align:center;font-size:12px;padding:4px 17px 0;cursor:pointer}
+.webix_cal_body .webix_hours{float:left;border-right:1px solid #cecece;padding-right:1px}
+.webix_cal_body .webix_minutes{float:left;padding-left:1px}
+.webix_cal_block_empty{float:left;text-align:center}
+.webix_time_footer{text-align:center;font-size:12px;padding:7px 17px 0;cursor:pointer}
 .webix_cal_done{margin-top:3px;border-radius:6px;font-size:13px;padding:auto 6px;font-family:'PT Sans',Tahoma;border:1px solid #3498db;outline:0;background:#27ae60;color:#fff;border-color:#27ae60;border-bottom:1px solid #209150;box-shadow:none;float:right}
+.webix_cal_blurred_hours{background-color:#f7f7f7}
 .webix_property_line{clear:both;width:100%;min-height:24px;height:auto}
 .webix_property_label,.webix_property_value{height:24px;line-height:24px;padding-left:10px;float:left;border-bottom:1px solid #ddd;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}
 .webix_property_label{border-right:1px solid #ddd}
@@ -403,7 +410,7 @@ div.webix_modal_cover{background-color:#000;cursor:default;filter:alpha(opacity=
 .webix_property_col_ind{float:right;border:1px solid #ddd;border-radius:2px;width:30px;cursor:pointer;height:13px;margin:3px 10px 3px 0}
 .webix_property_value{text-overflow:ellipsis;white-space:nowrap}
 .webix_property_check{margin-top:5px}
-.webix_tooltip{display:none;position:absolute;z-index:10000;background-color:#fff;padding:10px;border:1px solid #ddd;font-family:'PT Sans',Tahoma;font-size:13px;color:#666}
+.webix_tooltip{display:none;position:absolute;z-index:10000;background-color:#fff;padding:5px 10px;border:1px solid #ddd;font-family:'PT Sans',Tahoma;font-size:13px;color:#666;border-radius:3px;box-shadow:1px 1px 0 0 #CCC}
 .webix_color_row{clear:both;white-space:nowrap}
 .webix_color_palette{text-align:left}
 .webix_color_row,.webix_color_row div,.webix_color_selector{line-height:0;font-size:0}
@@ -427,7 +434,7 @@ input.webixtype_next{border-right-width:0;border-radius:6px 0 0 6px;-webkit-bord
 .webix_img_btn_abs_top .webix_icon,.webix_img_btn_top .webix_icon{font-size:22px;position:absolute;top:8px;left:50%}
 .webix_img_btn_abs .webix_icon{margin-left:4px}
 .webix_img_btn_abs.webix_img_btn_abs_top .webix_icon,.webix_img_btn_top .webix_icon{margin-left:-10px}
-.webix_img_btn,.webix_img_btn_top{vertical-align:top;background-color:transparent;border:none;width:100%}
+.webix_img_btn,.webix_img_btn_top{vertical-align:top;background-color:transparent;border:none;width:100%;padding:0}
 .webix_img_btn,.webix_img_btn_abs,.webix_img_btn_top{cursor:pointer;text-align:left;background-repeat:no-repeat;background-position:2px center;height:100%;font-size:13px}
 .webix_img_btn .webix_icon,.webix_img_btn_abs .webix_icon,.webix_img_btn_top .webix_icon{color:#fff}
 .webix_img_btn,.webix_img_btn_abs{padding:0}
@@ -445,7 +452,7 @@ input.webixtype_next{border-right-width:0;border-radius:6px 0 0 6px;-webkit-bord
 .webix_control{background:0 0}
 .webix_control button,.webix_control input,.webix_control textarea,.webix_el_label,.webix_inp_label,.webix_inp_top_label{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 .webix_el_box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding:3px 2px;height:100%;width:100%;font-size:13px}
-.webix_el_combo input,.webix_el_search input,.webix_el_text input{height:100%;padding:0 10px;border:1px solid #ddd;color:#666;font-size:13px;background:#fff;font-family:'PT Sans',Tahoma;border-color:#ccc;-webkit-appearance:none;padding-top:4px\0}
+.webix_el_combo input,.webix_el_datepicker input,.webix_el_search input,.webix_el_text input{height:100%;padding:0 10px;border:1px solid #ddd;color:#666;font-size:13px;background:#fff;font-family:'PT Sans',Tahoma;border-color:#ccc;-webkit-appearance:none;border-radius:0;padding-top:4px\0}
 .webix_inp_label,.webix_inp_top_label,.webix_label_right{color:#666}
 .webix_inp_label{float:left;padding-top:3px;padding-right:7.5px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
 .webix_inp_top_label{float:none;padding:3px 2px 0}
@@ -484,7 +491,7 @@ body:not(:-moz-handler-blocked) .webix_el_select select{padding:.2em}
 .webix_el_colorpicker .webix_inp_static div{float:right;width:16px;height:16px;margin:2px -16px 0 -5px;border-radius:6px}
 .webix_el_search .webix_el_box{position:relative}
 .webix_el_search span{position:absolute;right:15px;cursor:pointer;padding-left:7px}
-.webix_view.webix_control>.webix_disabled{background-color:transparent;filter:alpha(opacity=0)}
+.webix_view.webix_control>.webix_disabled{filter:alpha(opacity=0);opacity:0}
 .webix_view.webix_control .webix_disabled_box .webix_input_icon,.webix_view.webix_control .webix_disabled_box label{color:#aaa}
 .webix_view.webix_control .webix_disabled_box .webix_inp_static,.webix_view.webix_control .webix_disabled_box input,.webix_view.webix_control .webix_disabled_box select,.webix_view.webix_control .webix_disabled_box textarea{color:#aaa;background:#eee}
 .webix_view.webix_control .webix_disabled_box .webix_inp_counter_next,.webix_view.webix_control .webix_disabled_box .webix_inp_counter_prev,.webix_view.webix_control .webix_disabled_box .webix_segment_0,.webix_view.webix_control .webix_disabled_box .webix_segment_1,.webix_view.webix_control .webix_disabled_box .webix_segment_N{color:#aaa;background:#e9e9e9;border:1px solid #e9e9e9;text-shadow:none}
@@ -492,9 +499,9 @@ body:not(:-moz-handler-blocked) .webix_el_select select{padding:.2em}
 label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_el_tabbar{background:0 0}
 .webix_all_tabs{height:100%;display:table}
-.webix_tab_filler{display:table-cell;background:0 0;font-size:1px;border-bottom:1px solid #ddd}
+.webix_tab_filler{display:table-cell;background:0 0;font-size:1px;border-bottom:1px solid #ddd;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 .webix_item_tab:first-child{border-left:1px solid #ddd}
-.webix_item_tab{display:table-cell;text-align:center;vertical-align:middle;overflow:hidden;cursor:pointer;border:1px solid #ddd;border-left-width:0;background:#a4b4bf;color:#fff;-webkit-border-radius:4px 4px 0 0;-moz-border-radius-topleft:4px;-moz-border-radius-bottomleft:0;-moz-border-radius-topright:4px;-moz-border-radius-bottomright:0;border-radius:4px 4px 0 0}
+.webix_item_tab{display:table-cell;text-align:center;vertical-align:middle;overflow:hidden;cursor:pointer;border:1px solid #ddd;border-left-width:0;background:#a4b4bf;color:#fff;-webkit-border-radius:4px 4px 0 0;-moz-border-radius-topleft:4px;-moz-border-radius-bottomleft:0;-moz-border-radius-topright:4px;-moz-border-radius-bottomright:0;border-radius:4px 4px 0 0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 .webixtype_bottom .webix_item_tab{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
 .webix_item_tab.webix_selected{border-bottom-width:0;background:#3498db;color:#fff;border-color:#3498db}
 .webixtype_bottom .webix_item_tab.webix_selected{border-bottom-width:1px}
@@ -502,7 +509,7 @@ label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_after_all_tabs{width:100%;border-left:1px solid #ddd;border-right:1px solid #ddd;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 .webix_view.webix_control .webix_disabled_box .webix_item_tab{color:#aaa;background:#e9e9e9;border:1px solid #e9e9e9;text-shadow:none}
 .webix_el_tabbar .webixtype_icon .webix_img_btn_top,.webix_el_tabbar .webixtype_iconTop .webix_img_btn_top,.webix_el_tabbar .webixtype_image .webix_img_btn_top{background-position:center 0;position:relative;height:100%}
-.webix_tab_more_icon{cursor:pointer;display:table-cell;overflow:hidden;text-align:center;box-sizing:border-box;padding:0 3px}
+.webix_tab_more_icon{cursor:pointer;display:table-cell;overflow:hidden;text-align:center;box-sizing:border-box;vertical-align:middle;padding:0 3px}
 .webix_tab_more_icon .webix_icon{width:100%}
 .webix_tab_list .webix_list_item:last-child{border-bottom:none}
 .webix_icon.webix_tab_close{font-size:12px;float:right;padding:4px;margin-top:-4px}
@@ -1137,7 +1144,8 @@ label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_icon_btn{font-size:17px;display:inline-block;text-align:center;width:24px;color:#606060}
 .webix_el_iconBbutton .webix_icon_btn{text-align:center;width:100%;padding:5px 0}
 .webix_el_icon{cursor:pointer}
-@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;src:local('PT Sans'),local('PTSans-Regular'),url(fonts/PTS-webfont.eot) format('embedded-opentype'),url(fonts/PTS-webfont.woff) format('woff'),url(fonts/PTS-webfont.ttf) format('truetype')}
+@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;src:local('PT Sans'),local('PTSans-Regular'),url(../fonts/PTS-webfont.eot) format('embedded-opentype'),url(../fonts/PTS-webfont.woff) format('woff'),url(../fonts/PTS-webfont.ttf) format('truetype')}
+@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;src:local('PT Sans Bold'),local('PTSans-Bold'),url(../fonts/PTS-bold.eot) format('embedded-opentype'),url(../fonts/PTS-bold.woff) format('woff'),url(../fonts/PTS-bold.ttf) format('truetype')}
 .mainFont{font-family:'PT Sans',Tahoma;font-size:13px;color:#666}
 .webix_layout_toolbar.webix_toolbar{color:#fff;font-size:16px;background:#3498db}
 .webix_layout_toolbar.webix_toolbar .webix_el_button,.webix_layout_toolbar.webix_toolbar .webix_el_label,.webix_layout_toolbar.webix_toolbar .webix_inp_label{color:#fff}
@@ -1228,7 +1236,7 @@ label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_menu.webix_view .webix_list_item .webix_submenu_icon:before{content:'\f105'}
 .webix_menu.webix_view .webix_list_item.webix_selected{background:#27ae60}
 .webix_property .webix_property_label,.webix_property .webix_property_value{border-color:#ebebeb}
-.webix_view .webix_drag_over,.webix_view .webix_drop_zone{background-color:#d2e3ef}
+.webix_view .webix_drag_over,.webix_view .webix_drop_zone{background-color:#d2e4ef}
 .webix_view button,.webix_view input[type=button]{-webkit-appearance:none}
 .webix_el_colorpicker span.webix_input_icon,.webix_el_combo span.webix_input_icon,.webix_el_datepicker span.webix_input_icon,.webix_el_dbldatepicker span.webix_input_icon,.webix_el_richselect span.webix_input_icon{background-color:#3498db;color:#fff;-webkit-border-radius:0 6px 6px 0;-moz-border-radius-topleft:0;-moz-border-radius-bottomleft:0;-moz-border-radius-topright:6px;-moz-border-radius-bottomright:6px;border-radius:0 6px 6px 0}
 .focusStyle{border:1px solid #3498db;box-shadow:0 0 1px #3498db inset}
@@ -1340,3 +1348,4 @@ a:active .webix_custom_radio,a:focus .webix_custom_radio{border:1px solid #3498d
 .webix_input_icon,.webix_view{box-sizing:content-box}
 .webix_view.webix_el_label{box-sizing:border-box}
 .webix_inp_label,.webix_inp_top_label,.webix_label_right{margin-bottom:0}
+.webix_view table{border-collapse:initial}
