@@ -1724,7 +1724,7 @@ webix.skin.material = {
 	//space between tabs in tabbar
 	tabMargin:0,
 	tabOffset: 0,
-	tabBottomOffset: 1,
+	tabBottomOffset: 0,
 	tabTopOffset:0,
 
 	customCheckbox: true,

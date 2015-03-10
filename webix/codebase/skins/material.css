@@ -1001,7 +1001,47 @@ label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_window{border-radius:2px;box-shadow:0 0 20px rgba(0,0,0,.2);border:none}
 .webix_resizer_vx{border:1px solid #edf2f1!important;border-width:0 1px!important}
 .webix_popup_title{color:#545454!important;background:#fff!important;font-size:14px!important;font-weight:700;border-bottom:1px solid #dee7e5!important;text-shadow:none!important}
-.webix_modal_box{background:#fff!important;border:1px solid #edf2f1!important;padding:8px}
+.webix_popup_text{padding-left:8px;padding-right:8px}
+.webix_modal_box{background:#fff!important;border:none!important}
+.webix_popup_button{height:34px;line-height:34px;border:none}
+.webix_popup_button.confirm div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;padding:0 8px;box-shadow:none;box-shadow:0 0 5px rgba(0,0,0,.3);color:#fff;background-color:#3498db}
+.webix_popup_button.confirm div:active,.webix_popup_button.confirm div:hover{color:#fff;background-color:#4aa3df}
+.webix_popup_button.confirm div:active .webix_icon_btn,.webix_popup_button.confirm div:hover .webix_icon_btn{color:#fff}
+.webix_popup_button.confirm div:active .webix_badge,.webix_popup_button.confirm div:hover .webix_badge{background-color:#fff;color:#3498db}
+.webix_popup_button.confirm div .webix_icon_btn{color:#fff}
+.webix_popup_button.confirm div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:#fff;color:#3498db}
+.webix_popup_button div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;color:#3498db;background-color:transparent;padding:0 8px;box-shadow:none;height:34px;line-height:34px}
+.webix_popup_button div:active,.webix_popup_button div:hover{color:#3498db;background-color:rgba(52,152,219,.2)}
+.webix_popup_button div:active .webix_icon_btn,.webix_popup_button div:hover .webix_icon_btn{color:#3498db}
+.webix_popup_button div:active .webix_badge,.webix_popup_button div:hover .webix_badge{background-color:#3498db;color:#fff}
+.webix_popup_button div .webix_icon_btn{color:#3498db}
+.webix_popup_button div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:rgba(52,152,219,.2);color:#3498db}
+.webix_alert-warning .webix_popup_text,.webix_confirm-warning .webix_popup_text{box-shadow:0 3px #ff9800 inset}
+.webix_alert-warning .webix_popup_button.confirm div,.webix_confirm-warning .webix_popup_button.confirm div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;padding:0 8px;box-shadow:none;box-shadow:0 0 5px rgba(0,0,0,.3);color:#fff;background-color:#ff9800}
+.webix_alert-warning .webix_popup_button.confirm div:active,.webix_alert-warning .webix_popup_button.confirm div:hover,.webix_confirm-warning .webix_popup_button.confirm div:active,.webix_confirm-warning .webix_popup_button.confirm div:hover{color:#fff;background-color:#ffa21a}
+.webix_alert-warning .webix_popup_button.confirm div:active .webix_icon_btn,.webix_alert-warning .webix_popup_button.confirm div:hover .webix_icon_btn,.webix_confirm-warning .webix_popup_button.confirm div:active .webix_icon_btn,.webix_confirm-warning .webix_popup_button.confirm div:hover .webix_icon_btn{color:#fff}
+.webix_alert-warning .webix_popup_button.confirm div:active .webix_badge,.webix_alert-warning .webix_popup_button.confirm div:hover .webix_badge,.webix_confirm-warning .webix_popup_button.confirm div:active .webix_badge,.webix_confirm-warning .webix_popup_button.confirm div:hover .webix_badge{background-color:#fff;color:#ff9800}
+.webix_alert-warning .webix_popup_button.confirm div .webix_icon_btn,.webix_confirm-warning .webix_popup_button.confirm div .webix_icon_btn{color:#fff}
+.webix_alert-warning .webix_popup_button.confirm div .webix_badge,.webix_confirm-warning .webix_popup_button.confirm div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:#fff;color:#ff9800}
+.webix_alert-warning .webix_popup_button div,.webix_confirm-warning .webix_popup_button div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;padding:0 8px;box-shadow:none;color:#ff9800;background-color:transparent}
+.webix_alert-warning .webix_popup_button div:active,.webix_alert-warning .webix_popup_button div:hover,.webix_confirm-warning .webix_popup_button div:active,.webix_confirm-warning .webix_popup_button div:hover{color:#ff9800;background-color:rgba(255,152,0,.2)}
+.webix_alert-warning .webix_popup_button div:active .webix_icon_btn,.webix_alert-warning .webix_popup_button div:hover .webix_icon_btn,.webix_confirm-warning .webix_popup_button div:active .webix_icon_btn,.webix_confirm-warning .webix_popup_button div:hover .webix_icon_btn{color:#ff9800}
+.webix_alert-warning .webix_popup_button div:active .webix_badge,.webix_alert-warning .webix_popup_button div:hover .webix_badge,.webix_confirm-warning .webix_popup_button div:active .webix_badge,.webix_confirm-warning .webix_popup_button div:hover .webix_badge{background-color:#ff9800;color:#fff}
+.webix_alert-warning .webix_popup_button div .webix_icon_btn,.webix_confirm-warning .webix_popup_button div .webix_icon_btn{color:#ff9800}
+.webix_alert-warning .webix_popup_button div .webix_badge,.webix_confirm-warning .webix_popup_button div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:rgba(255,152,0,.2);color:#ff9800}
+.webix_alert-error .webix_popup_text,.webix_confirm-error .webix_popup_text{box-shadow:0 3px #ff5252 inset}
+.webix_alert-error .webix_popup_button.confirm div,.webix_confirm-error .webix_popup_button.confirm div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;padding:0 8px;box-shadow:none;box-shadow:0 0 5px rgba(0,0,0,.3);color:#fff;background-color:#ff5252}
+.webix_alert-error .webix_popup_button.confirm div:active,.webix_alert-error .webix_popup_button.confirm div:hover,.webix_confirm-error .webix_popup_button.confirm div:active,.webix_confirm-error .webix_popup_button.confirm div:hover{color:#fff;background-color:#ff6c6c}
+.webix_alert-error .webix_popup_button.confirm div:active .webix_icon_btn,.webix_alert-error .webix_popup_button.confirm div:hover .webix_icon_btn,.webix_confirm-error .webix_popup_button.confirm div:active .webix_icon_btn,.webix_confirm-error .webix_popup_button.confirm div:hover .webix_icon_btn{color:#fff}
+.webix_alert-error .webix_popup_button.confirm div:active .webix_badge,.webix_alert-error .webix_popup_button.confirm div:hover .webix_badge,.webix_confirm-error .webix_popup_button.confirm div:active .webix_badge,.webix_confirm-error .webix_popup_button.confirm div:hover .webix_badge{background-color:#fff;color:#ff5252}
+.webix_alert-error .webix_popup_button.confirm div .webix_icon_btn,.webix_confirm-error .webix_popup_button.confirm div .webix_icon_btn{color:#fff}
+.webix_alert-error .webix_popup_button.confirm div .webix_badge,.webix_confirm-error .webix_popup_button.confirm div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:#fff;color:#ff5252}
+.webix_alert-error .webix_popup_button div,.webix_confirm-error .webix_popup_button div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;padding:0 8px;box-shadow:none;color:#ff5252;background-color:transparent}
+.webix_alert-error .webix_popup_button div:active,.webix_alert-error .webix_popup_button div:hover,.webix_confirm-error .webix_popup_button div:active,.webix_confirm-error .webix_popup_button div:hover{color:#fff;background-color:#ff5252}
+.webix_alert-error .webix_popup_button div:active .webix_icon_btn,.webix_alert-error .webix_popup_button div:hover .webix_icon_btn,.webix_confirm-error .webix_popup_button div:active .webix_icon_btn,.webix_confirm-error .webix_popup_button div:hover .webix_icon_btn{color:#fff}
+.webix_alert-error .webix_popup_button div:active .webix_badge,.webix_alert-error .webix_popup_button div:hover .webix_badge,.webix_confirm-error .webix_popup_button div:active .webix_badge,.webix_confirm-error .webix_popup_button div:hover .webix_badge{background-color:#fff;color:#ff5252}
+.webix_alert-error .webix_popup_button div .webix_icon_btn,.webix_confirm-error .webix_popup_button div .webix_icon_btn{color:#ff5252}
+.webix_alert-error .webix_popup_button div .webix_badge,.webix_confirm-error .webix_popup_button div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:#ff5252;color:#fff}
 .webix_point_top{margin-top:-7px}
 .webix_point_bottom,.webix_point_left,.webix_point_right{margin-top:-1px}
 .webix_point_bottom{margin-top:7px}
@@ -1022,7 +1062,6 @@ label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_list .webix_list_item{color:#545454;border:none;padding:0 16px;line-height:32px}
 .webix_list .webix_list_item.webix_selected,.webix_list .webix_list_item:hover{background-color:#e6e6e6;padding:0 16px;border:none}
 .webix_popup.webix_view{padding:8px 0 6px;margin-top:-6px}
-.webix_popup.webix_view .webix_list_item{line-height:auto}
 .menu .webix_tree_item.webix_selected,.webix_menu .webix_selected{box-shadow:5px 0 0 #3498db inset;padding-left:19px}
 .webix_menu{border:none}
 .webix_popup.webix_menu.webix_view{padding:8px 0 6px}
@@ -1131,19 +1170,6 @@ label.webix_required:after{padding-left:4px;content:"*";color:red}
 .webix_edit_icon .webix_icon:hover,.webix_edit_icon.webix_icon:hover{color:#3498db}
 .webix_remove_icon .webix_icon:hover,.webix_remove_icon.webix_icon:hover{color:#ff5252}
 .webix_view .webix_button_transparent input[type=button],.webix_view .webix_el_button.webix_button_transparent button,.webix_view .webix_el_button.webix_button_transparent input,.webix_view .webix_el_toggle.webix_button_transparent button,.webix_view .webix_el_toggle.webix_button_transparent input,.webix_view .webixbutton.webix_button_transparent{border-width:1px;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;color:#fff;background-color:transparent;padding:0 8px}
-.webix_popup_button{height:34px;line-height:34px;border:none}
-.webix_popup_button.confirm div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;color:#3498db;background-color:transparent;padding:0 8px;box-shadow:none}
-.webix_popup_button.confirm div:active,.webix_popup_button.confirm div:hover{color:#3498db;background-color:rgba(52,152,219,.2)}
-.webix_popup_button.confirm div:active .webix_icon_btn,.webix_popup_button.confirm div:hover .webix_icon_btn{color:#3498db}
-.webix_popup_button.confirm div:active .webix_badge,.webix_popup_button.confirm div:hover .webix_badge{background-color:#3498db;color:#fff}
-.webix_popup_button.confirm div .webix_icon_btn{color:#3498db}
-.webix_popup_button.confirm div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:rgba(52,152,219,.2);color:#3498db}
-.webix_popup_button div{border-width:0;border-radius:2px;font-family:Roboto;font-size:14px;font-weight:700;text-transform:uppercase;text-shadow:none;padding:0 8px;box-shadow:none;box-shadow:0 0 5px rgba(0,0,0,.3);color:#fff;background-color:#3498db;height:34px;line-height:34px}
-.webix_popup_button div:active,.webix_popup_button div:hover{color:#fff;background-color:#4aa3df}
-.webix_popup_button div:active .webix_icon_btn,.webix_popup_button div:hover .webix_icon_btn{color:#fff}
-.webix_popup_button div:active .webix_badge,.webix_popup_button div:hover .webix_badge{background-color:#fff;color:#3498db}
-.webix_popup_button div .webix_icon_btn{color:#fff}
-.webix_popup_button div .webix_badge{display:inline-block;margin-left:8px;padding:2px 6px;line-height:16px;border-radius:16px;background-color:#fff;color:#3498db}
 .webix_icon_btn{color:#3498db}
 .fa,.webix_icon,.webix_icon_btn,.webix_input_icon{padding-right:5px}
 .webix_view.webix_form{color:#545454;font-family:Roboto;font-size:15px;font-weight:400}

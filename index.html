@@ -3,15 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+  <script type="text/javascript">
+    window.webix_skin = 'material';
+  </script>
 	<!-- Webix Library -->
-	<script type="text/javascript" src="../webix/codebase/webix.js"></script>
+	<script type="text/javascript" src="webix/codebase/webix.js"></script>
 	<!-- Dynamic themes -->
 	<script type="text/javascript">
 		var user   = webix.remote.$user;
 		//var config = (user && user.settings) ? JSON.parse(user.settings): {};
 		//var theme = (config.theme || webix.storage.local.get("--:app:theme") || "siberia:webix").split(":");
 		
-		document.write('<link type="text/css" rel="stylesheet" href="../webix/codebase/skins/material.css">');
+		document.write('<link type="text/css" rel="stylesheet" href="webix/codebase/skins/material.css">');
 		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.siberia.less">');
 	</script>
 

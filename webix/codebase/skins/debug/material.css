@@ -4676,25 +4676,25 @@ label.webix_required:after {
 /*
 //resizer
 .resizerXBG(){
-	#gradient > .v3(@backColor, @darkerBG, @darkestBG);
+    #gradient > .v3(@backColor, @darkerBG, @darkestBG);
 }
 .resizerYBG(){
-	#gradient > .h3(@backColor, @darkerBG, @darkestBG);
+    #gradient > .h3(@backColor, @darkerBG, @darkestBG);
 }
 */
 /*
 .webix_layout_wide > .webix_view, .webix_layout_space > .webix_view{
-	#border > .radius(@layoutRadius);
+    #border > .radius(@layoutRadius);
 
 }
 .webix_layout_wide, .webix_layout_space{
-	.webix_layout_accordion .webix_accordionitem:first-child,{
-		#border > .corners(@layoutRadius,@layoutRadius,0,0);
-	}
-	.webix_layout_accordion .webix_accordionitem:last-child{
-		#border > .corners(0,0,@layoutRadius,@layoutRadius);
+    .webix_layout_accordion .webix_accordionitem:first-child,{
+        #border > .corners(@layoutRadius,@layoutRadius,0,0);
+    }
+    .webix_layout_accordion .webix_accordionitem:last-child{
+        #border > .corners(0,0,@layoutRadius,@layoutRadius);
 
-	}
+    }
 }
 */
 .webix_layout_accordion .webix_accordionitem_header:hover {
@@ -4741,10 +4741,486 @@ label.webix_required:after {
   border-bottom: 1px solid #dee7e5 !important;
   text-shadow: none !important;
 }
+.webix_popup_text {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .webix_modal_box {
   background: #fff !important;
-  border: 1px solid #edf2f1 !important;
-  padding: 8px;
+  border: none !important;
+}
+.webix_popup_button {
+  height: 34px;
+  line-height: 34px;
+  border: none;
+}
+.webix_popup_button.confirm div {
+  border-width: 0px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #8bc4ea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: #3498db;
+  background-color: transparent;
+  padding: 0px 8px;
+  box-shadow: none;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  background-color: #3498db;
+}
+.webix_popup_button.confirm div:hover,
+.webix_popup_button.confirm div:active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_popup_button.confirm div:active .webix_icon_btn {
+  color: #3498db;
+}
+.webix_popup_button.confirm div:hover .webix_badge,
+.webix_popup_button.confirm div:active .webix_badge {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.webix_popup_button.confirm div .webix_icon_btn {
+  color: #3498db;
+}
+.webix_popup_button.confirm div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+.webix_popup_button.confirm div:hover,
+.webix_popup_button.confirm div:active {
+  color: #ffffff;
+  background-color: #4aa3df;
+}
+.webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_popup_button.confirm div:active .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_popup_button.confirm div:hover .webix_badge,
+.webix_popup_button.confirm div:active .webix_badge {
+  background-color: #ffffff;
+  color: #3498db;
+}
+.webix_popup_button.confirm div .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_popup_button.confirm div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  background-color: #ffffff;
+  color: #3498db;
+}
+.webix_popup_button div {
+  border-width: 0px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #8bc4ea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: #3498db;
+  background-color: transparent;
+  padding: 0px 8px;
+  box-shadow: none;
+  height: 34px;
+  line-height: 34px;
+}
+.webix_popup_button div:hover,
+.webix_popup_button div:active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.webix_popup_button div:hover .webix_icon_btn,
+.webix_popup_button div:active .webix_icon_btn {
+  color: #3498db;
+}
+.webix_popup_button div:hover .webix_badge,
+.webix_popup_button div:active .webix_badge {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.webix_popup_button div .webix_icon_btn {
+  color: #3498db;
+}
+.webix_popup_button div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_text,
+.webix_confirm-warning .webix_popup_text {
+  box-shadow: 0 3px #ff9800 inset;
+}
+.webix_alert-warning .webix_popup_button.confirm div,
+.webix_confirm-warning .webix_popup_button.confirm div {
+  border-width: 0px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #8bc4ea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: #3498db;
+  background-color: transparent;
+  padding: 0px 8px;
+  box-shadow: none;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  background-color: #ff9800;
+}
+.webix_alert-warning .webix_popup_button.confirm div:hover,
+.webix_confirm-warning .webix_popup_button.confirm div:hover,
+.webix_alert-warning .webix_popup_button.confirm div:active,
+.webix_confirm-warning .webix_popup_button.confirm div:active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.webix_alert-warning .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_alert-warning .webix_popup_button.confirm div:active .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button.confirm div:active .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_button.confirm div:hover .webix_badge,
+.webix_confirm-warning .webix_popup_button.confirm div:hover .webix_badge,
+.webix_alert-warning .webix_popup_button.confirm div:active .webix_badge,
+.webix_confirm-warning .webix_popup_button.confirm div:active .webix_badge {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.webix_alert-warning .webix_popup_button.confirm div .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button.confirm div .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_button.confirm div .webix_badge,
+.webix_confirm-warning .webix_popup_button.confirm div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_button.confirm div:hover,
+.webix_confirm-warning .webix_popup_button.confirm div:hover,
+.webix_alert-warning .webix_popup_button.confirm div:active,
+.webix_confirm-warning .webix_popup_button.confirm div:active {
+  color: #ffffff;
+  background-color: #ffa21a;
+}
+.webix_alert-warning .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_alert-warning .webix_popup_button.confirm div:active .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button.confirm div:active .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_alert-warning .webix_popup_button.confirm div:hover .webix_badge,
+.webix_confirm-warning .webix_popup_button.confirm div:hover .webix_badge,
+.webix_alert-warning .webix_popup_button.confirm div:active .webix_badge,
+.webix_confirm-warning .webix_popup_button.confirm div:active .webix_badge {
+  background-color: #ffffff;
+  color: #ff9800;
+}
+.webix_alert-warning .webix_popup_button.confirm div .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button.confirm div .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_alert-warning .webix_popup_button.confirm div .webix_badge,
+.webix_confirm-warning .webix_popup_button.confirm div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  background-color: #ffffff;
+  color: #ff9800;
+}
+.webix_alert-warning .webix_popup_button div,
+.webix_confirm-warning .webix_popup_button div {
+  border-width: 0px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #8bc4ea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: #3498db;
+  padding: 0px 8px;
+  box-shadow: none;
+  color: #ff9800;
+  background-color: transparent;
+}
+.webix_alert-warning .webix_popup_button div:hover,
+.webix_confirm-warning .webix_popup_button div:hover,
+.webix_alert-warning .webix_popup_button div:active,
+.webix_confirm-warning .webix_popup_button div:active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.webix_alert-warning .webix_popup_button div:hover .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button div:hover .webix_icon_btn,
+.webix_alert-warning .webix_popup_button div:active .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button div:active .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_button div:hover .webix_badge,
+.webix_confirm-warning .webix_popup_button div:hover .webix_badge,
+.webix_alert-warning .webix_popup_button div:active .webix_badge,
+.webix_confirm-warning .webix_popup_button div:active .webix_badge {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.webix_alert-warning .webix_popup_button div .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button div .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_button div .webix_badge,
+.webix_confirm-warning .webix_popup_button div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+.webix_alert-warning .webix_popup_button div:hover,
+.webix_confirm-warning .webix_popup_button div:hover,
+.webix_alert-warning .webix_popup_button div:active,
+.webix_confirm-warning .webix_popup_button div:active {
+  color: #ff9800;
+  background-color: rgba(255, 152, 0, 0.2);
+}
+.webix_alert-warning .webix_popup_button div:hover .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button div:hover .webix_icon_btn,
+.webix_alert-warning .webix_popup_button div:active .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button div:active .webix_icon_btn {
+  color: #ff9800;
+}
+.webix_alert-warning .webix_popup_button div:hover .webix_badge,
+.webix_confirm-warning .webix_popup_button div:hover .webix_badge,
+.webix_alert-warning .webix_popup_button div:active .webix_badge,
+.webix_confirm-warning .webix_popup_button div:active .webix_badge {
+  background-color: #ff9800;
+  color: #ffffff;
+}
+.webix_alert-warning .webix_popup_button div .webix_icon_btn,
+.webix_confirm-warning .webix_popup_button div .webix_icon_btn {
+  color: #ff9800;
+}
+.webix_alert-warning .webix_popup_button div .webix_badge,
+.webix_confirm-warning .webix_popup_button div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+.webix_alert-error .webix_popup_text,
+.webix_confirm-error .webix_popup_text {
+  box-shadow: 0 3px #ff5252 inset;
+}
+.webix_alert-error .webix_popup_button.confirm div,
+.webix_confirm-error .webix_popup_button.confirm div {
+  border-width: 0px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #8bc4ea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: #3498db;
+  background-color: transparent;
+  padding: 0px 8px;
+  box-shadow: none;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  background-color: #ff5252;
+}
+.webix_alert-error .webix_popup_button.confirm div:hover,
+.webix_confirm-error .webix_popup_button.confirm div:hover,
+.webix_alert-error .webix_popup_button.confirm div:active,
+.webix_confirm-error .webix_popup_button.confirm div:active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.webix_alert-error .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_confirm-error .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_alert-error .webix_popup_button.confirm div:active .webix_icon_btn,
+.webix_confirm-error .webix_popup_button.confirm div:active .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-error .webix_popup_button.confirm div:hover .webix_badge,
+.webix_confirm-error .webix_popup_button.confirm div:hover .webix_badge,
+.webix_alert-error .webix_popup_button.confirm div:active .webix_badge,
+.webix_confirm-error .webix_popup_button.confirm div:active .webix_badge {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.webix_alert-error .webix_popup_button.confirm div .webix_icon_btn,
+.webix_confirm-error .webix_popup_button.confirm div .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-error .webix_popup_button.confirm div .webix_badge,
+.webix_confirm-error .webix_popup_button.confirm div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+.webix_alert-error .webix_popup_button.confirm div:hover,
+.webix_confirm-error .webix_popup_button.confirm div:hover,
+.webix_alert-error .webix_popup_button.confirm div:active,
+.webix_confirm-error .webix_popup_button.confirm div:active {
+  color: #ffffff;
+  background-color: #ff6c6c;
+}
+.webix_alert-error .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_confirm-error .webix_popup_button.confirm div:hover .webix_icon_btn,
+.webix_alert-error .webix_popup_button.confirm div:active .webix_icon_btn,
+.webix_confirm-error .webix_popup_button.confirm div:active .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_alert-error .webix_popup_button.confirm div:hover .webix_badge,
+.webix_confirm-error .webix_popup_button.confirm div:hover .webix_badge,
+.webix_alert-error .webix_popup_button.confirm div:active .webix_badge,
+.webix_confirm-error .webix_popup_button.confirm div:active .webix_badge {
+  background-color: #ffffff;
+  color: #ff5252;
+}
+.webix_alert-error .webix_popup_button.confirm div .webix_icon_btn,
+.webix_confirm-error .webix_popup_button.confirm div .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_alert-error .webix_popup_button.confirm div .webix_badge,
+.webix_confirm-error .webix_popup_button.confirm div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  background-color: #ffffff;
+  color: #ff5252;
+}
+.webix_alert-error .webix_popup_button div,
+.webix_confirm-error .webix_popup_button div {
+  border-width: 0px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #8bc4ea;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: none;
+  color: #3498db;
+  padding: 0px 8px;
+  box-shadow: none;
+  color: #ff5252;
+  background-color: transparent;
+}
+.webix_alert-error .webix_popup_button div:hover,
+.webix_confirm-error .webix_popup_button div:hover,
+.webix_alert-error .webix_popup_button div:active,
+.webix_confirm-error .webix_popup_button div:active {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.2);
+}
+.webix_alert-error .webix_popup_button div:hover .webix_icon_btn,
+.webix_confirm-error .webix_popup_button div:hover .webix_icon_btn,
+.webix_alert-error .webix_popup_button div:active .webix_icon_btn,
+.webix_confirm-error .webix_popup_button div:active .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-error .webix_popup_button div:hover .webix_badge,
+.webix_confirm-error .webix_popup_button div:hover .webix_badge,
+.webix_alert-error .webix_popup_button div:active .webix_badge,
+.webix_confirm-error .webix_popup_button div:active .webix_badge {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.webix_alert-error .webix_popup_button div .webix_icon_btn,
+.webix_confirm-error .webix_popup_button div .webix_icon_btn {
+  color: #3498db;
+}
+.webix_alert-error .webix_popup_button div .webix_badge,
+.webix_confirm-error .webix_popup_button div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+}
+.webix_alert-error .webix_popup_button div:hover,
+.webix_confirm-error .webix_popup_button div:hover,
+.webix_alert-error .webix_popup_button div:active,
+.webix_confirm-error .webix_popup_button div:active {
+  color: #ffffff;
+  background-color: #ff5252;
+}
+.webix_alert-error .webix_popup_button div:hover .webix_icon_btn,
+.webix_confirm-error .webix_popup_button div:hover .webix_icon_btn,
+.webix_alert-error .webix_popup_button div:active .webix_icon_btn,
+.webix_confirm-error .webix_popup_button div:active .webix_icon_btn {
+  color: #ffffff;
+}
+.webix_alert-error .webix_popup_button div:hover .webix_badge,
+.webix_confirm-error .webix_popup_button div:hover .webix_badge,
+.webix_alert-error .webix_popup_button div:active .webix_badge,
+.webix_confirm-error .webix_popup_button div:active .webix_badge {
+  background-color: #ffffff;
+  color: #ff5252;
+}
+.webix_alert-error .webix_popup_button div .webix_icon_btn,
+.webix_confirm-error .webix_popup_button div .webix_icon_btn {
+  color: #ff5252;
+}
+.webix_alert-error .webix_popup_button div .webix_badge,
+.webix_confirm-error .webix_popup_button div .webix_badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  line-height: 16px;
+  border-radius: 16px;
+  background-color: rgba(52, 152, 219, 0.2);
+  color: #3498db;
+  background-color: #ff5252;
+  color: #ffffff;
 }
 .webix_point_top {
   margin-top: -7px;
@@ -4835,9 +5311,6 @@ label.webix_required:after {
 .webix_popup.webix_view {
   padding: 8px 0 6px 0;
   margin-top: -6px;
-}
-.webix_popup.webix_view .webix_list_item {
-  line-height: auto;
 }
 .menu .webix_tree_item.webix_selected,
 .webix_menu .webix_selected {
@@ -9154,123 +9627,6 @@ label.webix_required:after {
   color: #ffffff;
   background-color: transparent;
   padding: 0px 8px;
-}
-.webix_popup_button {
-  height: 34px;
-  line-height: 34px;
-  border: none;
-}
-.webix_popup_button.confirm div {
-  border-width: 0px;
-  border-radius: 2px;
-  font-family: "Roboto";
-  font-size: 14px;
-  color: #8bc4ea;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: none;
-  color: #3498db;
-  background-color: transparent;
-  padding: 0px 8px;
-  box-shadow: none;
-}
-.webix_popup_button.confirm div:hover,
-.webix_popup_button.confirm div:active {
-  color: #3498db;
-  background-color: rgba(52, 152, 219, 0.2);
-}
-.webix_popup_button.confirm div:hover .webix_icon_btn,
-.webix_popup_button.confirm div:active .webix_icon_btn {
-  color: #3498db;
-}
-.webix_popup_button.confirm div:hover .webix_badge,
-.webix_popup_button.confirm div:active .webix_badge {
-  background-color: #3498db;
-  color: #ffffff;
-}
-.webix_popup_button.confirm div .webix_icon_btn {
-  color: #3498db;
-}
-.webix_popup_button.confirm div .webix_badge {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 2px 6px;
-  line-height: 16px;
-  border-radius: 16px;
-  background-color: rgba(52, 152, 219, 0.2);
-  color: #3498db;
-}
-.webix_popup_button div {
-  border-width: 0px;
-  border-radius: 2px;
-  font-family: "Roboto";
-  font-size: 14px;
-  color: #8bc4ea;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: none;
-  color: #3498db;
-  background-color: transparent;
-  padding: 0px 8px;
-  box-shadow: none;
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
-  color: #ffffff;
-  background-color: #3498db;
-  height: 34px;
-  line-height: 34px;
-}
-.webix_popup_button div:hover,
-.webix_popup_button div:active {
-  color: #3498db;
-  background-color: rgba(52, 152, 219, 0.2);
-}
-.webix_popup_button div:hover .webix_icon_btn,
-.webix_popup_button div:active .webix_icon_btn {
-  color: #3498db;
-}
-.webix_popup_button div:hover .webix_badge,
-.webix_popup_button div:active .webix_badge {
-  background-color: #3498db;
-  color: #ffffff;
-}
-.webix_popup_button div .webix_icon_btn {
-  color: #3498db;
-}
-.webix_popup_button div .webix_badge {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 2px 6px;
-  line-height: 16px;
-  border-radius: 16px;
-  background-color: rgba(52, 152, 219, 0.2);
-  color: #3498db;
-}
-.webix_popup_button div:hover,
-.webix_popup_button div:active {
-  color: #ffffff;
-  background-color: #4aa3df;
-}
-.webix_popup_button div:hover .webix_icon_btn,
-.webix_popup_button div:active .webix_icon_btn {
-  color: #ffffff;
-}
-.webix_popup_button div:hover .webix_badge,
-.webix_popup_button div:active .webix_badge {
-  background-color: #ffffff;
-  color: #3498db;
-}
-.webix_popup_button div .webix_icon_btn {
-  color: #ffffff;
-}
-.webix_popup_button div .webix_badge {
-  display: inline-block;
-  margin-left: 8px;
-  padding: 2px 6px;
-  line-height: 16px;
-  border-radius: 16px;
-  background-color: rgba(52, 152, 219, 0.2);
-  background-color: #ffffff;
-  color: #3498db;
 }
 .webix_icon_btn {
   color: #3498db;
