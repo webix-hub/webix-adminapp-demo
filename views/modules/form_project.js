@@ -3,6 +3,7 @@ define([],function(){
 
 		"type": "clean",
     borderless: true,
+    css: "webix_layout_shadowed",
 		"rows":[
 			{
 				view: "toolbar",
@@ -37,8 +38,8 @@ define([],function(){
 						borderless: true,
 						cols:[
 							{},
-							{view: "button", css: "webix_button_primary raised", label: "Next", type: "form", align: "right",width: 80},
-              {view: "button", css: "webix_button_success raised", label: "Finish", type: "form", align: "right",width: 100}
+							{view: "button", css: "webix_button_primary webix_button_raised", label: "Next", type: "form", align: "right",width: 80},
+              {view: "button", css: "webix_button_success webix_button_raised", label: "Finish", type: "form", align: "right",width: 100}
 						]
 					}
 				]

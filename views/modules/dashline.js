@@ -2,8 +2,9 @@ define(function(){
 
 	return {
 		$ui:{
-			autoheight: true,
+			height: 136,
       borderless: true,
+      css: "webix_layout_shadowed",
 			css: "tiles",
 			template: function(data){
 				var t = null;

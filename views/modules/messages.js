@@ -49,6 +49,8 @@ define(function(){
 	return {
 		$ui:{
 			type: "clean",
+      borderless: true,
+      css: "webix_layout_shadowed",
 			rows:[
 				header,
 				{ rows:[ list, form ] }

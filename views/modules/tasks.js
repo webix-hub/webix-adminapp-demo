@@ -1,6 +1,8 @@
 define(function(){
 
 	var tasks = { 
+    borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			{
 				template: "<span class='webix_icon fa-tasks'></span>Pending Tasks", type:"header", "css": "sub_title", "height": 50

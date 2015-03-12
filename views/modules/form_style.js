@@ -2,6 +2,7 @@ define([],function(){
 	var layout = {
 		type: "clean",
     borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			{
 				view: "toolbar",
@@ -37,7 +38,7 @@ define([],function(){
 							{},
               {view: "button", type: "iconButton", icon:"angle-left", label: "Back",  align: "right", width: 90},
 							{view: "button", css: "webix_button_info", type: "info", label: "Info",  align: "right", width: 90},
-							{view: "button", css: "webix_button_primary raised", type:"form", label: "Done",  align: "right", width: 90}
+							{view: "button", css: "webix_button_primary webix_button_raised", type:"form", label: "Done",  align: "right", width: 90}
 						]
 					}
 

@@ -1,6 +1,8 @@
 define(["views/webix/googlemap"], function(){
 
 	var map = {
+    borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			{
 				template:"<span class='webix_icon fa-map-marker'></span>Events Map" , type:"header", "css": "sub_title", "height": 50

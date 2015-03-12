@@ -10,7 +10,7 @@ define(["models/data_arrays"],function(data_arrays){
 			{
 				"template": "<span class='webix_icon fa-folder-o'></span>Treetable", "css": "sub_title2", borderless: true
 			},
-			{ view: "button", css: "transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120}
+			{ view: "button", css: "webix_button_transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120}
 		]
 	};
 	var gridTree = {
@@ -62,6 +62,8 @@ define(["models/data_arrays"],function(data_arrays){
 
 	var layout = {
 		type: "clean",
+    borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			titleTree,
 			gridTree

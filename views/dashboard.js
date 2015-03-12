@@ -27,8 +27,13 @@ define([
 						type: "wide",
 						cols: [
 							messages,
-							revenue
-
+              {
+                borderless: true,
+                css: "webix_layout_shadowed",
+                rows: [
+                  revenue
+                ]
+              }
 						]
 					},
 					{

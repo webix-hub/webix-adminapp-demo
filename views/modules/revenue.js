@@ -113,6 +113,7 @@ define(function(){
 
 	var layout = {	
 		type: "clean",
+    borderless: true,
 		rows:[
 			chart,
 			{

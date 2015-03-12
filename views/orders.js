@@ -5,10 +5,10 @@ define([
 ], function(orderform, exports, orders){
 
 	var controls = [
-		{ view: "button", css: "webix_button_primary raised", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
+		{ view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
 			this.$scope.ui(orderform.$ui).show();
 		}},
-		{ view: "button", css: "webix_button_primary raised", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
+		{ view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
 		{},
 		{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
 			{id:"all", value:"All"},
@@ -82,6 +82,8 @@ define([
 				cols: controls
 			},
 			{
+        borderless: true,
+        css: "webix_layout_shadowed",
 				rows:[
 					grid,
 					{

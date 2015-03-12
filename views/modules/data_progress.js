@@ -11,7 +11,7 @@ define(["models/data_arrays"],function(data_arrays){
 			{
 				"template": "<span class='webix_icon fa-adjust'></span>Progress", "css": "sub_title2", borderless: true
 			},
-			{ view: "button", css: "transparent", type: "iconButton", icon: "sliders", label: "Update", width: 120}
+			{ view: "button", css: "webix_button_transparent", type: "iconButton", icon: "sliders", label: "Update", width: 120}
 		]
 	};
 	var gridProgress = {
@@ -41,6 +41,8 @@ define(["models/data_arrays"],function(data_arrays){
 
 	var layout = {
 		type: "clean",
+    borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			titleProgress,
 			gridProgress

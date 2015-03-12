@@ -3,6 +3,7 @@ define([],function(){
 
 		type: "clean",
     borderless: true,
+    css: "webix_layout_shadowed",
 		rows:[
 			{
 				view: "toolbar",
@@ -15,7 +16,7 @@ define([],function(){
 						"template": "<span class='webix_icon fa-male'></span>User", "css": "sub_title2", borderless:true
 					},
 					{
-						view: "button", css: "transparent", label: "Close", width: 80
+						view: "button", css: "webix_button_transparent", label: "Close", width: 80
 					}
 				]
 			},
@@ -39,7 +40,7 @@ define([],function(){
               {view: "button", css: "webix_button_danger", label: "Delete", type: "form", align: "left"},
 							{},
 							{view: "button", css: "", label: "Reset",  align: "right"},
-              {view: "button", css: "webix_button_primary raised", label: "Save", type: "form", align: "right"}
+              {view: "button", css: "webix_button_primary webix_button_raised", label: "Save", type: "form", align: "right"}
 						]
 					}
 

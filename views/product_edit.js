@@ -18,13 +18,18 @@ var layout = {
 					search,
 					{
 						gravity: 2.2,
+            type: "line",
+            borderless: true,
+            css: "webix_layout_shadowed",
 						rows:[
-							{view: "tabbar", type: "clean", multiview: true, optionWidth: 100,
-								options:[
-									{id: "mainView", value: "Main"},
-									{id: "imagesView", value: "Images"},
-									{id: "metaView", value: "Meta"}
-								]
+							{ rows: [{
+                  view: "tabbar", multiview: true, optionWidth: 100,
+                  options:[
+                    {id: "mainView", value: "Main", width: 200},
+                    {id: "imagesView", value: "Images"},
+                    {id: "metaView", value: "Meta"}
+                  ]
+                }]
 							},
 							{
 								cells:[
@@ -42,7 +47,7 @@ var layout = {
 								height:40,
 
 								cols:[
-									{ view: "button", css: "webix_button_primary raised", type: "form", icon: "plus", label: "Save", width: 90},
+									{ view: "button", css: "webix_button_primary webix_button_raised", type: "form", icon: "plus", label: "Save", width: 90},
 									{ view: "button", css: "button2", icon: "angle-left", label: "Reset", width: 90},
 
 									{},
