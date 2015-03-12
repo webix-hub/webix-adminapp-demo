@@ -4,16 +4,9 @@
 	<meta charset="utf-8">
 	<title></title>
 	<!-- Webix Library -->
-	<script type="text/javascript" src="../webix/codebase/webix.js"></script>
-	<!-- Dynamic themes -->
-	<script type="text/javascript">
-		var user   = webix.remote.$user;
-		//var config = (user && user.settings) ? JSON.parse(user.settings): {};
-		//var theme = (config.theme || webix.storage.local.get("--:app:theme") || "siberia:webix").split(":");
-		
-		document.write('<link type="text/css" rel="stylesheet" href="../webix/codebase/webix.css">');
-		document.write('<link type="text/css" rel="stylesheet/less" href="assets/theme.siberia.less">');
-	</script>
+	<script type="text/javascript" src="http://cdn.webix.com/edge/webix.js"></script>
+	<link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css">
+	<link rel="stylesheet/less" href="assets/theme.siberia.less">
 
 	<!-- The app's logic -->
 	<script type="text/javascript" data-main="app" src="libs/require.js"></script>

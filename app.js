@@ -15,7 +15,7 @@ define([
 	//CKEditor requires full path
 	webix.codebase = document.location.href.split("#")[0].replace("index.html","")+"libs/webix/";
 
-	if(!webix.env.touch && webix.ui.scrollSize)
+	if(!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
 		webix.CustomScroll.init();
 
 
