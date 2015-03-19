@@ -9,14 +9,12 @@ define([
 		type: "space",
 		cols:[
 			{type: "wide",
-        css: "webix_layout_shadowless",
 				rows: [
 					user,
 					event
 				]
 			},
 			{type: "wide",
-        css: "webix_layout_shadowless",
 				rows: [
 					style,
 					project

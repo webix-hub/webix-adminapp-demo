@@ -5,7 +5,7 @@ define([
 ], function(orderform, exports, orders){
 
 	var controls = [
-		{ view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
+		{ view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon: "plus", label: "Add order", width: 140, click: function(){
 			this.$scope.ui(orderform.$ui).show();
 		}},
 		{ view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},
@@ -78,7 +78,6 @@ define([
 		rows: [
 			{
 				height: 40,
-        css: "no_shadow",
 				cols: controls
 			},
 			{
