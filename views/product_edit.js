@@ -10,17 +10,12 @@ var mainView = {};
 
 
 var layout = {
-	type: "space",
-	rows:[
-		{
-			type: "wide",
+			type: "material",
 			cols:[
 				search,
 				{
 					gravity: 2.2,
 					type: "line",
-					borderless: true,
-					css: "webix_layout_shadowed",
 					rows:[
 						{ rows: [{
 							  view: "tabbar", multiview: true, optionWidth: 100,
@@ -57,8 +52,6 @@ var layout = {
 					]
 				}
 			]
-		}
-	]
 };
 
 

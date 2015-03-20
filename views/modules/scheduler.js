@@ -4,22 +4,14 @@ var addEvents = function(){
 };
 return {
 	$ui:{
-		minWidth: 500,
-		gravity: 2,
-    borderless: true,
-    type: "wide",
-		rows:[
-			{
-				type: "wide",
+		type: "material",
 				cols:[
 				{
-          borderless: true,
-          css: "webix_layout_shadowed",
 					width: 240,
 					rows:[
 						{
-              view: "calendar", 
-              on:{
+						view: "calendar", 
+						on:{
 							onDateSelect: function(date){
 								scheduler.updateView(date,"week");
 							}
@@ -52,8 +44,6 @@ return {
 				{
 					view: "dhx-scheduler",
 					date: new Date(),
-          borderless: true,
-          css: "webix_layout_shadowed",
 					mode:"month",
 					tabs:["day","week", "month"],
 					init:function(){
@@ -76,7 +66,7 @@ return {
 						scheduler.templates.week_scale_date = d("%D, %W/%j");
 						scheduler.templates.week_date = function(d1,d2){
 							return week1(d1)+" &ndash; "+ week2(scheduler.date.add(d2,-1,"day"));
-						}
+						};
 					},
 					ready:function(){
 						if(addEvents){
@@ -86,7 +76,6 @@ return {
 
 					}
 				}
-			]}
 		]
 	}
 };

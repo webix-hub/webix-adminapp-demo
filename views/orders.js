@@ -46,7 +46,7 @@ define([
 					{id:"shipping_company", header:"Shipping Company", sort:"string" },
 					{id:"payment_method", header:"Payment method", width:130, sort:"string"},
 					{id:"date", header:"Date", sort:"string", width:100},
-					{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
+					{id:"trash", header:"&nbsp;", width:45, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 				],
 				export: true,
 				on: {
@@ -74,15 +74,14 @@ define([
 	};
 
 	var layout = {
-		type: "space",
+		type: "material",
 		rows: [
 			{
 				height: 40,
+				css:"bg_clean",
 				cols: controls
 			},
 			{
-        borderless: true,
-        css: "webix_layout_shadowed",
 				rows:[
 					grid,
 					{

@@ -3,7 +3,7 @@ define([
 ], function(calendar){
 
 	var layout = {
-		type: "space",
+		type: "clean",
 		cols:[
 			calendar
 		]

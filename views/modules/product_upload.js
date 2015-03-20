@@ -14,6 +14,7 @@ define(function(){
 					]
 				},
 				{
+					css:"bg_panel_raised",
 					view:"datatable",
 					editable:true,
 					columns:[

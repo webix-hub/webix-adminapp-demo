@@ -3,7 +3,6 @@ define(["models/data_arrays"],function(data_arrays){
 	var titleProgress = {
 		view: "toolbar",
 		css: "highlighted_header header4",
-    borderless: true,
 		paddingX:5,
 		paddingY:5,
 		height:40,
@@ -41,8 +40,6 @@ define(["models/data_arrays"],function(data_arrays){
 
 	var layout = {
 		type: "clean",
-    borderless: true,
-    css: "webix_layout_shadowed",
 		rows:[
 			titleProgress,
 			gridProgress

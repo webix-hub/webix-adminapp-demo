@@ -3,8 +3,6 @@ define(["models/visitors"],function(visitors){
 	return {
 		$ui:{
 			"type": "clean",
-      borderless: true,
-      css: "webix_layout_shadowed",
 			"rows":[
 				{
 					"template": "<span class='webix_icon fa-sign-in'></span>Visitor statistics", "css": "sub_title", "height": 30

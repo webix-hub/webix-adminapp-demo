@@ -1,8 +1,6 @@
 define(["models/products"],function(products){
 	return {
 		$ui:{
-      borderless: true,
-      css: "webix_layout_shadowed",
 			rows:[
 				{
 					view: "form",

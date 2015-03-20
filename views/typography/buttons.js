@@ -37,9 +37,8 @@ var row2 = { type:"clean", rows:[{
 ]};
 
 var ui = {
-  height: 400,
+  height: 300,
   borderless: true,
-  css: "webix_layout_shadowed",
   rows: [
     {
       view: "template",

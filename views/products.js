@@ -44,9 +44,10 @@ var grid = {
 
 
 	var layout = {
-		type: "space",
+		type: "material",
 		rows:[
 			{
+				css:"bg_clean",
 				height: 40,
 				cols: [
 					{view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon:"file-excel-o",width:180, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
@@ -70,8 +71,6 @@ var grid = {
 				]
 			},
 			{
-				borderless: true,
-				css: "webix_layout_shadowed",
 				rows:[
 					grid,
 					{

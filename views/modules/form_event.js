@@ -2,8 +2,6 @@ define([],function(){
 	var layout = {
 
 		type: "clean",
-    css: "webix_layout_shadowed",
-    borderless: true,
 		rows:[
 			{
 				view: "toolbar",

@@ -48,8 +48,6 @@ define(["models/data_arrays"],function(data_arrays){
 
 	var layout = {
 		type: "clean",
-    borderless: true,
-    css: "webix_layout_shadowed",
 		rows:[
 			titleRating,
 			gridRating

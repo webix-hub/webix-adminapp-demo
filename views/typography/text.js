@@ -19,15 +19,11 @@ var row2 = {
 };
 
 var ui = {
-  type: "line",
   height: 150,
-  borderless: true,
-  css: "webix_layout_shadowed",
   rows: [
     {type: "line",
       rows: [
         {
-          view: "template",
           template: "Text Colors",
           type: "header"
         },

@@ -13,31 +13,29 @@ define([
 		rows:[
 			dashline,
 			{
-				type: "space",
+				margin:-10,
 				rows:[
 					{
 						height: 220,
-						type: "wide",
+						type: "material",
 						cols: [
 							visitors,
 							orders
 						]
 					},
 					{
-						type: "wide",
+						type: "material",
 						cols: [
 							messages,
-              {
-                borderless: true,
-                css: "webix_layout_shadowed",
-                rows: [
-                  revenue
-                ]
-              }
+							{
+								rows: [
+							  		revenue
+								]
+							}
 						]
 					},
 					{
-						type: "wide",
+						type: "material",
 						cols: [
 							tasks,
 							map

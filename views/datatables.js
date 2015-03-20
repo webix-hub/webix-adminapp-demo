@@ -7,22 +7,19 @@ define([
 ], function(rating,treetable,progress,spans,pager){
 
 var layout = {
-	type: "space",
+	type: "clean",
 	rows:[
 		{
-			type: "wide",
 			cols:[
 				{
-					type:"wide",
-          borderless: true,
+					type:"material",
 					rows:[
 						rating,
 						treetable
 					]
 				},
 				{
-					type:"wide",
-          borderless: true,
+					type:"material",
 					gravity: 0.8,
 					rows:[
 						progress,

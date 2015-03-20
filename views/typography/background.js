@@ -17,10 +17,7 @@ var row2 = {
 };
 
 var ui = {
-  type: "line",
   height: 200,
-  borderless: true,
-  css: "webix_layout_shadowed",
   rows: [
     {type: "line",
       rows: [

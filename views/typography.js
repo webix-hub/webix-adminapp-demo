@@ -6,94 +6,70 @@ define([
 ],function(buttons, raised, text, background){
 
 	var layout = {
-    type: "space",
+    type: "material",
+
 		rows:[
+      {
+        rows:[
           {
-            type: "line",
-            borderless: true,
-            css: "webix_layout_shadowed",
-            rows: [
-              {type: "line",
-                rows: [
-                  {
-                    view: "template",
-                    template: "Main Typography",
-                    type: "header"
-                  },
-                  {
-                    view: "form",
-                    elementsConfig:{
-                      labelWidth: 100,
-                      margin: 10,
-                      paddingX: 2,
-                      borderless: true
-                    },
-                    elements:[
-                      {               
-                        cols:[
-                          {template: 'Default text'},
-                          {template: 'Header Text', type: "header"},
-                          {template: '<a>Link</a>'}
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+            template: "Main Typography",
+            type: "header"
           },
-
-          text,
-          background,
-          buttons,
-          raised,
-
           {
-            type: "line",
-            height: 150,
-            borderless: true,
-            css: "webix_layout_shadowed",
-            width: "100%",
-            rows: [
-              {type: "line",
-                rows: [
-                  {
-                    view: "template",
-                    template: "Icon Styles",
-                    type: "header"
-                  },
-                  {
-                    view: "form",
-                    elementsConfig:{
-                      labelWidth: 100,
-                      margin: 10,
-                      paddingX: 2,
-                      borderless: true
-                    },
-                    elements:[
-                      {               
-                        cols:[
-                          {css: "webix_add_icon", header:"<span class='webix_icon fa-plus-circle'></span>", template:"<span class='webix_icon fa-plus-circle' style='cursor:pointer;'></span>Add Icon"},
-                          {css: "webix_edit_icon", header:"<span class='webix_icon fa-edit'></span>", template:"<span class='webix_icon fa-edit' style='cursor:pointer;'></span>Edit Icon"},
-                          {css: "webix_remove_icon", header:"<span class='webix_icon fa-times'></span>", template:"<span class='webix_icon fa-times' style='cursor:pointer;'></span>Remove Icon"}
-                        ]
-                      },
-                      {
-                        cols:[
-                          {template: 'css: "webix_add_icon"'},
-                          {template: 'css: "webix_edit_icon"'},
-                          {template: 'css: "webix_remove_icon"'}
-                        ]
-                      }
-
-                    ]
-                  }
-                ]
-              }
+            paddingX:25, paddingY:10, cols:[
+              { view:"label", label: 'Default text'},
+              { view:"label", label: 'Header Text', type: "header"},
+              { view:"label", label: '<a>Link</a>'}
             ]
           }
-          
         ]
+      },
+
+      text,
+      background,
+      buttons,
+      raised,
+
+      {
+        height:150,
+        rows:[
+          {
+            template: "Icon Styles",
+            type: "header"
+          },
+          {
+            paddingX:25, paddingY:10, type:"clean", borderless:true, cols:[
+              {css: "webix_add_icon", template:"<span class='webix_icon fa-plus-circle' style='cursor:pointer;'></span>Add Icon"},
+              {css: "webix_edit_icon", template:"<span class='webix_icon fa-edit' style='cursor:pointer;'></span>Edit Icon"},
+              {css: "webix_remove_icon", template:"<span class='webix_icon fa-times' style='cursor:pointer;'></span>Remove Icon"}
+            ]
+          },
+          {
+            paddingX:25, paddingY:10, type:"clean", borderless:true, cols:[
+              { template: 'css: "webix_add_icon"'},
+              { template: 'css: "webix_edit_icon"'},
+              { template: 'css: "webix_remove_icon"'}
+            ]
+          }
+        ]
+      },
+      {
+        height:150,
+        rows:[
+          {
+            template: "Panels",
+            type: "header"
+          },
+          {
+            padding:20, margin:20, cols:[
+              { view:"template", template: 'css:"bg_clean"', css:"bg_clean"},
+              { view:"template", template: 'css:"bg_panel"', css:"bg_panel"},
+              { view:"template", template: 'css:"bg_panel_raised"', css:"bg_panel_raised"}
+            ]
+          }
+        ]
+      },
+    ]
 	};
 
 	return { $ui:layout };

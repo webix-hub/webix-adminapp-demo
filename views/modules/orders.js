@@ -2,8 +2,6 @@ define(function(){
 	return {
 		$ui:{
 			"type": "clean",
-      borderless: true,
-      css: "webix_layout_shadowed",
 			"rows":[
 				{
 					"template": "<span class='webix_icon fa-bar-chart'></span>Orders", "css": "sub_title", "height": 30

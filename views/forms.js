@@ -6,15 +6,15 @@ define([
 ],function(user, project, event, style){
 
 	var layout = {
-		type: "space",
+		
 		cols:[
-			{type: "wide",
+			{type: "material",
 				rows: [
 					user,
 					event
 				]
 			},
-			{type: "wide",
+			{type: "material",
 				rows: [
 					style,
 					project

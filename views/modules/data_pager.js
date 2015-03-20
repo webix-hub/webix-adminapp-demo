@@ -3,7 +3,6 @@ define(["models/orders"],function(orders){
 	var titlePager = {
 		view: "toolbar",
 		css: "highlighted_header header5",
-    borderless: true,
 		paddingX:5,
 		paddingY:5,
 		height:40,
@@ -21,7 +20,6 @@ define(["models/orders"],function(orders){
 			{
 				id:"orderData",
 				view:"datatable", select:true,
-        borderless: true,
 				columns:[
 					{id:"id", header:"#", width:50},
 					{id:"employee", header:["Employee", {content:"selectFilter"} ], sort:"string", minWidth:150, fillspace:1},
@@ -70,13 +68,12 @@ define(["models/orders"],function(orders){
 
 
 	var layout = {
-		type: "clean",
-    borderless: true,
-    css: "webix_layout_shadowed",
-		rows:[
-			titlePager,
-			gridPager
-		]
+		type:"material", rows:[{
+			rows:[
+				titlePager,
+				gridPager
+			]
+		}]
 	};
 
 	return { $ui: layout };
