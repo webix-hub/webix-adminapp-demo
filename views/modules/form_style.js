@@ -35,8 +35,8 @@ define([],function(){
 						cols:[
 							{},
               {view: "button", type: "iconButton", icon:"angle-left", label: "Back",  align: "right", width: 90},
-							{view: "button", css: "webix_button_info", type: "info", label: "Info",  align: "right", width: 90},
-							{view: "button", css: "webix_button_primary webix_button_raised", type:"form", label: "Done",  align: "right", width: 90}
+							{view: "button", css: "button_info", type: "info", label: "Info",  align: "right", width: 90},
+							{view: "button", css: "button_primary button_raised", type:"form", label: "Done",  align: "right", width: 90}
 						]
 					}
 

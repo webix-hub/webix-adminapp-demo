@@ -14,7 +14,7 @@ define([],function(){
 						"template": "<span class='webix_icon fa-male'></span>User", "css": "sub_title2", borderless:true
 					},
 					{
-						view: "button", css: "webix_button_transparent", label: "Close", width: 80
+						view: "button", css: "button_transparent", label: "Close", width: 80
 					}
 				]
 			},
@@ -35,10 +35,10 @@ define([],function(){
 						paddingX: 2,
 						borderless: true,
 						cols:[
-              {view: "button", css: "webix_button_danger", label: "Delete", type: "form", align: "left"},
+              {view: "button", css: "button_danger", label: "Delete", type: "form", align: "left"},
 							{},
 							{view: "button", css: "", label: "Reset",  align: "right"},
-              {view: "button", css: "webix_button_primary webix_button_raised", label: "Save", type: "form", align: "right"}
+              {view: "button", css: "button_primary button_raised", label: "Save", type: "form", align: "right"}
 						]
 					}
 

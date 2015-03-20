@@ -50,8 +50,8 @@ var grid = {
 				css:"bg_clean",
 				height: 40,
 				cols: [
-					{view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon:"file-excel-o",width:180, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
-					{view: "button", css: "webix_button_primary webix_button_raised", type: "iconButton", icon:"refresh",width:130, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", css: "button_primary button_raised", type: "iconButton", icon:"file-excel-o",width:180, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", css: "button_primary button_raised", type: "iconButton", icon:"refresh",width:130, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
 					{},
 					{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
 						{id:"all", value:"All"},

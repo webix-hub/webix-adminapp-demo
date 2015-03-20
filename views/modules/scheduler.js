@@ -34,7 +34,7 @@ return {
 										}
 									}
 								},
-								{ view: "button", css: "webix_button_primary webix_button_raised", label:"Add new calendar",align:"left"},
+								{ view: "button", css: "button_primary button_raised", label:"Add new calendar",align:"left"},
 								{}
 							]
 						}

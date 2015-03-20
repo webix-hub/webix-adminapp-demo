@@ -2,34 +2,34 @@ define(function(){
 
 var row1 = { type:"clean", rows:[{               
     type:"clean", margin:20, cols:[
-      {view: "button", label: "Ordinary Raised", css: "webix_button_raised", align: "left"},
-      {view: "button", label: "Primary Raised", css: "webix_button_primary webix_button_raised", align: "left"},
-      {view: "button", label: "Info Raised", css: "webix_button_info webix_button_raised", align: "left"},
-      {view: "button", label: "Success Raised", css: "webix_button_success webix_button_raised", align: "right"}
+      {view: "button", label: "Ordinary Raised", css: "button_raised", align: "left"},
+      {view: "button", label: "Primary Raised", css: "button_primary button_raised", align: "left"},
+      {view: "button", label: "Info Raised", css: "button_info button_raised", align: "left"},
+      {view: "button", label: "Success Raised", css: "button_success button_raised", align: "right"}
     ]
   },
   {
     type:"clean", cols:[
-      {template: 'css: "webix_button_raised"'},
-      {template: 'css: "webix_button_primary webix_button_raised"'},
-      {template: 'css: "webix_button_info webix_button_raised"'},
-      {template: 'css: "webix_button_success webix_button_raised"'}
+      {template: 'css: "button_raised"'},
+      {template: 'css: "button_primary button_raised"'},
+      {template: 'css: "button_info button_raised"'},
+      {template: 'css: "button_success button_raised"'}
     ]
   }
 ]};
 
 var row2 = { type:"clean", rows:[{               
     type:"clean", margin:20, cols:[
-      {view: "button", label: "Warning Raised", css: "webix_button_warning webix_button_raised", align: "right"},
-      {view: "button", label: "Danger Raised", css: "webix_button_danger webix_button_raised", align: "right"},
-      {view: "button", label: "Badged", css: "webix_button_danger webix_button_raised", align: "left", badge:4 },
+      {view: "button", label: "Warning Raised", css: "button_warning button_raised", align: "right"},
+      {view: "button", label: "Danger Raised", css: "button_danger button_raised", align: "right"},
+      {view: "button", label: "Badged", css: "button_danger button_raised", align: "left", badge:4 },
       {}
     ]
   },
   {
     type:"clean", cols:[
-      {template: 'css: "webix_button_warning webix_button_raised"'},
-      {template: 'css: "webix_button_danger webix_button_raised"'},
+      {template: 'css: "button_warning button_raised"'},
+      {template: 'css: "button_danger button_raised"'},
       {template: 'Button with badge'},
       {}
     ]

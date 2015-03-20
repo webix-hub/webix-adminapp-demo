@@ -3,17 +3,17 @@ define(function(){
 var row1 = {
   cols:[
     {template: 'Default text'},
-    {template: 'css: "webix_text_primary"', css: 'webix_text_primary'},
-    {template: 'css: "webix_text_info"', css: 'webix_text_info'},
-    {template: 'css: "webix_text_success"', css: 'webix_text_success'}
+    {template: 'css: "text_primary"', css: 'text_primary'},
+    {template: 'css: "text_info"', css: 'text_info'},
+    {template: 'css: "text_success"', css: 'text_success'}
   ]
 };
 
 var row2 = {
   cols:[
-    {template: 'css: "webix_text_warning"', css: 'webix_text_warning'},
-    {template: 'css: "webix_text_danger"', css: 'webix_text_danger'},
-    {template: 'css: "webix_text_muted"', css: 'webix_text_muted'},
+    {template: 'css: "text_warning"', css: 'text_warning'},
+    {template: 'css: "text_danger"', css: 'text_danger'},
+    {template: 'css: "text_muted"', css: 'text_muted'},
     {}
   ]
 };

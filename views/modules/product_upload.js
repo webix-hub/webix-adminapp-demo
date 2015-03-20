@@ -9,7 +9,7 @@ define(function(){
 					cols:[
 						{},
 						{
-							view:"button", css: "webix_button_primary webix_button_raised", type:"iconButton", icon: "plus-circle", label: "Add image record", width: 210
+							view:"button", css: "button_primary button_raised", type:"iconButton", icon: "plus-circle", label: "Add image record", width: 210
 						}
 					]
 				},

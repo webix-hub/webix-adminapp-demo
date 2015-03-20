@@ -3,16 +3,16 @@ define(function(){
 var row1 = {
   cols:[
     {template: 'Default backround'},
-    {template: 'css: "webix_bg_primary"', css: 'webix_bg_primary'},
-    {template: 'css: "webix_bg_info"', css: 'webix_bg_info'}
+    {template: 'css: "bg_primary"', css: 'bg_primary'},
+    {template: 'css: "bg_info"', css: 'bg_info'}
   ]
 };
 
 var row2 = {
   cols:[
-    {template: 'css: "webix_bg_success"', css: 'webix_bg_success'},
-    {template: 'css: "webix_bg_warning"', css: 'webix_bg_warning'},
-    {template: 'css: "webix_bg_danger"', css: 'webix_bg_danger'}
+    {template: 'css: "bg_success"', css: 'bg_success'},
+    {template: 'css: "bg_warning"', css: 'bg_warning'},
+    {template: 'css: "bg_danger"', css: 'bg_danger'}
   ]
 };
 

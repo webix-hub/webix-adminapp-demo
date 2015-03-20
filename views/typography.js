@@ -39,16 +39,16 @@ define([
           },
           {
             paddingX:25, paddingY:10, type:"clean", borderless:true, cols:[
-              {css: "webix_add_icon", template:"<span class='webix_icon fa-plus-circle' style='cursor:pointer;'></span>Add Icon"},
-              {css: "webix_edit_icon", template:"<span class='webix_icon fa-edit' style='cursor:pointer;'></span>Edit Icon"},
-              {css: "webix_remove_icon", template:"<span class='webix_icon fa-times' style='cursor:pointer;'></span>Remove Icon"}
+              {css: "solid_icon", template:"<span class='webix_icon fa-plus-circle' style='cursor:pointer;'></span>Add Icon"},
+              {css: "action_icon", template:"<span class='webix_icon fa-edit' style='cursor:pointer;'></span>Edit Icon"},
+              {css: "danger_icon", template:"<span class='webix_icon fa-times' style='cursor:pointer;'></span>Remove Icon"}
             ]
           },
           {
             paddingX:25, paddingY:10, type:"clean", borderless:true, cols:[
-              { template: 'css: "webix_add_icon"'},
-              { template: 'css: "webix_edit_icon"'},
-              { template: 'css: "webix_remove_icon"'}
+              { template: 'css: "solid_icon"'},
+              { template: 'css: "action_icon"'},
+              { template: 'css: "danger_icon"'}
             ]
           }
         ]
