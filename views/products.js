@@ -10,8 +10,6 @@ var grid = {
 	view:"datatable", select:true, editable:true, editaction:"dblclick",
 	columns:[
 		{id:"id", header:"#", width:50},
-
-
 		{id:"code", header:["Code", {content:"textFilter"} ], sort:"string", minWidth:80, fillspace: 1},
 		{id:"name", header:["Name", {content:"textFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"text"},
 		{id:"categoryName", header:["Category", {content:"selectFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"select",  template:"<div class='category#category#'>#categoryName#</div>"},
@@ -39,6 +37,9 @@ var grid = {
 				}
 			});
 		}
+	},
+	ready:function(){
+		webix.extend(this, webix.ProgressBar);
 	}
 };
 
@@ -52,7 +53,16 @@ var grid = {
 
 				cols:[
 					{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
-					{view: "button", type: "iconButton", icon:"refresh",width:100, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", type: "iconButton", icon:"refresh", width:100, label: "Refresh", click: function(){
+						var grid = $$("productsData");
+						grid.clearAll();
+						grid.showProgress();
+						webix.delay(function(){
+							grid.parse(products.getAll);
+							grid.hideProgress();
+						}, null, null, 300);
+						
+					}},
 					{},
 					{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
 						{id:"all", value:"All"},

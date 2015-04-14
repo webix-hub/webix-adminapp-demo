@@ -19,7 +19,11 @@ define(function(){
 					},
 					on:{
 						onBeforeSelect:function(id){
-							return !this.getItem(id).$count;
+							if(this.getItem(id).$count){
+								debugger;
+								return false;
+							}
+							
 						},
 						onAfterSelect:function(id){
 							this.$scope.show("./"+id);
