@@ -11,7 +11,7 @@ define(["models/data_arrays"],function(data_arrays){
 			{
 				"template": "<span class='webix_icon fa-star-o'></span>Rating", "css": "sub_title2", borderless: true
 			},
-			{view: "button", css: "button_transparent", type: "iconButton", icon:"refresh",width:120, label: "Refresh"}
+			{view: "button", css: "button_transparent", type: "iconButton", icon:"refresh",width:130, label: "Refresh"}
 		]
 	};
 

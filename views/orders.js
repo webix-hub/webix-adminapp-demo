@@ -5,7 +5,7 @@ define([
 ], function(orderform, exports, orders){
 
 	var controls = [
-		{ view: "button", css: "button_primary button_raised", type: "iconButton", icon: "plus", label: "Add order", width: 140, click: function(){
+		{ view: "button", css: "button_primary button_raised", type: "iconButton", icon: "plus", label: "Add order", width: 150, click: function(){
 			this.$scope.ui(orderform.$ui).show();
 		}},
 		{ view: "button", css: "button_primary button_raised", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exports},

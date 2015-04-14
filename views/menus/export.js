@@ -16,7 +16,7 @@ return {
 					$$("orderData").exportToExcel();
 				}
 				else if(id==2)
-					$$("orderData").exportToPdf();
+					$$("orderData").exportToPDF();
 			}
 		}
 	}

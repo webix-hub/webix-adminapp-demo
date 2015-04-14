@@ -39,10 +39,10 @@ define([],function(){
 						paddingX: 2,
 						borderless: true,
 						cols:[
-              {view: "button", css: "button_warning button_raised", label: "Warning", type: "form", align: "left"},
+              				{view: "button", css: "button_warning button_raised", label: "Warning", type: "form", align: "left"},
 							{},
 							{view: "button", label: "Reset",  align: "right"},
-							{view: "button", css: "button_success button_raised", label: "Save", type: "icon", icon: "edit", align: "right"}
+							{view: "button", css: "button_success button_raised", label: "Save", align: "right"}
 						]
 					}
 

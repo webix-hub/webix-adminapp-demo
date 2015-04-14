@@ -39,6 +39,9 @@ var grid = {
 				}
 			});
 		}
+	},
+	ready:function(){
+		webix.extend(this, webix.ProgressBar);
 	}
 };
 
@@ -50,8 +53,16 @@ var grid = {
 				css:"bg_clean",
 				height: 40,
 				cols: [
-					{view: "button", css: "button_primary button_raised", type: "iconButton", icon:"file-excel-o",width:180, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
-					{view: "button", css: "button_primary button_raised", type: "iconButton", icon:"refresh",width:130, label: "Refresh", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", css: "button_primary button_raised", type: "iconButton", icon:"file-excel-o",width:190, label: "Export To Excel", click: function(){$$("productsData").exportToExcel();}},
+					{view: "button", css: "button_primary button_raised", type: "iconButton", icon:"refresh",width:130, label: "Refresh", click: function(){
+						var grid = $$("productsData");
+						grid.clearAll();
+						grid.showProgress();
+						webix.delay(function(){
+							grid.parse(products.getAll);
+							grid.hideProgress();
+						}, null, null, 300);
+					}},
 					{},
 					{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
 						{id:"all", value:"All"},

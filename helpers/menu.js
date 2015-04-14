@@ -27,7 +27,7 @@ define([], function(){
 		$onui:function(ui, name, url, scope){
 			//menu handling
 			if (ui.$menu && url.length)
-				select_menu(ui.$menu, url[0].page)
+				select_menu(ui.$menu, url[0].page);
 		}
 	}
 });

@@ -18,9 +18,9 @@ var layout = {
 					type: "line",
 					rows:[
 						{ rows: [{
-							  view: "tabbar", multiview: true, optionWidth: 100,
-							  options:[
-								{id: "mainView", value: "Main", width: 200},
+							view: "tabbar", multiview: true, optionWidth: 100,
+							options:[
+								{id: "mainView", value: "Main"},
 								{id: "imagesView", value: "Images"},
 								{id: "metaView", value: "Meta"}
 							  ]

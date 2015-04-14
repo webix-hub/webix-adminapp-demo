@@ -13,11 +13,11 @@ define(["models/files",	"views/modules/edittree","views/webix/fileview"], functi
 					{view: "button", type: "icon", icon: "pencil-square-o", label: "Rename", width: 120, click:function(){
 						$$("fileTree").edit($$("fileTree").getSelectedId());
 					}},
-					{view: "button", type: "icon", icon: "refresh", label: "Refresh", width: 120},
+					{view: "button", type: "icon", icon: "refresh", label: "Refresh", width: 125},
 					{view: "button", type: "icon", icon: "times", label: "Delete", width: 115},
 					{},
 
-					{view: "button", type: "icon", icon: "plus", label: "Upload", width: 120, click: function(){
+					{view: "button", css:"upload_icon", type: "icon", icon: "plus", label: "Upload", width: 120, click: function(){
 						$$("fileUploadAPI").fileDialog({});
 					}}
 				]
