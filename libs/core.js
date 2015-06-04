@@ -287,7 +287,7 @@ define([
 			var parts = parse_parts(name);
 			app.path = [].concat(parts);
 
-			webix.ui.$freeze = true;
+			//webix.ui.$freeze = true;
 			render_stack(app.$layout, parts);
 		},
 		show:function(name, options){
