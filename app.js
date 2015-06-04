@@ -15,7 +15,7 @@ define([
 	//CKEditor requires full path
 	webix.codebase = document.location.href.split("#")[0].replace("index.html","")+"libs/webix/";
 
-	if(!webix.env.touch && webix.ui.scrollSize)
+	if(!webix.env.touch && webix.ui.scrollSize && webix.CustomScroll)
 		webix.CustomScroll.init();
 
 
@@ -23,6 +23,8 @@ define([
 		tracker.init({
 			accessToken: '650b007d5d794bb68d056584451a57a8',
 			captureUncaught: true,
+			source_map_enabled: true,
+			code_version:"0.8.0",
 			payload: {
 				environment: 'production'
 			}

@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var less = require('gulp-less');
 var clean = require('gulp-clean');
+var zip = require("gulp-zip");
 
 var replace = require("gulp-replace");
 var jshint = require("gulp-jshint");
@@ -66,7 +67,8 @@ gulp.task('build', ["js", "css"], function(){
 		.pipe(replace(/\.css\"/g, '.css?'+build+'"'))
 		.pipe(replace(/\.js\"/g, '.js?'+build+'"'))
 		.pipe(replace("require.config", "webix.production = true; require.config"))
-		.pipe(replace(/\.\.\/webix\/codebase\//g, '//cdn.webix.io/site/'))
+		.pipe(replace(/\.\.\/webix\/codebase\//g, '//cdn.webix.com/site/'))
+		.pipe(replace(/cdn\.webix\.com\/edge/g, 'cdn.webix.com/site'))
 
 		.pipe(gulp.dest("./deploy/")),
 		//server
@@ -76,6 +78,12 @@ gulp.task('build', ["js", "css"], function(){
 	
 });
 
+gulp.task("sources", function(){
+	gulp.src(["assets/**/*", "helpers/**/*", "libs/**/*", "models/**/*", "server/**/*", "views/**/*","index.html", "app.js", "package.json"], 
+		{base: './'})
+	.pipe( zip("webix-admin-app.sources.zip") )
+	.pipe( gulp.dest('./') );
+});
 
 gulp.task('lint', function() {
   return gulp.src('./views/**/*.js', './helpers/**/*.js', './models/**/*.js', './configs/**/*.js', './*.js')
