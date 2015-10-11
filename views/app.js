@@ -11,9 +11,9 @@ define([
 	//Top toolbar
 	var mainToolbar = {
 		view: "toolbar",
-
+		
 		elements:[
-			{view: "label", label: "<a href='http://webix.com'><img class='photo' src='assets/imgs/webix-logotype.svg' height='40' /></a>", width: 200},
+			{view: "label", label: "<a href='http://webix.com'><img class='photo' src='assets/imgs/logo.png' /></a>", width: 200},
 
 			{ height:46, id: "person_template", css: "header_person", borderless:true, width: 180, data: {id:3,name: "Oliver Parr"},
 				template: function(obj){

@@ -48,7 +48,7 @@ define([
 					{id:"date", header:"Date", sort:"string", width:100},
 					{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 				],
-				export: true,
+				"export": true,
 				on: {
 					onAfterLoad: function(){
 						this.select(4);
