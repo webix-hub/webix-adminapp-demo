@@ -261,13 +261,12 @@ define([
 
 			//show start page
 			setTimeout(function(){
-				app.start();
+				webix.ready(function(){
+					app.start();
+				});
 			},1);
 
-			var title = document.getElementsByTagName("title")[0];
-			if (title)
-				title.innerHTML = app.config.name;
-
+			
 			
 			var node = app.config.container;
 			webix.html.addCss(node, "webixappstart");

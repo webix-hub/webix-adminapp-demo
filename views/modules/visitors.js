@@ -29,7 +29,7 @@ define(["models/visitors"],function(visitors){
 					},
 					"series":[
 						{ "value": "#rec#", "color": "#a4b4bf"},
-						{ "value": "#new#", "color": "#61b5ee"}
+						{ "value": "#newv#", "color": "#61b5ee"}
 					],
 					"padding":{
 						"top": 25

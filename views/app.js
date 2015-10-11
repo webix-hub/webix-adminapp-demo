@@ -13,8 +13,7 @@ define([
 		view: "toolbar",
     css: "header",
 		elements:[
-			{view: "template", borderless: true, css: "logo", template: "<a href='http://webix.com'><img class='photo' src='assets/imgs/webix-logotype.svg' height='34' /></a>", width: 200},
-
+			{view: "template", borderless: true, css: "logo", template: "<a href='http://webix.com'><img class='photo' src='assets/imgs/logo.png?555' /></a>", width: 200},
 			{ height:46, id: "person_template", css: "header_person", borderless:true, width: 180, data: {id:3,name: "Oliver Parr"},
 				template: function(obj){
 					var html = 	"<div style='height:100%;width:100%;' onclick='webix.$$(\"profilePopup\").show(this)'>";
