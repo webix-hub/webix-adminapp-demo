@@ -1,14 +1,10 @@
-define([
-	"views/modules/scheduler"
-], function(calendar){
+import calendar from "views/modules/scheduler";
 
-	var layout = {
-		type: "space",
-		cols:[
-			calendar
-		]
-	};
+var layout = {
+	type: "space",
+	cols:[
+		calendar
+	]
+};
 
-	return { $ui:layout };
-
-});
+export default layout;

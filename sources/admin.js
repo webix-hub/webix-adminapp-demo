@@ -1,5 +1,5 @@
 import "../assets/theme.siberia.less";
-import {JetApp} from "@xbs/wjet";
+import {JetApp} from "webix-jet";
 
 webix.codebase = "//cdn.webix.com/components/";
 
@@ -13,10 +13,10 @@ webix.ready(function(){
 		version:	"1.0",
 		start:		"/app/dashboard"
 	});
-	// app.use(Locale);
-	// app.use(Theme);
 
-	app.attachEvent("app:error:resolve", function(){
+	app.attachEvent("app:error:resolve", function(name, err){
+		debugger;
+		console.error(err);
 		webix.delay(() => this.show("/app/dashboard"));
 	})
 	app.render();

@@ -1,11 +1,17 @@
-define([
-	"views/modules/editor",
-	"views/modules/topsales",
-	"models/products"
-], function(editor, topsales, products){
+import {JetView} from "webix-jet";
 
+import {data} 	from "models/products";
 
-var grid = {
+export default class ProductsView extends JetView {
+	config(){
+		return layout;
+	}
+	init(view){
+		view.queryView({ view:"datatable" }).parse(data);
+	}
+}
+
+const grid = {
 	id:"productsData",
 	view:"datatable", select:true, editable:true, editaction:"dblclick",
 	columns:[
@@ -22,17 +28,16 @@ var grid = {
 	],
 	pager:"pagerA",
 	"export":true,
-	data:products.getAll,
 	onClick:{
 		"fa-trash-o":function(e,id,node){
 			webix.confirm({
 				text:"The product will be deleted. <br/> Are you sure?", ok:"Yes", cancel:"Cancel",
-				callback:function(res){
+				callback:() => {
 					if(res){
-						var item = webix.$$("productsData").getItem(id);
+						const item = this.getItem(id);
 						item.status = "0";
 						item.statusName = "Deleted";
-						webix.$$("productsData").refresh(id);
+						this.refresh(id);
 					}
 				}
 			});
@@ -43,73 +48,54 @@ var grid = {
 	}
 };
 
-
-	var layout = {
-		type: "space",
-
-		rows:[
-			{
-				height:40,
-
-				cols:[
-					{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){
-						webix.toExcel($$("productsData"));
-					}},
-					{view: "button", type: "iconButton", icon:"refresh", width:100, label: "Refresh", click: function(){
-						var grid = $$("productsData");
-						grid.clearAll();
-						grid.showProgress();
-						webix.delay(function(){
-							grid.parse(products.getAll);
-							grid.hideProgress();
-						}, null, null, 300);
-						
-					}},
-					{},
-					{view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
-						{id:"all", value:"All"},
-						{id:"1", value:"Published"},
-						{id:"2", value:"Not published"},
-						{id:"0", value:"Deleted"}
-					],  label:"Filter products", on:{
-						onChange:function(){
-							var val = this.getValue();
-							if(val=="all")
-								$$("productsData").filter("#status#","");
-							else
-								$$("productsData").filter("#status#",val);
-						}
-					}
-					}
-				]
-			},
-			{
-				rows:[
-					grid,
-					{
-						view: "toolbar",
-						css: "highlighted_header header6",
-						paddingX:5,
-						paddingY:5,
-						height:40,
-						cols:[{
-							view:"pager", id:"pagerA",
-							template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
-							autosize:true,
-							height: 35,
-							group:5
-						}
-
-						]
-					}
-				]
+const controls = [
+	{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){
+		webix.toExcel($$("productsData"));
+	}},
+	{view: "button", type: "iconButton", icon:"refresh", width:100, label: "Refresh", click: function(){
+		var grid = $$("productsData");
+		grid.clearAll();
+		grid.showProgress();
+		webix.delay(function(){
+			grid.parse(data);
+			grid.hideProgress();
+		}, null, null, 300);
+		
+	}},
+	{},
+	{ view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
+		{id:"all", value:"All"},
+		{id:"1", value:"Published"},
+		{id:"2", value:"Not published"},
+		{id:"0", value:"Deleted"}
+	],  label:"Filter products", on:{
+			onChange:function(){
+				var val = this.getValue();
+				if(val=="all")
+					$$("productsData").filter("#status#","");
+				else
+					$$("productsData").filter("#status#",val);
 			}
+		}
+	}
+];
 
+const toolbar = {
+	view: "toolbar",
+	css: "highlighted_header header6",
+	paddingX:5, paddingY:5, height:40,
+	cols:[{
+		view:"pager", id:"pagerA",
+		template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
+		autosize:true, 
+		height: 35, group:5
+	}]
+};
 
-		]
-
-	};
-
-return { $ui:layout };
-
-});
+const layout = {
+	type: "space",
+	rows:[
+		{ height:40, cols: controls	},
+		{ rows:[ grid, toolbar ] }
+	]
+};

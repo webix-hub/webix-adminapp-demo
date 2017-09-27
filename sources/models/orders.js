@@ -1,6 +1,4 @@
-define([],function(){
-	
-var data =[
+export const data =[
 	{"id":1,"date":"2014-03-20","employee":"Ray M. Parra","customer":"Sabrina N. Hermann","status":"new","fee":12.5,"taxes":23.028,"total":323.378,"shipping_company":"Shipping A","payment_method":"Credit card"},
 	{"id":2,"date":"2014-03-20","employee":"Lane E. Dion","customer":"Bradly N. Mauro","status":"new","fee":12,"taxes":6.528,"total":100.128,"shipping_company":"Shipping C","payment_method":"Wire transer"},
 	{"id":3,"date":"2014-03-20","employee":"Ray M. Parra","customer":"Stepanie P. Lilley","status":"ready","fee":25,"taxes":54,"total":1429,"shipping_company":"Shipping A","payment_method":"Credit card"},
@@ -63,12 +61,5 @@ var data =[
 	{"id":37,"date":"2014-08-26","employee":"Romaine B. Alley","customer":"Stephane A. Chandler","status":"completed","fee":0,"taxes":0,"total":0,"shipping_company":"Shipping C","payment_method":"Credit Card"},
 	{"id":38,"date":"2014-08-26","employee":"Jamila N. Mccallister","customer":"Olimpia C. Whelan","status":"new","fee":55,"taxes":13,"total":2100,"shipping_company":"Shipping E","payment_method":"Credit Card"},
 	{"id":39,"date":"2014-08-26","employee":"Romaine B. Alley","customer":"Jettie P. Whelan","status":"ready","fee":18,"taxes":8,"total":956,"shipping_company":"Shipping A","payment_method":"Wire Transfer"},
-	{"id":40,"date":"2014-08-26","employee":"Lane E. Dion","customer":"Stepanie P. Lilley","status":"completed","fee":133,"taxes":33,"total":754,"shipping_company":"Shipping D", "payment_method":"Cash"},
-
+	{"id":40,"date":"2014-08-26","employee":"Lane E. Dion","customer":"Stepanie P. Lilley","status":"completed","fee":133,"taxes":33,"total":754,"shipping_company":"Shipping D", "payment_method":"Cash"}
 ];
-
-return {
-	getAll:data
-};
-
-});

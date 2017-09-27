@@ -33,7 +33,8 @@ var config = {
     extensions: ['.js'],
     modules: ["./sources", "node_modules", "bower_components"],
     alias:{
-      "jet-views":path.resolve(__dirname, 'sources/views')
+      "jet-views":path.resolve(__dirname, 'sources/views'),
+      "jet-locales":path.resolve(__dirname, 'sources/locales')
     }
   },
   plugins: [

@@ -1,12 +1,10 @@
-define([
-	"views/modules/data_rating",
-	"views/modules/data_treetable",
-	"views/modules/data_progress",
-	"views/modules/data_spans",
-	"views/modules/data_pager"
-], function(rating,treetable,progress,spans,pager){
+import rating		from "views/modules/data_rating";
+import treetable	from "views/modules/data_treetable";
+import progress		from "views/modules/data_progress";
+import spans		from "views/modules/data_spans";
+import pager		from "views/modules/data_pager";
 
-var layout = {
+const layout = {
 	type: "space",
 	rows:[
 		{
@@ -34,7 +32,4 @@ var layout = {
 	]
 };
 
-
-return { $ui:layout };
-
-});
+export default layout;

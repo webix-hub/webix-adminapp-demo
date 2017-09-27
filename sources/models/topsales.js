@@ -1,6 +1,4 @@
-define([],function(){
-
-	var data =[
+export const data =[
 	{productId:1,value: 15000,selection: "month", name:"Chai"},
 	{productId:1,value: 35000,selection: "month3", name:"Chocolate"},
 	{productId:1,value: 130000,selection: "year", name:"Chai"},
@@ -14,9 +12,3 @@ define([],function(){
 	{productId:4,value: 45000,selection: "month3", name:"Marmalade"},
 	{productId:4,value: 100500,selection: "year", name:"Syrup"}
 ];
-
-	return {
-		getAll:data
-	};
-
-});

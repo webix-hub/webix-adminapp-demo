@@ -1,5 +1,5 @@
-import getData from "models/files";
-import {JetView} from "@xbs/wjet";
+import {data} from "models/files";
+import {JetView} from "webix-jet";
 
 export default class FMView extends JetView {
 		config(){
@@ -8,8 +8,8 @@ export default class FMView extends JetView {
 				disabledHistory:true
 			}
 		}
-		$init(view){
-			view.parse(getData());
+		init(view){
+			view.parse(webix.copy(data));
 		}
 }
 
