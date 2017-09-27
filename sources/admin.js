@@ -15,9 +15,8 @@ webix.ready(function(){
 	});
 
 	app.attachEvent("app:error:resolve", function(name, err){
-		debugger;
-		console.error(err);
+		window.console.error(err);
 		webix.delay(() => this.show("/app/dashboard"));
-	})
+	});
 	app.render();
 });

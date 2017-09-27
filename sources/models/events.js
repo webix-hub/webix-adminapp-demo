@@ -2,7 +2,7 @@ var weekStart = webix.Date.weekStart(new Date());
 var monthStart = webix.Date.monthStart(new Date());
 var day = webix.Date.dayStart(new Date());
 var day2 = webix.Date.add(webix.Date.copy(day),1,"month",true);
-var monthStart1 = webix.Date.add(webix.Date.copy(monthStart),-1,"month",true);
+
 var monthStart2 = webix.Date.add(webix.Date.copy(monthStart),1,"month",true);
 var weekStart2 = webix.Date.add(webix.Date.copy(weekStart),1,"month",true);
 var weekStart1 = webix.Date.add(webix.Date.copy(weekStart),-1,"month",true);

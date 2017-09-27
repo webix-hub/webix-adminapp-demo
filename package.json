@@ -30,6 +30,7 @@
     "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
+    "eslint": "^4.7.2",
     "webix-jet": "^1.0.0"
   }
 }
