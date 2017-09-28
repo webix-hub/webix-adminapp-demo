@@ -7,9 +7,22 @@
 	<script type="text/javascript" src="//cdn.webix.com/edge/webix.js"></script>
 	<link rel="stylesheet" href="//cdn.webix.com/edge/webix.css">
 
+	<!-- Filemanager Library -->
 	<script type="text/javascript" src="//cdn.webix.com/site/filemanager/filemanager.js"></script>
 	<link rel="stylesheet" href="//cdn.webix.com/site/filemanager/filemanager.css">
 
+	<!-- Error tracking -->
+	<script src="https://cdn.ravenjs.com/3.10.0/raven.min.js"></script>
+	<script type="text/javascript">
+		var host = document.location.host;
+		if (host !== "localhost" && host !== "127.0.0.1"){
+			Raven
+				.config("https://59d0634de9704b61ba83823ec3bf4787@sentry.webix.io/12")
+				.install();
+		}
+	</script>
+
+	<!-- The App -->
 	<link rel="stylesheet" href="codebase/admin.css">
 	<script type="text/javascript" src="codebase/admin.js"></script>
 </head>
