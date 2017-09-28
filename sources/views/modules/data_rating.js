@@ -21,7 +21,7 @@ const titleRating = {
 		{
 			"template": "<span class='webix_icon fa-star-o'></span>Rating", "css": "sub_title2", borderless: true
 		},
-		{view: "button", type: "iconButton", icon:"refresh",width:100, label: "Refresh"}
+		{view: "button", type: "iconButton", icon:"refresh", css: "button_transparent", width:130, label: "Refresh"}
 	]
 };
 

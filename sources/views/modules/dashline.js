@@ -7,7 +7,7 @@ const ui = {
 		var html = "<div class='flex_tmp'>";
 		for(var i=0; i < items.length; i++){
 			t = items[i];
-			html += "<div class='item "+t.css+"'>";
+			html += "<div class='item "+t.css+" bg_panel'>";
 			html += "<div class='webix_icon icon fa-"+ t.icon+"'></div>";
 			html += "<div class='details'><div class='value'>"+t.value+"</div><div class='text'>"+t.text+"</div></div>";
 			html +=  "<div class='footer'>View more <span class='webix_icon fa-angle-double-right'></span></div>";

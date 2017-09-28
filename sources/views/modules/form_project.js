@@ -35,7 +35,8 @@ const layout = {
 					borderless: true,
 					cols:[
 						{},
-						{view: "button", label: "Next", type: "form", align: "right",width: 80}
+						{view: "button", css: "button_primary button_raised", label: "Next", type: "form", align: "right",width: 80},
+						{view: "button", css: "button_success button_raised", label: "Finish", type: "form", align: "right",width: 100}
 					]
 				}
 			]

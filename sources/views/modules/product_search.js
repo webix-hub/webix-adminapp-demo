@@ -20,8 +20,8 @@ const layout = {
 			paddingY:5,
 			margin: 2,
 			rows:[
-				{view: "label",label: "Find product:"},
-				{view: "search"}
+				{view: "label", label: "Find product:"},
+				{view: "search", placeholder: "Type here...",}
 			]
 		},
 		{

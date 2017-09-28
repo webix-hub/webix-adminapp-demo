@@ -16,18 +16,17 @@ const grid = {
 	view:"datatable", select:true, editable:true, editaction:"dblclick",
 	columns:[
 		{id:"id", header:"#", width:50},
-		{id:"code", header:["Code", {content:"textFilter"} ], sort:"string", minWidth:80, fillspace: 1},
+		{id:"code", header:["Code", {content:"textFilter"} ], sort:"string", minWidth:70, fillspace: 1},
 		{id:"name", header:["Name", {content:"textFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"text"},
 		{id:"categoryName", header:["Category", {content:"selectFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"select",  template:"<div class='category#category#'>#categoryName#</div>"},
 		{id:"price", header:["Price"], sort:"int", minWidth:80, fillspace: 1, format:webix.i18n.priceFormat},
-		{id:"quantity", header:["Quantity" ], sort:"int", minWidth:60, fillspace: 1},
-		{id:"statusName", header:["Status"], minWidth:75, sort:"string", fillspace: 1, template:"<span class='status status#status#'>#statusName#</span>"},
+		{id:"quantity", header:["Quantity" ], sort:"int", minWidth:50, fillspace: 1},
+		{id:"statusName", header:["Status"], minWidth:110, sort:"string", fillspace: 1, template:"<span class='status status#status#'>#statusName#</span>"},
 
-		{id:"edit", header:"&nbsp;", width:35, template:"<span  style=' cursor:pointer;' class='webix_icon fa-pencil'></span>"},
-		{id:"delete", header:"&nbsp;", width:35, template:"<span  style='cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
+		{id:"edit", header:"&nbsp;", width:50, template:"<span  style=' cursor:pointer;' class='webix_icon fa-pencil'></span>"},
+		{id:"delete", header:"&nbsp;", width:50, template:"<span  style='cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 	],
 	pager:"pagerA",
-	"export":true,
 	onClick:{
 		"fa-trash-o":function(e,id){
 			webix.confirm({
@@ -49,19 +48,25 @@ const grid = {
 };
 
 const controls = [
-	{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){
-		webix.toExcel(webix.$$("productsData"));
-	}},
-	{view: "button", type: "iconButton", icon:"refresh", width:100, label: "Refresh", click: function(){
-		var grid = webix.$$("productsData");
-		grid.clearAll();
-		grid.showProgress();
-		webix.delay(function(){
-			grid.parse(data);
-			grid.hideProgress();
-		}, null, null, 300);
-		
-	}},
+	{view: "button", type: "iconButton", 
+		css: "button_primary button_raised", icon:"file-excel-o",
+		width:180, label: "Export To Excel", click: function(){
+			webix.toExcel(webix.$$("productsData"));
+		}
+	},
+	{view: "button", type: "iconButton",
+		css: "button_primary button_raised", icon:"refresh",
+		width:130, label: "Refresh", click: function(){
+			var grid = webix.$$("productsData");
+			grid.clearAll();
+			grid.showProgress();
+			webix.delay(function(){
+				grid.parse(data);
+				grid.hideProgress();
+			}, null, null, 300);
+			
+		}
+	},
 	{},
 	{ view:"richselect", id:"order_filter", value: "all", maxWidth: 300, minWidth: 250, vertical: true, labelWidth: 110, options:[
 		{id:"all", value:"All"},
@@ -86,16 +91,16 @@ const toolbar = {
 	paddingX:5, paddingY:5, height:40,
 	cols:[{
 		view:"pager", id:"pagerA",
-		template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
+		template:"{common.pages()}",
 		autosize:true, 
 		height: 35, group:5
 	}]
 };
 
 const layout = {
-	type: "space",
+	type: "material",
 	rows:[
-		{ height:40, cols: controls	},
+		{ height:40, css:"bg_clean", cols: controls	},
 		{ rows:[ grid, toolbar ] }
 	]
 };

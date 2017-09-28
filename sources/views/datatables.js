@@ -5,20 +5,20 @@ import spans		from "views/modules/data_spans";
 import pager		from "views/modules/data_pager";
 
 const layout = {
-	type: "space",
+	type: "clean",
 	rows:[
 		{
 			type: "wide",
 			cols:[
 				{
-					type:"wide",
+					type:"material",
 					rows:[
 						rating,
 						treetable
 					]
 				},
 				{
-					type:"wide",
+					type:"material",
 					gravity: 0.8,
 					rows:[
 						progress,

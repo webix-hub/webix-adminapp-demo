@@ -13,7 +13,7 @@ const layout = {
 					"template": "<span class='webix_icon fa-male'></span>User", "css": "sub_title2", borderless:true
 				},
 				{
-					view: "button", label: "Close", width: 80
+					view: "button", css: "button_transparent", label: "Close", width: 80
 				}
 			]
 		},
@@ -24,11 +24,11 @@ const layout = {
 				labelWidth: 120
 			},
 			elements:[
-				{view: "text", label: "First Name",name: "name1"},
-				{view: "text", label: "Last Name", name: "name2"},
-				{view: "datepicker", label: "Date of Birth", name: "date"},
+				{view: "text", placeholder: "Type here...", label: "First Name",name: "name1"},
+				{view: "text", placeholder: "Type here...", label: "Last Name", name: "name2"},
+				{view: "datepicker", placeholder: "Select here...", label: "Date of Birth", name: "date"},
 			
-				{view: "text", label: "Phone Number"},
+				{view: "text", placeholder: "Type here...", label: "Phone Number"},
 				{
 					margin: 10,
 					paddingX: 2,
@@ -36,7 +36,7 @@ const layout = {
 					cols:[
 						{},
 						{view: "button", label: "Reset",  align: "right"},
-						{view: "button", label: "Save", type: "form", align: "right"}
+						{view: "button", css: "button_primary button_raised", label: "Save", type: "form", align: "right"}
 					]
 				}
 

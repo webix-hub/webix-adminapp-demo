@@ -9,11 +9,11 @@ const layout = {
 	type: "clean",
 	rows:[
 		{
-			type: "space",
+			type: "clean", margin:-10,
 			rows:[
 
 				{
-					type: "wide",
+					type: "material",
 					minHeight: 250,
 					cols: [
 						{
@@ -31,7 +31,7 @@ const layout = {
 				},
 				{
 
-					type: "wide",
+					type: "material",
 					cols: [
 						{
 
@@ -58,7 +58,7 @@ const layout = {
 				},
 				{
 					height: 220,
-					type: "wide",
+					type: "material",
 					cols: [
 
 						orders,

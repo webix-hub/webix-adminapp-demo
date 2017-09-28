@@ -1,7 +1,7 @@
 import calendar from "views/modules/scheduler";
 
 var layout = {
-	type: "space",
+	type: "clean",
 	cols:[
 		calendar
 	]

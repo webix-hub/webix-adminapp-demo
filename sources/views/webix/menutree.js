@@ -2,9 +2,6 @@
 webix.type(webix.ui.tree, {
 	name:"menuTree",
 	height: 40,
-	icon:function(){
-		return "";
-	},
 	folder:function(obj){
 		if(obj.icon)
 			return "<span class='webix_icon icon fa-"+obj.icon+"'></span>";

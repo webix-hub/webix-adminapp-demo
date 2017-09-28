@@ -15,10 +15,10 @@ export default class OrdersView extends JetView{
 }
 
 const controls = [
-	{ view: "button", type: "iconButton", icon: "plus", label: "Add order", width: 130, click: function(){
+	{ view: "button", css: "button_primary button_raised", type: "iconButton", icon: "plus", label: "Add order", width: 150, click: function(){
 		this.$scope._form.show(this.$view);
 	}},
-	{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exportwin },
+	{ view: "button", css: "button_primary button_raised", type: "iconButton", icon: "external-link", label: "Export", width: 120, popup: exportwin },
 	{},
 	{view:"richselect", id:"order_filter", value: "all", maxWidth: 400, minWidth: 250, vertical: true, labelWidth: 100, options:[
 		{id:"all", value:"All"},
@@ -56,9 +56,8 @@ const grid = {
 				{id:"shipping_company", header:"Shipping Company", sort:"string" },
 				{id:"payment_method", header:"Payment method", width:130, sort:"string"},
 				{id:"date", header:"Date", sort:"string", width:100},
-				{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
+				{id:"trash", header:"&nbsp;", width:45, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 			],
-			"export": true,
 			on: {
 				onAfterLoad: function(){
 					this.select(4);
@@ -83,10 +82,11 @@ const grid = {
 };
 
 var layout = {
-	type: "space",
+	type: "material",
 	rows:[
 		{
 			height:40,
+			css:"bg_clean",
 			cols:controls
 		},
 		{
@@ -100,7 +100,7 @@ var layout = {
 					height:40,
 					cols:[{
 						view:"pager", id:"pagerA",
-						template:"{common.first()}{common.prev()}&nbsp; {common.pages()}&nbsp; {common.next()}{common.last()}",
+						template:"{common.pages()}",
 						autosize:true,
 						height: 35,
 						group:5

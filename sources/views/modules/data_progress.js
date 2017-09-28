@@ -20,7 +20,7 @@ const titleProgress = {
 		{
 			"template": "<span class='webix_icon fa-adjust'></span>Progress", "css": "sub_title2", borderless: true
 		},
-		{ view: "button", type: "iconButton", icon: "sliders", label: "Update", width: 100}
+		{ view: "button", type: "iconButton", icon: "sliders", label: "Update", width: 120, css: "button_transparent" }
 	]
 };
 const gridProgress = {

@@ -25,10 +25,9 @@ export default class AppView extends JetView {
 //Top toolbar
 var mainToolbar = {
 	view: "toolbar",
-	
+	css: "header",
 	elements:[
-		{view: "label", label: "<a href='http://webix.com'><img class='photo' src='assets/imgs/logo.png' /></a>", width: 200},
-
+		{view: "template", borderless: true, css: "logo", template: "<a href='http://webix.com'><img class='photo' src='assets/imgs/logo.png' /></a>", width: 200},
 		{ height:46, id: "person_template", css: "header_person", borderless:true, width: 180, data: {id:3,name: "Oliver Parr"},
 			template: function(obj){
 				var html = 	"<div style='height:100%;width:100%;' onclick='webix.$$(\"profilePopup\").show(this)'>";

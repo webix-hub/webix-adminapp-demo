@@ -11,18 +11,18 @@ const layout = {
 	rows:[
 		dashline,
 		{
-			type: "space",
+			margin:-10,
 			rows:[
 				{
 					height: 220,
-					type: "wide",
+					type: "material",
 					cols: [
 						visitors,
 						orders
 					]
 				},
 				{
-					type: "wide",
+					type: "material",
 					cols: [
 						messages,
 						revenue
@@ -30,7 +30,7 @@ const layout = {
 					]
 				},
 				{
-					type: "wide",
+					type: "material",
 					cols: [
 						tasks,
 						map

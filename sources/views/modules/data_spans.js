@@ -20,7 +20,7 @@ var titleGroup = {
 		{
 			"template": "<span class='webix_icon fa-arrows-v'></span>Spans", "css": "sub_title2", borderless: true
 		},
-		{ view: "icon", icon: "refresh",width: 40}
+		{ view: "button", css:"button_transparent", type: "iconButton", icon: "refresh", width: 32}
 
 	]
 };

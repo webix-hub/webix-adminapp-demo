@@ -4,15 +4,14 @@ import event	from "views/modules/form_event";
 import style	from "views/modules/form_style";
 
 var layout = {
-	type: "space",
 	cols:[
-		{type: "wide",
+		{type: "material",
 			rows: [
 				user,
 				event
 			]
 		},
-		{type: "wide",
+		{type: "material",
 			rows: [
 				style,
 				project

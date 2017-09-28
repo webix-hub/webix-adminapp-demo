@@ -22,7 +22,7 @@ const titleTree = {
 		{
 			"template": "<span class='webix_icon fa-folder-o'></span>Treetable", "css": "sub_title2", borderless: true
 		},
-		{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 100}
+		{ view: "button", css: "button_transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120}
 	]
 };
 const gridTree = {

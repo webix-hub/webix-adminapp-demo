@@ -12,7 +12,7 @@ const layout = {
 					"template": "<span class='webix_icon fa-star-o'></span>Event", "css": "sub_title2", borderless:true
 				},
 				{
-					view: "button", label: "Close", width: 80
+					view: "button", css: "button_transparent", label: "Close", width: 80
 				}
 			]
 		},
@@ -22,7 +22,7 @@ const layout = {
 				labelWidth: 100
 			},
 			elements:[
-				{view: "text", label: "Event Name"},
+				{view: "text", placeholder: "Type here...", label: "Event Name"},
 				{view: "datepicker", label: "Start Date", value: new Date(), timepicker:true, format: "%H:%i %D, %d %M"},
 				{view: "datepicker", label: "End Date", value: webix.Date.add(new Date(),1,"hour"), format: "%H:%i %D, %d %M", timepicker:true},
 				{view: "checkbox", label: "All-day"},
@@ -31,7 +31,7 @@ const layout = {
 					{id:2, value: "Webix project"},
 					{id:3, value: "Other"}
 				]},
-				{view: "textarea", label: "Details", height: 80},
+				{view: "textarea", placeholder: "Type here...", label: "Details", height: 80},
 				{
 					margin: 10,
 					paddingX: 2,
@@ -39,7 +39,7 @@ const layout = {
 					cols:[
 						{},
 						{view: "button", label: "Reset",  align: "right"},
-						{view: "button", label: "Save", type: "form", align: "right"}
+						{view: "button", css: "button_success button_raised", label: "Save", align: "right"}
 					]
 				}
 

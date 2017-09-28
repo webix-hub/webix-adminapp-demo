@@ -26,15 +26,16 @@ const layout = {
 				{ view: "colorpicker", label: "Background", value: "#a693eb"},
 				{ view: "colorpicker", label: "Font Color", value: "#a4b4bf"},
 
-				{ view: "text", label: "Font Size (px)", value: "14"},
+				{ view: "text", placeholder: "Type here...", label: "Font Size (px)", value: "14"},
 				{
 					margin: 10,
 					paddingX: 2,
 					borderless: true,
 					cols:[
 						{},
-						{view: "button", type: "iconButton", icon:"angle-left", label: "Back",  align: "right", width: 90},
-						{view: "button", type:"form", label: "Done",  align: "right", width: 90}
+						{view: "button", type:"iconButton", icon:"angle-left", label: "Back",  align: "right", width: 90},
+						{view: "button", css: "button_info", type: "info", label: "Info",  align: "right", width: 90},
+						{view: "button", css: "button_primary button_raised", type:"form", label: "Done",  align: "right", width: 90}
 					]
 				}
 

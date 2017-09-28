@@ -106,7 +106,7 @@ const donut3 = {
 };
 
 const layout = {	
-	type: "clean",
+	type: "clean", borderless: true,
 	rows:[
 		chart,
 		{

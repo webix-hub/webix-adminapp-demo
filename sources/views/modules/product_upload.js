@@ -7,12 +7,13 @@ const ui = {
 			cols:[
 				{},
 				{
-					view:"button", type:"iconButton", icon: "plus-circle", label: "Add image record", width: 170
+					view:"button", css: "button_primary button_raised", type:"iconButton", icon: "plus-circle", label: "Add image record", width: 210
 				}
 			]
 		},
 		{
 			view:"datatable",
+			css:"bg_panel_raised",
 			editable:true,
 			columns:[
 				{ id:"photo",	header:"Image",  template:"<span class='product_image webix_icon fa-#icon#'></span>", fillspace:1},

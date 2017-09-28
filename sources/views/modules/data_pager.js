@@ -20,8 +20,8 @@ const titlePager = {
 		{
 			"template": "<span class='webix_icon fa-file-text-o'></span>Pager", "css": "sub_title2", borderless: true
 		},
-		{ view: "button", type: "iconButton", icon: "external-link", label: "Export", width: 100},
-		{ view: "button", type: "iconButton", icon: "pencil-square-o", label: "Edit", width: 80}
+		{ view: "button", css: "button_transparent", type: "iconButton", icon: "external-link", label: "Export", width: 120},
+		{ view: "button", css: "button_transparent", type: "iconButton", icon: "pencil-square-o", label: "Edit", width: 100}
 	]
 };
 const gridPager =  {
@@ -42,7 +42,7 @@ const gridPager =  {
 				{id:"shipping_company", header:"Shipping Company", sort:"string" },
 				{id:"payment_method", header:"Payment method", width:130, sort:"string"},
 				{id:"date", header:"Date", sort:"string", width:100},
-				{id:"trash", header:"&nbsp;", width:35, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
+				{id:"trash", header:"&nbsp;", width:50, template:"<span  style='color:#777777; cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
 			],
 			export: true,
 			on: {
@@ -77,9 +77,10 @@ const gridPager =  {
 
 
 const layout = {
-	type: "clean",
-	rows:[
-		titlePager,
-		gridPager
-	]
+	type: "material", rows:[{
+		rows:[
+			titlePager,
+			gridPager
+		]
+	}]
 };
