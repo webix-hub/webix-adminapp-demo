@@ -40,7 +40,7 @@ const chart = {
 	},
 	on: {
 		onAfterLoad: function(){
-			$$("topSelling").setValue("month");
+			webix.$$("topSelling").setValue("month");
 		}
 	},
 	padding:{
@@ -56,10 +56,10 @@ const form = {
 	cols:[
 		{
 			view: "radio", id:"topSelling", label: "", labelWidth: 0, vertical: true,on:{
-			onChange: function(){
-				$$("productsBar").filter(function(obj){ return obj.selection == $$("topSelling").getValue(); });
-			}
-		},
+				onChange: function(){
+					webix.$$("productsBar").filter(function(obj){ return obj.selection == webix.$$("topSelling").getValue(); });
+				}
+			},
 			options: [
 				{id: "month", value:"Last month"},
 				{id: "month3", value: "Last 3 months"}

@@ -1,7 +1,3 @@
-const header = {
-	"template": "<span class='webix_icon fa-line-chart'></span>Revenue", "css": "sub_title", "height": 50
-};
-
 const chart = {
 	view: "chart",
 	type: "line",

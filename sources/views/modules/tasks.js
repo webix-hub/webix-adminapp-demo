@@ -12,7 +12,7 @@ const tasks = {
 				marker: function(obj){
 					return "<span class='webix_icon_btn fa-bell-o marker "+obj.type+"' style='max-width:32px;' ></span>";
 				},
-				check:  webix.template('<span class="webix_icon_btn fa-{obj.$check?check-:}square-o list_icon" style="max-width:32px;"></span>'),
+				check:  webix.template("<span class=\"webix_icon_btn fa-{obj.$check?check-:}square-o list_icon\" style=\"max-width:32px;\"></span>"),
 				template: function(obj,type){
 					return "<div class='"+(obj.$check?"done":"")+"'>"+type.check(obj,type)+"<span class='list_text'>"+obj.text+"</span><span class='marker "+obj.type+"'>"+(obj.type||"")+"</span></div>";
 				}

@@ -4,7 +4,8 @@
         "es6": true
     },
     "globals":{
-        "webix":true
+        "webix":true,
+        "scheduler":true
     },
     "extends": "eslint:recommended",
     "parserOptions": {

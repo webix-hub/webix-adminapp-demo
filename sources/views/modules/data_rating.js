@@ -43,7 +43,7 @@ const gridRating = {
 		}
 	],
 	onClick:{
-		rating_star:function(ev, id, html){
+		rating_star:function(ev, id){
 			this.getItem(id.row)[id.column] = (ev.target||ev.srcElement).getAttribute("title");
 			this.updateItem(id.row);
 		}

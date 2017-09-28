@@ -36,7 +36,7 @@ const gridTree = {
 	],
 	select: true,
 	type: {
-		icon:function(obj,common){
+		icon:function(obj){
 			if (obj.$count){
 				if (obj.open)
 					return "<span class='webix_icon fa-angle-down'></span>";
@@ -45,7 +45,7 @@ const gridTree = {
 			} else
 				return "<div class='webix_tree_none'></div>";
 		},
-		folder:function(obj, common){
+		folder:function(obj){
 			if (obj.$count){
 				if (obj.open)
 					return "<span class='webix_icon fa-folder-open-o'></span>";
@@ -66,7 +66,7 @@ const gridTree = {
 	},
 	on:{
 		onAfterLoad:function(){
-			this.select(12)
+			this.select(12);
 		}
 	}
 };

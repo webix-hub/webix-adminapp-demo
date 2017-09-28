@@ -21,7 +21,7 @@ const grid = {
 		{id:"categoryName", header:["Category", {content:"selectFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"select",  template:"<div class='category#category#'>#categoryName#</div>"},
 		{id:"price", header:["Price"], sort:"int", minWidth:80, fillspace: 1, format:webix.i18n.priceFormat},
 		{id:"quantity", header:["Quantity" ], sort:"int", minWidth:60, fillspace: 1},
-		{id:"statusName", header:["Status"], minWidth:75, sort:"string", minWidth:70, fillspace: 1, template:"<span class='status status#status#'>#statusName#</span>"},
+		{id:"statusName", header:["Status"], minWidth:75, sort:"string", fillspace: 1, template:"<span class='status status#status#'>#statusName#</span>"},
 
 		{id:"edit", header:"&nbsp;", width:35, template:"<span  style=' cursor:pointer;' class='webix_icon fa-pencil'></span>"},
 		{id:"delete", header:"&nbsp;", width:35, template:"<span  style='cursor:pointer;' class='webix_icon fa-trash-o'></span>"}
@@ -29,10 +29,10 @@ const grid = {
 	pager:"pagerA",
 	"export":true,
 	onClick:{
-		"fa-trash-o":function(e,id,node){
+		"fa-trash-o":function(e,id){
 			webix.confirm({
 				text:"The product will be deleted. <br/> Are you sure?", ok:"Yes", cancel:"Cancel",
-				callback:() => {
+				callback:(res) => {
 					if(res){
 						const item = this.getItem(id);
 						item.status = "0";
@@ -50,10 +50,10 @@ const grid = {
 
 const controls = [
 	{view: "button", type: "iconButton", icon:"file-excel-o",width:150, label: "Export To Excel", click: function(){
-		webix.toExcel($$("productsData"));
+		webix.toExcel(webix.$$("productsData"));
 	}},
 	{view: "button", type: "iconButton", icon:"refresh", width:100, label: "Refresh", click: function(){
-		var grid = $$("productsData");
+		var grid = webix.$$("productsData");
 		grid.clearAll();
 		grid.showProgress();
 		webix.delay(function(){
@@ -69,14 +69,14 @@ const controls = [
 		{id:"2", value:"Not published"},
 		{id:"0", value:"Deleted"}
 	],  label:"Filter products", on:{
-			onChange:function(){
-				var val = this.getValue();
-				if(val=="all")
-					$$("productsData").filter("#status#","");
-				else
-					$$("productsData").filter("#status#",val);
-			}
+		onChange:function(){
+			var val = this.getValue();
+			if(val=="all")
+				webix.$$("productsData").filter("#status#","");
+			else
+				webix.$$("productsData").filter("#status#",val);
 		}
+	}
 	}
 ];
 

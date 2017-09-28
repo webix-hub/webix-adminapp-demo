@@ -24,7 +24,7 @@ const form = {
 		]},
 		{view: "checkbox", name: "in_stock", label: "In stock",value: 1},
 		{ view: "label", label: "Full description", height:30},
-		{ id:'editor', view:"textarea", value:"", editor:{language: 'en'}, minHeight: 220},
+		{ id:"editor", view:"textarea", value:"", editor:{language: "en"}, minHeight: 200},
 
 		{}
 	]

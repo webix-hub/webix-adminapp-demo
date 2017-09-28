@@ -1,4 +1,3 @@
-import dashline 	from "views/modules/dashline";
 import visitors 	from "views/modules/visitors";
 import orders 		from "views/modules/orders";
 import chart_diff 	from "views/modules/chart_diff";

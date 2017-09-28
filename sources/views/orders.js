@@ -30,9 +30,9 @@ const controls = [
 		onChange:function(){
 			let val = this.getValue();
 			if(val=="all")
-				$$("orderData").filter("#status#","");
+				webix.$$("orderData").filter("#status#","");
 			else
-				$$("orderData").filter("#status#", val);
+				webix.$$("orderData").filter("#status#", val);
 		}
 	}
 	}
@@ -66,7 +66,7 @@ const grid = {
 			},
 			pager:"pagerA",
 			onClick:{
-				webix_icon:function(e,id,node){
+				webix_icon:function(e,id){
 					webix.confirm({
 						text:"The order will be deleted.<br/> Are you sure?", ok:"Yes", cancel:"Cancel",
 						callback:function(res){

@@ -1,13 +1,13 @@
 webix.protoUI({
 	name:"ckeditor",
-	$init:function(config){
+	$init:function(){
 		this.$view.className += " webix_selectable";
 	},
 	defaults:{
 		borderless:true,
 		toolbar: [
-			[ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],
-			[ 'FontSize', 'TextColor', 'BGColor' ]
+			[ "Bold", "Italic", "-", "NumberedList", "BulletedList", "-", "Link", "Unlink" ],
+			[ "FontSize", "TextColor", "BGColor" ]
 		]
 	},
 	_init_ckeditor_once:function(){
@@ -22,7 +22,7 @@ webix.protoUI({
 		};
 		webix.extend(t,this.config.editor||{});
 		webix.require("ckeditor/ckeditor.js", function(){
-			this._3rd_editor = CKEDITOR.replace( this.config.textAreaID, t);
+			this._3rd_editor = window.CKEDITOR.replace( this.config.textAreaID, t);
 		}, this);
 	},
 	_set_inner_size:function(x, y){

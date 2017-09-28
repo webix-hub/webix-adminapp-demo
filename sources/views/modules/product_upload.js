@@ -34,7 +34,7 @@ const ui = {
 						view:"uploader",
 						upload:	"server/upload.php",
 						on:{
-							onFileUploadError: function(item){
+							onFileUploadError: function(){
 								webix.alert("Error during file upload");
 							}
 						},
@@ -43,10 +43,10 @@ const ui = {
 				},
 				onItemClick:function(id){
 					if (id.column == "upload")
-						$$("uploadAPI").fileDialog({ rowid : id.row });
+						webix.$$("uploadAPI").fileDialog({ rowid : id.row });
 				},
 				onDestruct: function(){
-					$$("uploadAPI").destructor();
+					webix.$$("uploadAPI").destructor();
 				}
 			}
 		},

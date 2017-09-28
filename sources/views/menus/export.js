@@ -10,10 +10,10 @@ const ui = {
 	on:{
 		onItemClick:function(id){
 			if(id==1){
-				webix.toExcel($$("orderData"));
+				webix.toExcel(webix.$$("orderData"));
 			}
 			else if(id==2)
-				$$("orderData").exportToPDF();
+				webix.$$("orderData").exportToPDF();
 		}
 	}
 };

@@ -6,7 +6,7 @@ webix.protoUI({
 	getScheduler:function(){
 		return this._scheduler;
 	},
-	$init:function(config){
+	$init:function(){
 		this.$ready.push(function(){
 			var tabs = this.config.tabs;
 
@@ -31,7 +31,7 @@ webix.protoUI({
 		webix.require([
 			"//cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.js"
 		], function(){
-			var scheduler = this._scheduler = window.Scheduler ? Scheduler.getSchedulerInstance() : window.scheduler;
+			var scheduler = this._scheduler = window.Scheduler ? window.Scheduler.getSchedulerInstance() : window.scheduler;
 
 			if (this.config.init)
 				this.config.init.call(this);

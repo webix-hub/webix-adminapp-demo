@@ -22,7 +22,7 @@ const menudata = [
 
 export default class MenuView extends JetView{
 	init(){
-		$$("app:menu").parse(menudata);
+		webix.$$("app:menu").parse(menudata);
 		this.use(plugins.Menu, "app:menu");
 	}	
 	config(){
