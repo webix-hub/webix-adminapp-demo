@@ -4,6 +4,7 @@ var webpack = require("webpack");
 module.exports = function(env) {
 
 	var ExtractTextPlugin = require("extract-text-webpack-plugin");
+	var production = !!(env && env.production === "true");
 
 	var config = {
 		entry: "./sources/admin.js",
@@ -38,11 +39,15 @@ module.exports = function(env) {
 			}
 		},
 		plugins: [
-			new ExtractTextPlugin("./admin.css")
+			new ExtractTextPlugin("./admin.css"),
+			new webpack.DefinePlugin({
+				VERSION: `"${require("./package.json").version}"`,
+				PRODUCTION : production
+			})
 		]
 	};
 
-	if (env && env.compress === "true") {
+	if (production) {
 		config.plugins.push(
 			new  webpack.optimize.UglifyJsPlugin({
 				test: /\.js$/

@@ -27,19 +27,13 @@ webix.protoUI({
 		});
 	},
 	_render_once:function(){
-		webix.require("//cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.css");
-		webix.require([
-			"//cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.js"
-		], function(){
-			var scheduler = this._scheduler = window.Scheduler ? window.Scheduler.getSchedulerInstance() : window.scheduler;
+		var scheduler = this._scheduler = window.Scheduler ? window.Scheduler.getSchedulerInstance() : window.scheduler;
 
-			if (this.config.init)
-				this.config.init.call(this);
+		if (this.config.init)
+			this.config.init.call(this);
 
-			scheduler.init(this.$view.firstChild, (this.config.date||new Date()), (this.config.mode||"week"));
-			if (this.config.ready)
-				this.config.ready.call(this);
-
-		}, this);
+		scheduler.init(this.$view.firstChild, (this.config.date||new Date()), (this.config.mode||"week"));
+		if (this.config.ready)
+			this.config.ready.call(this);
 	}
 }, webix.ui.view);

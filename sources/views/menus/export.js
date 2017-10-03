@@ -13,7 +13,7 @@ const ui = {
 				webix.toExcel(webix.$$("orderData"));
 			}
 			else if(id==2)
-				webix.$$("orderData").exportToPDF();
+				webix.toPDF(webix.$$("orderData"));
 		}
 	}
 };
