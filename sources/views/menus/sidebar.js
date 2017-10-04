@@ -28,30 +28,25 @@ export default class MenuView extends JetView{
 	config(){
 		return {
 			width: 200,
-			rows:[
-				{
-					view: "tree", id: "app:menu",
-					type: "menuTree2", css: "menu",
-					activeTitle: true, select: true,
-					tooltip: {
-						template: function(obj){
-							return obj.$count?"":obj.details;
-						}
-					},
-					on:{
-						onBeforeSelect:function(id){
-							if(this.getItem(id).$count){
-								return false;
-							}
-						},
-						onAfterSelect:function(id){
-							var item = this.getItem(id);
-							webix.$$("title").parse({title: item.value, details: item.details});
-						}
-					},
-					
+			view: "tree", id: "app:menu",
+			type: "menuTree2", css: "menu",
+			activeTitle: true, select: true,
+			tooltip: {
+				template: function(obj){
+					return obj.$count?"":obj.details;
 				}
-			]
+			},
+			on:{
+				onBeforeSelect:function(id){
+					if(this.getItem(id).$count){
+						return false;
+					}
+				},
+				onAfterSelect:function(id){
+					var item = this.getItem(id);
+					webix.$$("title").parse({title: item.value, details: item.details});
+				}
+			}
 		};
 	}
 }
