@@ -18,7 +18,7 @@ const grid = {
 		{id:"id", header:"#", width:50},
 		{id:"code", header:["Code", {content:"textFilter"} ], sort:"string", minWidth:70, fillspace: 1},
 		{id:"name", header:["Name", {content:"textFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"text"},
-		{id:"categoryName", header:["Category", {content:"selectFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"select",  template:"<div class='category#category#'>#categoryName#</div>"},
+		{id:"categoryName", header:["Category", {content:"selectFilter"} ], sort:"string", minWidth:120, fillspace: 2, editor:"text",  template:"<div class='category#category#'>#categoryName#</div>"},
 		{id:"price", header:["Price"], sort:"int", minWidth:80, fillspace: 1, format:webix.i18n.priceFormat},
 		{id:"quantity", header:["Quantity" ], sort:"int", minWidth:50, fillspace: 1},
 		{id:"statusName", header:["Status"], minWidth:110, sort:"string", fillspace: 1, template:"<span class='status status#status#'>#statusName#</span>"},

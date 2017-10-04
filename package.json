@@ -1,6 +1,6 @@
 {
   "name": "webix-admin-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Demo of Admin interface",
   "main": "sources/admin.js",
   "scripts": {

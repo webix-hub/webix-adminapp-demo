@@ -5,7 +5,9 @@
     },
     "globals":{
         "webix":true,
-        "scheduler":true
+        "scheduler":true,
+        "VERSION":true,
+        "PRODUCTION":true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
