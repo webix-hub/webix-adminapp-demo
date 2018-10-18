@@ -9,7 +9,7 @@ Live demos
 
 In Flat skin - http://webix.com/demos/admin-app/
 
-In Material skin - http://webix.com/demos/material/admin-app/
+In [Material 5.4](https://github.com/webix-hub/material-design-skin) skin - http://webix.com/demos/material/admin-app/
 
 
 Technical details
