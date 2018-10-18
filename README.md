@@ -5,7 +5,7 @@ Live demos
 ----------
 
 - Flat skin - http://webix.com/demos/admin-app/
-- Material skin - http://webix.com/demos/material/admin-app/
+- [Material 5.4](https://github.com/webix-hub/material-design-skin) skin - http://webix.com/demos/material/admin-app/
 
 Jet 0.x
 ----------
