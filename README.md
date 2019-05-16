@@ -6,14 +6,14 @@ Live demo
 
 - Material skin - http://webix.com/demos/admin-app/
 
-Jet 0.x
+Older versions
 ----------
 Demo in this repo uses latest Webix (6.0+) and Webix Jet 2.x, if you want to check older version, check
 
-- Flat skin, Jet 0.x, Webix 5.4 - https://github.com/webix-hub/webix-adminapp-demo/tree/jet0
-- Material skin, Jet 0.x, Webix 5.4 - https://github.com/webix-hub/webix-adminapp-demo/tree/material-jet0
-- Flat skin, Jet 1.x, Webix 5.4 - https://github.com/webix-hub/webix-adminapp-demo/tree/jet1
-- Material skin, Jet 1.x, Webix 5.4 - https://github.com/webix-hub/webix-adminapp-demo/tree/material-jet1
+- Flat skin, Jet 0.x - https://github.com/webix-hub/webix-adminapp-demo/tree/jet0
+- Material skin, Jet 0.x - https://github.com/webix-hub/webix-adminapp-demo/tree/material-jet0
+- Flat skin, Jet 1.x - https://github.com/webix-hub/webix-adminapp-demo/tree/jet1
+- Material skin, Jet 1.x - https://github.com/webix-hub/webix-adminapp-demo/tree/material-jet1
 
 
 Technical details
