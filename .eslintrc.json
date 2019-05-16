@@ -5,9 +5,8 @@
     },
     "globals":{
         "webix":true,
-        "scheduler":true,
-        "VERSION":true,
-        "PRODUCTION":true
+        "remote":true,
+        "APPNAME":true, "VERSION":true, "PRODUCTION":true
     },
     "extends": "eslint:recommended",
     "parserOptions": {

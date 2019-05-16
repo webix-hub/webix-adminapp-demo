@@ -1,0 +1,242 @@
+.webixappstart{
+    opacity:0;
+}
+.webixapp{
+    transition: opacity 500ms;
+    opacity: 1;
+}
+.logo{
+	background:url(webix-logo.svg) 2px -7px no-repeat;
+}
+.webix_header.webix_dark .webix_template{
+	text-align:center;
+	line-height: 56px;
+}
+.avatar .mainphoto{
+	border-radius:25px;
+	widows:40px;
+	height:40px;
+	position:relative;
+	top:-4px;
+}
+.status{
+	position:relative;
+	top:-25px;
+	left:25px;
+	font-size:10px !important;
+	text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+/*Dashboard*/
+.currencies_list .webix_list_item{
+	line-height: 60px;
+}
+.currencies_list .icon{
+	float:left;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	border-radius: 24px;
+	text-align: center;
+	font-size: 24px;
+	margin-right: 16px;
+	margin-top: 6px;
+}
+.currencies_list .value{
+	font-size: 16px;
+	font-weight: 500;
+}
+.currencies_list .delta{
+	font-size: 16px;
+	font-weight: 500;
+	float:right;
+	margin-right: 8px;
+}
+.currencies_list .delta.red{
+	color:#FF5C4C;
+}
+.currencies_list .delta.green{
+	color:#55CD97;
+}
+.reviews .img{
+	float:left;
+	margin-top:18px;
+	margin-right:16px;
+	height:100%;
+}
+.reviews .img img{
+	background-color:red;
+	border-radius:25px;
+	height:48px;
+	width:48px;
+}
+.reviews .text{
+	margin-top:10px;
+}
+.reviews .text .name{
+	font-weight: 500;
+	display:block;
+}
+.reviews .text .webix_icon.mdi-bookmark-check,
+.reviews .text .webix_icon.mdi-bookmark-plus{
+	float:right;
+	margin-top:4px;
+	margin-right:4px;
+}
+.reviews .text .webix_icon.mdi-bookmark-check{
+	color: #1CA1C1;
+}
+.reviews .text .webix_icon.mdi-bookmark-plus{
+	color: #94A1B3;
+}
+.reviews .text .stars{
+	width:90px;
+	margin-left:-4px;
+	position: relative;
+	top:-4px;
+}
+.reviews .text .star{
+	margin-right:-3px !important;
+	font-size:16px !important;
+}
+.reviews .text .stars .star.gold{
+	color:#FDBF4C;
+}
+.reviews .text .stars .star.grey{
+	color:#94A1B3;
+}
+.reviews .text .date{
+	color: #94A1B3;
+	position: relative;
+	top:-4px;
+	margin-left:8px;
+}
+.reviews .text .message{
+	display:block;
+	max-height:48px;
+	overflow: hidden;
+	line-height: 22px;
+	position: relative;
+	top:-6px;
+}
+.reviews .text .tag{
+	padding:4px 10px;
+	border-radius: 100px;
+	color:#ffffff;
+	font-weight: 500;
+	font-size: 12px;
+    line-height: 20px;
+}
+.reviews .text .tag.New{
+	background: #1CA1C1;
+}
+.reviews .text .tag.Pending{
+	background: #55CD97;
+}
+.webix_tooltip.review_tooltip{
+	width:300px;
+}
+.stats .title{
+	font-weight:500;
+	font-size: 16px;
+	line-height: 20px;
+	display:block;
+	padding-top:8px;
+}
+.stats .webix_list_item{
+	padding:2px 20px;
+}
+.progress_bar_element{
+	background-color: #F4F5F9;
+	border-radius: 4px;
+	width:100%;
+	height:6px;
+	margin-top:5px;
+	margin-bottom:9px;
+}
+.progress_result{
+	height:100%;
+	border-radius: 4px;
+}
+.progress_result.all{
+	background: #1CA1C1;
+}
+.progress_result.first{
+	background: #55CD97;
+}
+.progress_result.second{
+	background: #FDBF4C;
+}
+
+.check_tree .webix_tree_branch_1{
+	padding:4px;
+}
+.check_tree .webix_tree_checkbox{
+	margin:0 10px;
+}
+.check_tree .webix_scroll_cont > .webix_tree_leaves{
+	padding:16px 8px;
+}
+.check_tree .webix_tree_item span.checked{
+	text-decoration: line-through;
+}
+.check_tree .webix_tree_item span{
+	margin-left:6px;
+}
+
+/* headers (templates) */
+.webix_view.chart_header{
+	text-align: center;
+}
+/* transactions grid */
+.method{
+	margin-bottom:-8px;
+}
+/* features grid */
+.header_center, .column_center{
+	text-align:center;
+}
+.feature.webix_icon.wxi-plus-circle{
+	color:#55CD97;
+}
+.feature.webix_icon.wxi-minus-circle{
+	color:#DADEE0;
+}
+/* widgets grid */
+.yellow{
+	color: #FDBF4C;
+}
+.green{
+	color: #55CD97;
+}
+.blue{
+	color: #1CA1C1;
+}
+
+.custom_dark{
+	background: #565B67;
+	font-size:18px;
+	color: #ffffff;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.custom_dark .webix_template {
+	line-height: 55px;
+}
+
+/* forms */
+.radio_demo .webix_radio_option{
+	margin-bottom:20px;
+}
+
+.webix_view.form_photo > div{
+	padding:0px;
+}
+
+/*pivot*/
+.webix_pivot_configure_toolbar .webix_el_label .webix_el_box, 
+.webix_pivot_configure_toolbar .webix_el_label  {
+	margin-right:5px;
+	overflow: visible;
+}

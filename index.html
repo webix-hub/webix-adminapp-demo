@@ -2,18 +2,29 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Webix Admin</title>
+	<title></title>
 	<!-- Webix Library -->
-	<script type="text/javascript" src="//cdn.webix.com/pro/5.4/webix.js?v=5.0.0"></script>
-	<link rel="stylesheet" href="//cdn.webix.com/pro/5.4/webix.css?v=5.0.0">
+	<script type="text/javascript" src="//cdn.webix.com/pro/6.3/webix.js?{VERSION}"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.webix.com/pro/6.3/webix.css?{VERSION}">
 
-	<!-- Error tracking -->
-	<script src="https://cdn.ravenjs.com/3.10.0/raven.min.js"></script>
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css" crossorigin="anonymous">
+	
+	<!-- App -->
+	<script type="text/javascript" src="codebase/app.js?{VERSION}"></script>
+	<link rel="stylesheet" type="text/css" href="codebase/app.css?{VERSION}">
+	<script>
+		webix.ready(function(){
+			if (webix.env.touch)
+				webix.ui.fullScreen();
+			else if (webix.CustomScroll)
+				webix.CustomScroll.init();
+		
+			const app = new AppDemo({});
+			app.render();
+		});
+	</script>
 
-	<!-- The App -->
-	<link rel="stylesheet" href="codebase/admin.css">
-	<script type="text/javascript" src="codebase/admin.js"></script>
 </head>
-<body>
-</body>
+<body></body>
 </html>

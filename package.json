@@ -1,22 +1,19 @@
 {
-  "name": "webix-admin-app",
-  "version": "1.0.1",
-  "description": "Demo of Admin interface",
-  "main": "sources/admin.js",
+  "name": "admin-app",
+  "version": "1.0.0",
+  "description": "Admin Demo",
+  "main": "sources/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint sources/",
     "build": "webpack --env.production true",
-    "start": "webpack-dev-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:xbsltd/webix-admin-app.git"
+    "start": "webpack-dev-server",
+    "deploy": "yarn build && rsync -ar index.html codebase webix.com:/root/composer/snippet.webix.com/admin/"
   },
   "keywords": [
-    "webix"
+    "webix",
+    "jet"
   ],
-  "author": "Maria Staskova",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -33,6 +30,6 @@
     "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
-    "webix-jet": "^1.0.0"
+    "webix-jet": "^2.0.0"
   }
 }

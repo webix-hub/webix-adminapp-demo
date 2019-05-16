@@ -1,4 +1,8 @@
-codebase/
-deploy/
-node_modules/
+.DS_Store
+.idea
+node_modules
 *.log
+*.tar
+
+codebase/app.js
+codebase/app.css

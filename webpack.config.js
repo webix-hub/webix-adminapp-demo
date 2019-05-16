@@ -11,11 +11,14 @@ module.exports = function(env) {
 	};
 
 	var config = {
-		entry: "./sources/admin.js",
+		entry: "./sources/app.js",
 		output: {
 			path: path.join(__dirname, "codebase"),
 			publicPath:"/codebase/",
-			filename: "admin.js"
+			library: "AppDemo",
+			libraryExport: "default",
+    		libraryTarget: "var",
+			filename: "app.js"
 		},
 		devtool: "inline-source-map",
 		module: {
@@ -43,7 +46,7 @@ module.exports = function(env) {
 			}
 		},
 		plugins: [
-			new ExtractTextPlugin("./admin.css"),
+			new ExtractTextPlugin("./app.css"),
 			new webpack.DefinePlugin({
 				VERSION: `"${pack.version}"`,
 				APPNAME: `"${pack.name}"`,

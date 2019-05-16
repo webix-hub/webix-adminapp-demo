@@ -1,23 +1,22 @@
-import {data} from "models/files";
 import {JetView} from "webix-jet";
+import {data} from "models/files";
 
-// load external css
-webix.require("//cdn.webix.com/site/filemanager/filemanager.css");
-// load external js
-const ready = webix.require("//cdn.webix.com/site/filemanager/filemanager.js")
-	// return UI after lib loading
-	.then(() => FMView);
-
-class FMView extends JetView {
+export default class SheetView extends JetView{
 	config(){
-		return {
-			view:"filemanager",
-			disabledHistory:true
+		const config = {
+			type:"space", rows:[{
+				view:"filemanager", localId:"files",
+				disabledHistory:true
+			}]
 		};
+
+		return webix.require({
+			"https://cdn.webix.com/pro/edge/filemanager/filemanager.js"	:true,
+			"https://cdn.webix.com/pro/edge/filemanager/filemanager.css":true
+		}).then(() => config);
 	}
-	init(view){
-		view.parse(webix.copy(data));
+
+	init(){
+		this.$$("files").parse(webix.copy(data));
 	}
 }
-
-export default ready;
