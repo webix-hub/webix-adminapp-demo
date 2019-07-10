@@ -177,10 +177,15 @@
 .check_tree .webix_scroll_cont > .webix_tree_leaves{
 	padding:16px 8px;
 }
-.check_tree .webix_tree_item span.checked{
+.check_tree .webix_tree_item.webix_selected{
+	background:#ffffff !important;
+}
+.check_tree .webix_tree_item span.checked,
+.check_tree .webix_tree_item.webix_selected span.checked{
 	text-decoration: line-through;
 }
-.check_tree .webix_tree_item span{
+.check_tree .webix_tree_item span,
+.check_tree .webix_tree_item.webix_selected span{
 	margin-left:6px;
 }
 
