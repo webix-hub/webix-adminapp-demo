@@ -4,8 +4,7 @@ export default class SheetView extends JetView{
 	config(){
 		const config = {
 			type:"space", rows:[{
-				view:"filemanager", localId:"files",
-				disabledHistory:true,
+				view:"filemanager",
 				url:"https://docs.webix.com/filemanager-backend/"
 			}]
 		};
