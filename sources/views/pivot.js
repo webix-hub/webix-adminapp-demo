@@ -1,21 +1,16 @@
 import {JetView} from "webix-jet";
-import {data} from "models/pivot";
 
 export default class SheetView extends JetView{
 	config(){
 		const config = {
 			type:"space", rows:[{
-				view:"pivot", localId:"pivot",
+				view: "pivot",
 				structure: {
-					rows: ["form", "name"], 
+					rows: ["form", "name"],
 					columns: ["year"],
-					values: [
-						{ name:"oil", operation:["min","sum"]}
-					],
-					filters:[
-						{name: "name", type: "select"}
-					]
-				}
+					values: [{ name: "oil", operation: ["min", "sum"] }],
+				},
+				url: "https://cdn.webix.com/demodata/pivot.json",
 			}]
 		};
 
@@ -25,7 +20,4 @@ export default class SheetView extends JetView{
 		}).then(() => config);
 	}
 
-	init(){
-		this.$$("pivot").parse(data);
-	}
 }
